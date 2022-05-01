@@ -1,0 +1,4 @@
+s,o
+<http://example.org/resource/Res5>,"\"one literal\""
+<http://example.org/resource/Res3>,"\"This literal contains a dot . which should NOT be removed\""
+<http://example.org/resource/Res6>,"\"one literal\"^^<type1>"

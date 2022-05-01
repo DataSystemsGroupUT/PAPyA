@@ -1,0 +1,1026 @@
+Subject,Predicate,Object
+http://localhost/publications/articles/Journal1/1944/Article14,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal1/1944/Article14,http://purl.org/dc/elements/1.1/title,intercepting immunopathology addends
+http://localhost/publications/articles/Journal1/1944/Article14,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.voucherable.tld/jeered/immunopathology.html
+http://localhost/publications/articles/Journal1/1944/Article14,http://swrc.ontoware.org/ontology#pages,16
+http://localhost/publications/articles/Journal1/1944/Article14,http://xmlns.com/foaf/0.1/homepage,http://www.jeered.tld/addends/surveiled.html
+http://localhost/publications/articles/Journal1/1944/Article14,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal1/1944
+http://localhost/publications/articles/Journal1/1944/Article14,http://purl.org/dc/elements/1.1/creator,_:b95
+http://localhost/publications/articles/Journal1/1944/Article14,http://purl.org/dc/elements/1.1/creator,_:b96
+_:b155,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b155,http://xmlns.com/foaf/0.1/name,Takehide Gauna
+_:b163,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b163,http://xmlns.com/foaf/0.1/name,Gratia Flach
+_:b192,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b192,http://xmlns.com/foaf/0.1/name,Shoichi Mathey
+_:b252,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b252,http://xmlns.com/foaf/0.1/name,Chikafusa Koolman
+_:b307,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b307,http://xmlns.com/foaf/0.1/name,Eshita Whitby
+_:b320,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b320,http://xmlns.com/foaf/0.1/name,Seriozhenka Homen
+_:b380,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b380,http://xmlns.com/foaf/0.1/name,Tango Constable
+_:b424,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b424,http://xmlns.com/foaf/0.1/name,Aracely Kuka
+http://localhost/publications/articles/Journal1/1951/Article17,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal1/1951/Article17,http://purl.org/dc/elements/1.1/title,waterfowls tarots incomparability
+http://localhost/publications/articles/Journal1/1951/Article17,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.parricidal.tld/unrented/tarots.html
+http://localhost/publications/articles/Journal1/1951/Article17,http://xmlns.com/foaf/0.1/homepage,http://www.unrented.tld/incomparability/tacet.html
+http://localhost/publications/articles/Journal1/1951/Article17,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal1/1951
+http://localhost/publications/articles/Journal1/1951/Article17,http://purl.org/dc/elements/1.1/creator,_:b429
+_:b468,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b468,http://xmlns.com/foaf/0.1/name,Kumi Belidor
+_:b492,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b492,http://xmlns.com/foaf/0.1/name,Roslava Ranum
+http://localhost/publications/journals/Journal1/1952,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Journal
+http://localhost/publications/journals/Journal1/1952,http://swrc.ontoware.org/ontology#number,1
+http://localhost/publications/journals/Journal1/1952,http://purl.org/dc/elements/1.1/title,Journal 1 (1952)
+http://localhost/publications/journals/Journal1/1952,http://swrc.ontoware.org/ontology#volume,13
+http://localhost/publications/journals/Journal1/1952,http://purl.org/dc/terms/issued,1952
+http://localhost/publications/journals/Journal1/1952,http://swrc.ontoware.org/ontology#editor,_:b500
+http://localhost/publications/articles/Journal1/1952/Article9,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal1/1952/Article9,http://purl.org/dc/elements/1.1/title,gaudily repenters riotousness
+http://localhost/publications/articles/Journal1/1952/Article9,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.seriating.tld/cordites/repenters.html
+http://localhost/publications/articles/Journal1/1952/Article9,http://swrc.ontoware.org/ontology#pages,152
+http://localhost/publications/articles/Journal1/1952/Article9,http://xmlns.com/foaf/0.1/homepage,http://www.cordites.tld/riotousness/jaundicing.html
+http://localhost/publications/articles/Journal1/1952/Article9,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal1/1952
+http://localhost/publications/articles/Journal1/1952/Article9,http://purl.org/dc/elements/1.1/creator,_:b483
+http://localhost/publications/articles/Journal1/1952/Article9,http://purl.org/dc/elements/1.1/creator,_:b484
+_:b572,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b572,http://xmlns.com/foaf/0.1/name,Nomi Rosato
+http://localhost/publications/articles/Journal1/1953/Article26,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal1/1953/Article26,http://purl.org/dc/elements/1.1/title,scullery bumpkinish reclining
+http://localhost/publications/articles/Journal1/1953/Article26,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.rewove.tld/wrongness/bumpkinish.html
+http://localhost/publications/articles/Journal1/1953/Article26,http://swrc.ontoware.org/ontology#pages,108
+http://localhost/publications/articles/Journal1/1953/Article26,http://xmlns.com/foaf/0.1/homepage,http://www.wrongness.tld/reclining/thriftiness.html
+http://localhost/publications/articles/Journal1/1953/Article26,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal1/1953
+http://localhost/publications/articles/Journal1/1953/Article26,http://purl.org/dc/elements/1.1/creator,_:b620
+_:b670,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b670,http://xmlns.com/foaf/0.1/name,Iulia Morra
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://purl.org/dc/elements/1.1/title,proslavery blindfolding cookey
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://purl.org/dc/terms/issued,1954
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://localhost/vocabulary/bench/cdrom,http://www.furnaces.tld/berthas/blindfolding.html
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://swrc.ontoware.org/ontology#pages,110
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://xmlns.com/foaf/0.1/homepage,http://www.berthas.tld/cookey/impaneled.html
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://purl.org/dc/elements/1.1/creator,_:b689
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://localhost/vocabulary/bench/booktitle,obdurately proslavery berthas
+http://localhost/publications/inprocs/Proceeding1/1954/Inproceeding33,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1954
+_:b785,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b785,http://xmlns.com/foaf/0.1/name,Argus Bierwirth
+_:b822,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b822,http://xmlns.com/foaf/0.1/name,Severin Buzard
+http://localhost/publications/journals/Journal3/1955,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Journal
+http://localhost/publications/journals/Journal3/1955,http://swrc.ontoware.org/ontology#number,1
+http://localhost/publications/journals/Journal3/1955,http://purl.org/dc/elements/1.1/title,Journal 3 (1955)
+http://localhost/publications/journals/Journal3/1955,http://swrc.ontoware.org/ontology#volume,2
+http://localhost/publications/journals/Journal3/1955,http://purl.org/dc/terms/issued,1955
+http://localhost/publications/journals/Journal3/1955,http://swrc.ontoware.org/ontology#editor,_:b758
+_:b991,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b991,http://xmlns.com/foaf/0.1/name,Tiun Hussien
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://purl.org/dc/elements/1.1/title,marsupialize winglets tsp
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://purl.org/dc/terms/issued,1957
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.tallows.tld/codeines/winglets.html
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://swrc.ontoware.org/ontology#pages,95
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://xmlns.com/foaf/0.1/homepage,http://www.codeines.tld/tsp/jihads.html
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://purl.org/dc/elements/1.1/creator,_:b1049
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://localhost/vocabulary/bench/booktitle,eucharists marsupialize codeines
+http://localhost/publications/inprocs/Proceeding1/1957/Inproceeding50,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1957
+_:b1101,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b1101,http://xmlns.com/foaf/0.1/name,Gundela Renfer
+http://localhost/publications/articles/Journal2/1957/Article42,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal2/1957/Article42,http://purl.org/dc/elements/1.1/title,retrenching untrammelled undeclared
+http://localhost/publications/articles/Journal2/1957/Article42,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.entwists.tld/retribute/untrammelled.html
+http://localhost/publications/articles/Journal2/1957/Article42,http://swrc.ontoware.org/ontology#pages,143
+http://localhost/publications/articles/Journal2/1957/Article42,http://xmlns.com/foaf/0.1/homepage,http://www.retribute.tld/undeclared/refolds.html
+http://localhost/publications/articles/Journal2/1957/Article42,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal2/1957
+http://localhost/publications/articles/Journal2/1957/Article42,http://purl.org/dc/elements/1.1/creator,_:b1119
+http://localhost/publications/articles/Journal2/1957/Article51,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal2/1957/Article51,http://purl.org/dc/elements/1.1/title,sacrist macadam sighing
+http://localhost/publications/articles/Journal2/1957/Article51,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.ogreism.tld/infiltration/macadam.html
+http://localhost/publications/articles/Journal2/1957/Article51,http://swrc.ontoware.org/ontology#pages,24
+http://localhost/publications/articles/Journal2/1957/Article51,http://xmlns.com/foaf/0.1/homepage,http://www.infiltration.tld/sighing/espanol.html
+http://localhost/publications/articles/Journal2/1957/Article51,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal2/1957
+http://localhost/publications/articles/Journal2/1957/Article51,http://purl.org/dc/elements/1.1/creator,_:b1131
+http://localhost/publications/articles/Journal2/1957/Article63,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal2/1957/Article63,http://purl.org/dc/elements/1.1/title,thewless abstractness freemasons
+http://localhost/publications/articles/Journal2/1957/Article63,http://swrc.ontoware.org/ontology#pages,26
+http://localhost/publications/articles/Journal2/1957/Article63,http://xmlns.com/foaf/0.1/homepage,http://www.homogenized.tld/freemasons/pyrethrin.html
+http://localhost/publications/articles/Journal2/1957/Article63,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal2/1957
+http://localhost/publications/articles/Journal2/1957/Article63,http://purl.org/dc/elements/1.1/creator,_:b1145
+http://localhost/publications/articles/Journal3/1957/Article75,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal3/1957/Article75,http://purl.org/dc/elements/1.1/title,barographic overeducates unsteadiest
+http://localhost/publications/articles/Journal3/1957/Article75,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.realising.tld/surnamers/overeducates.html
+http://localhost/publications/articles/Journal3/1957/Article75,http://swrc.ontoware.org/ontology#pages,180
+http://localhost/publications/articles/Journal3/1957/Article75,http://xmlns.com/foaf/0.1/homepage,http://www.surnamers.tld/unsteadiest/insists.html
+http://localhost/publications/articles/Journal3/1957/Article75,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal3/1957
+http://localhost/publications/articles/Journal3/1957/Article75,http://purl.org/dc/elements/1.1/creator,_:b1159
+http://localhost/publications/articles/Journal3/1957/Article75,http://purl.org/dc/elements/1.1/creator,_:b1160
+http://localhost/publications/articles/Journal3/1957/Article104,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal3/1957/Article104,http://purl.org/dc/elements/1.1/title,ergots compassed skippered
+http://localhost/publications/articles/Journal3/1957/Article104,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.whipper.tld/naturalism/compassed.html
+http://localhost/publications/articles/Journal3/1957/Article104,http://swrc.ontoware.org/ontology#pages,170
+http://localhost/publications/articles/Journal3/1957/Article104,http://xmlns.com/foaf/0.1/homepage,http://www.naturalism.tld/skippered/listed.html
+http://localhost/publications/articles/Journal3/1957/Article104,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal3/1957
+http://localhost/publications/articles/Journal3/1957/Article104,http://purl.org/dc/elements/1.1/creator,_:b1191
+http://localhost/publications/articles/Journal4/1957/Article130,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1957/Article130,http://purl.org/dc/elements/1.1/title,antioxidants cyclo rhizomatous
+http://localhost/publications/articles/Journal4/1957/Article130,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.pedagogies.tld/amounting/cyclo.html
+http://localhost/publications/articles/Journal4/1957/Article130,http://swrc.ontoware.org/ontology#pages,36
+http://localhost/publications/articles/Journal4/1957/Article130,http://xmlns.com/foaf/0.1/homepage,http://www.amounting.tld/rhizomatous/intrans.html
+http://localhost/publications/articles/Journal4/1957/Article130,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1957
+http://localhost/publications/articles/Journal4/1957/Article130,http://purl.org/dc/elements/1.1/creator,_:b1220
+http://localhost/publications/articles/Journal4/1957/Article130,http://purl.org/dc/elements/1.1/creator,_:b1221
+http://localhost/publications/articles/Journal4/1957/Article134,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1957/Article134,http://purl.org/dc/elements/1.1/title,lensed anthologists nonreligious
+http://localhost/publications/articles/Journal4/1957/Article134,http://swrc.ontoware.org/ontology#pages,149
+http://localhost/publications/articles/Journal4/1957/Article134,http://xmlns.com/foaf/0.1/homepage,http://www.afghani.tld/nonreligious/interlocutrices.html
+http://localhost/publications/articles/Journal4/1957/Article134,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1957
+http://localhost/publications/articles/Journal4/1957/Article134,http://purl.org/dc/elements/1.1/creator,_:b1225
+_:b1261,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b1261,http://xmlns.com/foaf/0.1/name,Aldona Sichel
+http://localhost/publications/articles/Journal2/1958/Article40,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal2/1958/Article40,http://purl.org/dc/elements/1.1/title,bayoneting acidulation evisceration
+http://localhost/publications/articles/Journal2/1958/Article40,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.bobsledder.tld/coadmit/acidulation.html
+http://localhost/publications/articles/Journal2/1958/Article40,http://swrc.ontoware.org/ontology#pages,36
+http://localhost/publications/articles/Journal2/1958/Article40,http://xmlns.com/foaf/0.1/homepage,http://www.coadmit.tld/evisceration/bondwoman.html
+http://localhost/publications/articles/Journal2/1958/Article40,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal2/1958
+http://localhost/publications/articles/Journal2/1958/Article40,http://purl.org/dc/elements/1.1/creator,_:b1277
+http://localhost/publications/articles/Journal2/1958/Article44,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal2/1958/Article44,http://purl.org/dc/elements/1.1/title,unplayable cozey sidebands
+http://localhost/publications/articles/Journal2/1958/Article44,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.ritualized.tld/backing/cozey.html
+http://localhost/publications/articles/Journal2/1958/Article44,http://swrc.ontoware.org/ontology#pages,141
+http://localhost/publications/articles/Journal2/1958/Article44,http://xmlns.com/foaf/0.1/homepage,http://www.backing.tld/sidebands/consuls.html
+http://localhost/publications/articles/Journal2/1958/Article44,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal2/1958
+http://localhost/publications/articles/Journal2/1958/Article44,http://purl.org/dc/elements/1.1/creator,_:b1281
+_:b1364,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b1364,http://xmlns.com/foaf/0.1/name,Lilian Carolina
+http://localhost/publications/articles/Journal4/1958/Article147,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1958/Article147,http://purl.org/dc/elements/1.1/title,messages gastronomical unfeasible
+http://localhost/publications/articles/Journal4/1958/Article147,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.revives.tld/clairvoyance/gastronomical.html
+http://localhost/publications/articles/Journal4/1958/Article147,http://swrc.ontoware.org/ontology#pages,86
+http://localhost/publications/articles/Journal4/1958/Article147,http://xmlns.com/foaf/0.1/homepage,http://www.clairvoyance.tld/unfeasible/blanketed.html
+http://localhost/publications/articles/Journal4/1958/Article147,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1958
+http://localhost/publications/articles/Journal4/1958/Article147,http://purl.org/dc/elements/1.1/creator,_:b1403
+http://localhost/publications/articles/Journal4/1958/Article147,http://purl.org/dc/elements/1.1/creator,_:b1404
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://purl.org/dc/elements/1.1/title,mystifiers interpretative porcelains
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://purl.org/dc/terms/issued,1959
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.iguana.tld/inventively/interpretative.html
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://swrc.ontoware.org/ontology#pages,188
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://xmlns.com/foaf/0.1/homepage,http://www.inventively.tld/porcelains/redder.html
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://purl.org/dc/elements/1.1/creator,http://localhost/persons/Paul_Erdoes
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://purl.org/dc/elements/1.1/creator,_:b1321
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://localhost/vocabulary/bench/booktitle,otoliths mystifiers inventively
+http://localhost/publications/inprocs/Proceeding1/1959/Inproceeding8,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1959
+http://localhost/publications/articles/Journal1/1959/Article2,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal1/1959/Article2,http://purl.org/dc/elements/1.1/title,cupbearers tarantulae rebutter
+http://localhost/publications/articles/Journal1/1959/Article2,http://xmlns.com/foaf/0.1/homepage,http://www.reweighs.tld/rebutter/jimjams.html
+http://localhost/publications/articles/Journal1/1959/Article2,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal1/1959
+http://localhost/publications/articles/Journal1/1959/Article2,http://purl.org/dc/elements/1.1/creator,_:b1432
+_:b1547,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b1547,http://xmlns.com/foaf/0.1/name,Perpetua Leyva
+http://localhost/publications/inprocs/Proceeding2/1959/Inproceeding36,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding2/1959/Inproceeding36,http://purl.org/dc/elements/1.1/title,reenacts tappers noses
+http://localhost/publications/inprocs/Proceeding2/1959/Inproceeding36,http://purl.org/dc/terms/issued,1959
+http://localhost/publications/inprocs/Proceeding2/1959/Inproceeding36,http://swrc.ontoware.org/ontology#pages,79
+http://localhost/publications/inprocs/Proceeding2/1959/Inproceeding36,http://xmlns.com/foaf/0.1/homepage,http://www.descended.tld/noses/carrousel.html
+http://localhost/publications/inprocs/Proceeding2/1959/Inproceeding36,http://purl.org/dc/elements/1.1/creator,_:b1355
+http://localhost/publications/inprocs/Proceeding2/1959/Inproceeding36,http://localhost/vocabulary/bench/booktitle,psalmic descended tappers
+http://localhost/publications/inprocs/Proceeding2/1959/Inproceeding36,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding2/1959
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://purl.org/dc/elements/1.1/title,deviation muzhik outline
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://purl.org/dc/terms/issued,1960
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.wagnerians.tld/realizing/muzhik.html
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://swrc.ontoware.org/ontology#pages,146
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://xmlns.com/foaf/0.1/homepage,http://www.realizing.tld/outline/fatalistic.html
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://purl.org/dc/elements/1.1/creator,http://localhost/persons/Paul_Erdoes
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://purl.org/dc/elements/1.1/creator,_:b1487
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://purl.org/dc/elements/1.1/creator,_:b1489
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://localhost/vocabulary/bench/booktitle,secrets deviation realizing
+http://localhost/publications/inprocs/Proceeding1/1960/Inproceeding7,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1960
+http://localhost/publications/articles/Journal3/1960/Article95,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal3/1960/Article95,http://purl.org/dc/elements/1.1/title,dropsical christly workless
+http://localhost/publications/articles/Journal3/1960/Article95,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.gazelles.tld/drawler/christly.html
+http://localhost/publications/articles/Journal3/1960/Article95,http://swrc.ontoware.org/ontology#pages,124
+http://localhost/publications/articles/Journal3/1960/Article95,http://xmlns.com/foaf/0.1/homepage,http://www.drawler.tld/workless/devisals.html
+http://localhost/publications/articles/Journal3/1960/Article95,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal3/1960
+http://localhost/publications/articles/Journal3/1960/Article95,http://purl.org/dc/elements/1.1/creator,_:b1752
+http://localhost/publications/articles/Journal5/1960/Article145,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal5/1960/Article145,http://purl.org/dc/elements/1.1/title,reships efts urinalysis
+http://localhost/publications/articles/Journal5/1960/Article145,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.vendees.tld/perspicuousness/efts.html
+http://localhost/publications/articles/Journal5/1960/Article145,http://swrc.ontoware.org/ontology#pages,180
+http://localhost/publications/articles/Journal5/1960/Article145,http://xmlns.com/foaf/0.1/homepage,http://www.perspicuousness.tld/urinalysis/prosperously.html
+http://localhost/publications/articles/Journal5/1960/Article145,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal5/1960
+http://localhost/publications/articles/Journal5/1960/Article145,http://purl.org/dc/elements/1.1/creator,_:b1832
+_:b1832,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b1832,http://xmlns.com/foaf/0.1/name,Weronikia Hoffee
+_:b1842,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b1842,http://xmlns.com/foaf/0.1/name,Britta Nessner
+_:b1856,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b1856,http://xmlns.com/foaf/0.1/name,Zigzag Willian
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://purl.org/dc/elements/1.1/title,throttler achiever fuchsias
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://purl.org/dc/terms/issued,1961
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.paddocking.tld/nonextraditable/achiever.html
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://swrc.ontoware.org/ontology#pages,46
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://xmlns.com/foaf/0.1/homepage,http://www.nonextraditable.tld/fuchsias/ritualization.html
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://purl.org/dc/elements/1.1/creator,_:b1745
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://localhost/vocabulary/bench/booktitle,rajas throttler nonextraditable
+http://localhost/publications/inprocs/Proceeding1/1961/Inproceeding26,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1961
+_:b1956,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b1956,http://xmlns.com/foaf/0.1/name,Elvio Wagnor
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://purl.org/dc/elements/1.1/title,consumerism ascertains dooming
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://purl.org/dc/terms/issued,1961
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.individualistic.tld/drawlier/ascertains.html
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://swrc.ontoware.org/ontology#pages,138
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://xmlns.com/foaf/0.1/homepage,http://www.drawlier.tld/dooming/enqueue.html
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://purl.org/dc/elements/1.1/creator,_:b1795
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://localhost/vocabulary/bench/booktitle,yielders consumerism drawlier
+http://localhost/publications/inprocs/Proceeding2/1961/Inproceeding53,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding2/1961
+_:b2036,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b2036,http://xmlns.com/foaf/0.1/name,AbdulQuddoos Mccallie
+http://localhost/publications/articles/Journal4/1962/Article102,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1962/Article102,http://purl.org/dc/elements/1.1/title,knittings rased ergotic
+http://localhost/publications/articles/Journal4/1962/Article102,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.tierces.tld/visions/rased.html
+http://localhost/publications/articles/Journal4/1962/Article102,http://swrc.ontoware.org/ontology#pages,143
+http://localhost/publications/articles/Journal4/1962/Article102,http://xmlns.com/foaf/0.1/homepage,http://www.visions.tld/ergotic/hayrack.html
+http://localhost/publications/articles/Journal4/1962/Article102,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1962
+http://localhost/publications/articles/Journal4/1962/Article102,http://purl.org/dc/elements/1.1/creator,_:b2270
+_:b2288,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b2288,http://xmlns.com/foaf/0.1/name,Yanire Holdridge
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://purl.org/dc/elements/1.1/title,sprucy babblers mobilize
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://purl.org/dc/terms/issued,1963
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.muckier.tld/hyperexcitable/babblers.html
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://swrc.ontoware.org/ontology#pages,13
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://xmlns.com/foaf/0.1/homepage,http://www.hyperexcitable.tld/mobilize/licencers.html
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://purl.org/dc/elements/1.1/creator,_:b2282
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://localhost/vocabulary/bench/booktitle,kronen sprucy hyperexcitable
+http://localhost/publications/inprocs/Proceeding1/1963/Inproceeding16,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1963
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://purl.org/dc/elements/1.1/title,predestinates dismantled architraves
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://purl.org/dc/terms/issued,1963
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.enamouring.tld/reconsigned/dismantled.html
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://swrc.ontoware.org/ontology#pages,109
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://xmlns.com/foaf/0.1/homepage,http://www.reconsigned.tld/architraves/motorboat.html
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://purl.org/dc/elements/1.1/creator,_:b2310
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://localhost/vocabulary/bench/booktitle,sapped predestinates reconsigned
+http://localhost/publications/inprocs/Proceeding2/1963/Inproceeding53,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding2/1963
+http://localhost/publications/articles/Journal4/1963/Article123,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1963/Article123,http://purl.org/dc/elements/1.1/title,evading ledges fomentation
+http://localhost/publications/articles/Journal4/1963/Article123,http://swrc.ontoware.org/ontology#pages,28
+http://localhost/publications/articles/Journal4/1963/Article123,http://xmlns.com/foaf/0.1/homepage,http://www.slicers.tld/fomentation/aerated.html
+http://localhost/publications/articles/Journal4/1963/Article123,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1963
+http://localhost/publications/articles/Journal4/1963/Article123,http://purl.org/dc/elements/1.1/creator,_:b2548
+http://localhost/publications/articles/Journal5/1963/Article157,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal5/1963/Article157,http://purl.org/dc/elements/1.1/title,shrined disproves satiated
+http://localhost/publications/articles/Journal5/1963/Article157,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.incendiarism.tld/infirms/disproves.html
+http://localhost/publications/articles/Journal5/1963/Article157,http://swrc.ontoware.org/ontology#pages,41
+http://localhost/publications/articles/Journal5/1963/Article157,http://xmlns.com/foaf/0.1/homepage,http://www.infirms.tld/satiated/prandial.html
+http://localhost/publications/articles/Journal5/1963/Article157,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal5/1963
+http://localhost/publications/articles/Journal5/1963/Article157,http://purl.org/dc/elements/1.1/creator,_:b2590
+http://localhost/publications/articles/Journal5/1963/Article172,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal5/1963/Article172,http://purl.org/dc/elements/1.1/title,splendor mirths oviparously
+http://localhost/publications/articles/Journal5/1963/Article172,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.feudalists.tld/quainter/mirths.html
+http://localhost/publications/articles/Journal5/1963/Article172,http://swrc.ontoware.org/ontology#pages,143
+http://localhost/publications/articles/Journal5/1963/Article172,http://xmlns.com/foaf/0.1/homepage,http://www.quainter.tld/oviparously/lessoned.html
+http://localhost/publications/articles/Journal5/1963/Article172,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal5/1963
+http://localhost/publications/articles/Journal5/1963/Article172,http://purl.org/dc/elements/1.1/creator,_:b2608
+http://localhost/publications/articles/Journal6/1963/Article186,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal6/1963/Article186,http://purl.org/dc/elements/1.1/title,pilotings conceptualist loamed
+http://localhost/publications/articles/Journal6/1963/Article186,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.counterinsurgent.tld/footboard/conceptualist.html
+http://localhost/publications/articles/Journal6/1963/Article186,http://swrc.ontoware.org/ontology#pages,65
+http://localhost/publications/articles/Journal6/1963/Article186,http://xmlns.com/foaf/0.1/homepage,http://www.footboard.tld/loamed/lollop.html
+http://localhost/publications/articles/Journal6/1963/Article186,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal6/1963
+http://localhost/publications/articles/Journal6/1963/Article186,http://purl.org/dc/elements/1.1/creator,_:b2627
+http://localhost/publications/articles/Journal6/1963/Article203,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal6/1963/Article203,http://purl.org/dc/elements/1.1/title,prescience webfeet dualistic
+http://localhost/publications/articles/Journal6/1963/Article203,http://swrc.ontoware.org/ontology#pages,107
+http://localhost/publications/articles/Journal6/1963/Article203,http://xmlns.com/foaf/0.1/homepage,http://www.casette.tld/dualistic/fanlights.html
+http://localhost/publications/articles/Journal6/1963/Article203,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal6/1963
+http://localhost/publications/articles/Journal6/1963/Article203,http://purl.org/dc/elements/1.1/creator,_:b2651
+http://localhost/publications/inprocs/Proceeding3/1963/Inproceeding101,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding3/1963/Inproceeding101,http://purl.org/dc/elements/1.1/title,permeated lymphs sandpit
+http://localhost/publications/inprocs/Proceeding3/1963/Inproceeding101,http://purl.org/dc/terms/issued,1963
+http://localhost/publications/inprocs/Proceeding3/1963/Inproceeding101,http://swrc.ontoware.org/ontology#pages,191
+http://localhost/publications/inprocs/Proceeding3/1963/Inproceeding101,http://xmlns.com/foaf/0.1/homepage,http://www.overrefinement.tld/sandpit/malinger.html
+http://localhost/publications/inprocs/Proceeding3/1963/Inproceeding101,http://purl.org/dc/elements/1.1/creator,_:b2337
+http://localhost/publications/inprocs/Proceeding3/1963/Inproceeding101,http://localhost/vocabulary/bench/booktitle,cookable overrefinement lymphs
+http://localhost/publications/inprocs/Proceeding3/1963/Inproceeding101,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding3/1963
+http://localhost/publications/articles/Journal7/1963/Article236,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal7/1963/Article236,http://purl.org/dc/elements/1.1/title,regathers profitable muskits
+http://localhost/publications/articles/Journal7/1963/Article236,http://swrc.ontoware.org/ontology#pages,46
+http://localhost/publications/articles/Journal7/1963/Article236,http://xmlns.com/foaf/0.1/homepage,http://www.aery.tld/muskits/piccalilli.html
+http://localhost/publications/articles/Journal7/1963/Article236,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal7/1963
+http://localhost/publications/articles/Journal7/1963/Article236,http://purl.org/dc/elements/1.1/creator,_:b2692
+http://localhost/publications/articles/Journal7/1963/Article268,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal7/1963/Article268,http://purl.org/dc/elements/1.1/title,pinked decoders rabidity
+http://localhost/publications/articles/Journal7/1963/Article268,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.invalidates.tld/boned/decoders.html
+http://localhost/publications/articles/Journal7/1963/Article268,http://xmlns.com/foaf/0.1/homepage,http://www.boned.tld/rabidity/pinfeathers.html
+http://localhost/publications/articles/Journal7/1963/Article268,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal7/1963
+http://localhost/publications/articles/Journal7/1963/Article268,http://purl.org/dc/elements/1.1/creator,_:b2728
+http://localhost/publications/articles/Journal7/1963/Article268,http://purl.org/dc/elements/1.1/creator,_:b2729
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://purl.org/dc/elements/1.1/title,tarweeds blacklisted unclench
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://purl.org/dc/terms/issued,1964
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.oxygenates.tld/reacceding/blacklisted.html
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://swrc.ontoware.org/ontology#pages,95
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://xmlns.com/foaf/0.1/homepage,http://www.reacceding.tld/unclench/amoebic.html
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://purl.org/dc/elements/1.1/creator,_:b2674
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://localhost/vocabulary/bench/booktitle,pouted tarweeds reacceding
+http://localhost/publications/inprocs/Proceeding1/1964/Inproceeding43,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1964
+_:b2808,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b2808,http://xmlns.com/foaf/0.1/name,Loretta Liddy
+_:b2877,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b2877,http://xmlns.com/foaf/0.1/name,Thyestes Traux
+_:b2973,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b2973,http://xmlns.com/foaf/0.1/name,Cisco Agtarap
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://purl.org/dc/elements/1.1/title,catafalques discourtesy wildernesses
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://purl.org/dc/terms/issued,1964
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.addictive.tld/pourboire/discourtesy.html
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://swrc.ontoware.org/ontology#pages,16
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://xmlns.com/foaf/0.1/homepage,http://www.pourboire.tld/wildernesses/amphitheater.html
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://purl.org/dc/elements/1.1/creator,_:b2711
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://purl.org/dc/elements/1.1/creator,_:b2712
+http://localhost/publications/inprocs/Proceeding3/1964/Inproceeding103,http://localhost/vocabulary/bench/booktitle,unwarier catafalques pourboire
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://purl.org/dc/elements/1.1/title,coerciveness scraggy anticancer
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://purl.org/dc/terms/issued,1964
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.canalizing.tld/exhaustless/scraggy.html
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://swrc.ontoware.org/ontology#pages,78
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://xmlns.com/foaf/0.1/homepage,http://www.exhaustless.tld/anticancer/foxes.html
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://purl.org/dc/elements/1.1/creator,_:b2762
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://localhost/vocabulary/bench/booktitle,ambiences coerciveness exhaustless
+http://localhost/publications/inprocs/Proceeding4/1964/Inproceeding145,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding4/1964
+_:b3125,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b3125,http://xmlns.com/foaf/0.1/name,Charmayne Hewgley
+http://localhost/publications/articles/Journal9/1964/Article311,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal9/1964/Article311,http://purl.org/dc/elements/1.1/title,gratefulness lorises cottonmouths
+http://localhost/publications/articles/Journal9/1964/Article311,http://swrc.ontoware.org/ontology#pages,107
+http://localhost/publications/articles/Journal9/1964/Article311,http://xmlns.com/foaf/0.1/homepage,http://www.basally.tld/cottonmouths/calipering.html
+http://localhost/publications/articles/Journal9/1964/Article311,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal9/1964
+http://localhost/publications/articles/Journal9/1964/Article311,http://purl.org/dc/elements/1.1/creator,_:b3147
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://purl.org/dc/elements/1.1/title,perceptually imposingly studhorse
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://purl.org/dc/terms/issued,1965
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.flauntingly.tld/monorails/imposingly.html
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://swrc.ontoware.org/ontology#pages,62
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://xmlns.com/foaf/0.1/homepage,http://www.monorails.tld/studhorse/strived.html
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://purl.org/dc/elements/1.1/creator,_:b3110
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://purl.org/dc/elements/1.1/creator,_:b3111
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://localhost/vocabulary/bench/booktitle,grecized perceptually monorails
+http://localhost/publications/inprocs/Proceeding1/1965/Inproceeding31,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1965
+http://localhost/publications/incolls/1965/Incollection2,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Incollection
+http://localhost/publications/incolls/1965/Incollection2,http://purl.org/dc/elements/1.1/title,abrogators pouting equilibrated
+http://localhost/publications/incolls/1965/Incollection2,http://purl.org/dc/terms/issued,1965
+http://localhost/publications/incolls/1965/Incollection2,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.flyable.tld/zouave/pouting.html
+http://localhost/publications/incolls/1965/Incollection2,http://swrc.ontoware.org/ontology#pages,173
+http://localhost/publications/incolls/1965/Incollection2,http://xmlns.com/foaf/0.1/homepage,http://www.zouave.tld/equilibrated/zymolysis.html
+http://localhost/publications/incolls/1965/Incollection2,http://purl.org/dc/elements/1.1/creator,_:b3248
+http://localhost/publications/incolls/1965/Incollection2,http://localhost/vocabulary/bench/booktitle,ennoblers abrogators zouave
+http://localhost/publications/inprocs/Proceeding2/1965/Inproceeding56,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding2/1965/Inproceeding56,http://purl.org/dc/elements/1.1/title,limewater resistors denarii
+http://localhost/publications/inprocs/Proceeding2/1965/Inproceeding56,http://purl.org/dc/terms/issued,1965
+http://localhost/publications/inprocs/Proceeding2/1965/Inproceeding56,http://swrc.ontoware.org/ontology#pages,179
+http://localhost/publications/inprocs/Proceeding2/1965/Inproceeding56,http://xmlns.com/foaf/0.1/homepage,http://www.sponging.tld/denarii/schmo.html
+http://localhost/publications/inprocs/Proceeding2/1965/Inproceeding56,http://purl.org/dc/elements/1.1/creator,_:b3125
+http://localhost/publications/inprocs/Proceeding2/1965/Inproceeding56,http://localhost/vocabulary/bench/booktitle,undisputed sponging resistors
+http://localhost/publications/inprocs/Proceeding2/1965/Inproceeding56,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding2/1965
+http://localhost/publications/articles/Journal4/1965/Article102,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1965/Article102,http://purl.org/dc/elements/1.1/title,uncoils prodigally elephantiasis
+http://localhost/publications/articles/Journal4/1965/Article102,http://swrc.ontoware.org/ontology#pages,49
+http://localhost/publications/articles/Journal4/1965/Article102,http://xmlns.com/foaf/0.1/homepage,http://www.semiprimitive.tld/elephantiasis/duplexing.html
+http://localhost/publications/articles/Journal4/1965/Article102,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1965
+http://localhost/publications/articles/Journal4/1965/Article102,http://purl.org/dc/elements/1.1/creator,_:b3252
+http://localhost/publications/articles/Journal4/1965/Article116,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1965/Article116,http://purl.org/dc/elements/1.1/title,retarded benefaction stunners
+http://localhost/publications/articles/Journal4/1965/Article116,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.emasculators.tld/accursedness/benefaction.html
+http://localhost/publications/articles/Journal4/1965/Article116,http://swrc.ontoware.org/ontology#pages,183
+http://localhost/publications/articles/Journal4/1965/Article116,http://xmlns.com/foaf/0.1/homepage,http://www.accursedness.tld/stunners/understudies.html
+http://localhost/publications/articles/Journal4/1965/Article116,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1965
+http://localhost/publications/articles/Journal4/1965/Article116,http://purl.org/dc/elements/1.1/creator,_:b3269
+http://localhost/publications/articles/Journal5/1965/Article140,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal5/1965/Article140,http://purl.org/dc/elements/1.1/title,alleger unended reflux
+http://localhost/publications/articles/Journal5/1965/Article140,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.mangrove.tld/glassfuls/unended.html
+http://localhost/publications/articles/Journal5/1965/Article140,http://swrc.ontoware.org/ontology#pages,46
+http://localhost/publications/articles/Journal5/1965/Article140,http://xmlns.com/foaf/0.1/homepage,http://www.glassfuls.tld/reflux/tacticians.html
+http://localhost/publications/articles/Journal5/1965/Article140,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal5/1965
+http://localhost/publications/articles/Journal5/1965/Article140,http://purl.org/dc/elements/1.1/creator,_:b3298
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://purl.org/dc/elements/1.1/title,geodesist concentrated boughs
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://purl.org/dc/terms/issued,1965
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.otolithic.tld/dingle/concentrated.html
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://swrc.ontoware.org/ontology#pages,84
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://xmlns.com/foaf/0.1/homepage,http://www.dingle.tld/boughs/cheroot.html
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://purl.org/dc/elements/1.1/creator,_:b2793
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://purl.org/dc/elements/1.1/creator,_:b2816
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://localhost/vocabulary/bench/booktitle,keypunchers geodesist dingle
+http://localhost/publications/inprocs/Proceeding3/1965/Inproceeding131,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding3/1965
+http://localhost/publications/articles/Journal6/1965/Article215,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal6/1965/Article215,http://purl.org/dc/elements/1.1/title,youngling expropriated offended
+http://localhost/publications/articles/Journal6/1965/Article215,http://swrc.ontoware.org/ontology#pages,110
+http://localhost/publications/articles/Journal6/1965/Article215,http://xmlns.com/foaf/0.1/homepage,http://www.semiotic.tld/offended/duelled.html
+http://localhost/publications/articles/Journal6/1965/Article215,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal6/1965
+http://localhost/publications/articles/Journal6/1965/Article215,http://purl.org/dc/elements/1.1/creator,_:b3399
+http://localhost/publications/articles/Journal6/1965/Article215,http://purl.org/dc/elements/1.1/creator,_:b3400
+http://localhost/publications/articles/Journal6/1965/Article227,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal6/1965/Article227,http://purl.org/dc/elements/1.1/title,unimpeachable excising nailer
+http://localhost/publications/articles/Journal6/1965/Article227,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.brattish.tld/romancing/excising.html
+http://localhost/publications/articles/Journal6/1965/Article227,http://swrc.ontoware.org/ontology#pages,159
+http://localhost/publications/articles/Journal6/1965/Article227,http://xmlns.com/foaf/0.1/homepage,http://www.romancing.tld/nailer/quoits.html
+http://localhost/publications/articles/Journal6/1965/Article227,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal6/1965
+http://localhost/publications/articles/Journal6/1965/Article227,http://purl.org/dc/elements/1.1/creator,_:b3416
+_:b3485,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b3485,http://xmlns.com/foaf/0.1/name,Raakaan Stockton
+_:b3515,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b3515,http://xmlns.com/foaf/0.1/name,Awn Rataj
+http://localhost/publications/articles/Journal9/1965/Article332,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal9/1965/Article332,http://purl.org/dc/elements/1.1/title,caffeins chamoising manchus
+http://localhost/publications/articles/Journal9/1965/Article332,http://swrc.ontoware.org/ontology#pages,69
+http://localhost/publications/articles/Journal9/1965/Article332,http://xmlns.com/foaf/0.1/homepage,http://www.couldest.tld/manchus/enlightenment.html
+http://localhost/publications/articles/Journal9/1965/Article332,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal9/1965
+http://localhost/publications/articles/Journal9/1965/Article332,http://purl.org/dc/elements/1.1/creator,_:b3561
+http://localhost/publications/articles/Journal9/1965/Article332,http://purl.org/dc/elements/1.1/creator,_:b3562
+http://localhost/publications/articles/Journal10/1965/Article351,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal10/1965/Article351,http://purl.org/dc/elements/1.1/title,windpipe destitution conditionals
+http://localhost/publications/articles/Journal10/1965/Article351,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.binds.tld/tootles/destitution.html
+http://localhost/publications/articles/Journal10/1965/Article351,http://xmlns.com/foaf/0.1/homepage,http://www.tootles.tld/conditionals/twelves.html
+http://localhost/publications/articles/Journal10/1965/Article351,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal10/1965
+http://localhost/publications/articles/Journal10/1965/Article351,http://purl.org/dc/elements/1.1/creator,_:b3591
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://purl.org/dc/elements/1.1/title,regurgitation unswept bereaves
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://purl.org/dc/terms/issued,1966
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.abettals.tld/contriving/unswept.html
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://swrc.ontoware.org/ontology#pages,9
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://xmlns.com/foaf/0.1/homepage,http://www.contriving.tld/bereaves/cangues.html
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://purl.org/dc/elements/1.1/creator,_:b3569
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://localhost/vocabulary/bench/booktitle,guts regurgitation contriving
+http://localhost/publications/inprocs/Proceeding1/1966/Inproceeding16,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1966
+http://localhost/publications/articles/Journal1/1966/Article24,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal1/1966/Article24,http://purl.org/dc/elements/1.1/title,diphtherian emaciation monologues
+http://localhost/publications/articles/Journal1/1966/Article24,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.hundredweight.tld/tzarism/emaciation.html
+http://localhost/publications/articles/Journal1/1966/Article24,http://swrc.ontoware.org/ontology#pages,191
+http://localhost/publications/articles/Journal1/1966/Article24,http://xmlns.com/foaf/0.1/homepage,http://www.tzarism.tld/monologues/acknowledger.html
+http://localhost/publications/articles/Journal1/1966/Article24,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal1/1966
+http://localhost/publications/articles/Journal1/1966/Article24,http://purl.org/dc/elements/1.1/creator,_:b3570
+http://localhost/publications/articles/Journal3/1966/Article96,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal3/1966/Article96,http://purl.org/dc/elements/1.1/title,bedrug nephron trothed
+http://localhost/publications/articles/Journal3/1966/Article96,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.senecas.tld/smiths/nephron.html
+http://localhost/publications/articles/Journal3/1966/Article96,http://xmlns.com/foaf/0.1/homepage,http://www.smiths.tld/trothed/cervicitis.html
+http://localhost/publications/articles/Journal3/1966/Article96,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal3/1966
+http://localhost/publications/articles/Journal3/1966/Article96,http://purl.org/dc/elements/1.1/creator,_:b3687
+http://localhost/publications/articles/Journal4/1966/Article127,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1966/Article127,http://purl.org/dc/elements/1.1/title,fallouts procathedrals eductions
+http://localhost/publications/articles/Journal4/1966/Article127,http://localhost/vocabulary/bench/cdrom,http://www.declassifications.tld/fallouts/detracts.html
+http://localhost/publications/articles/Journal4/1966/Article127,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.precalculated.tld/detracts/procathedrals.html
+http://localhost/publications/articles/Journal4/1966/Article127,http://swrc.ontoware.org/ontology#note,barehead monkeying dallier headhunts chagrined campaigned clammier mea glosses sottishly trombones
+http://localhost/publications/articles/Journal4/1966/Article127,http://swrc.ontoware.org/ontology#pages,50
+http://localhost/publications/articles/Journal4/1966/Article127,http://xmlns.com/foaf/0.1/homepage,http://www.detracts.tld/eductions/carver.html
+http://localhost/publications/articles/Journal4/1966/Article127,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1966
+http://localhost/publications/articles/Journal4/1966/Article127,http://purl.org/dc/elements/1.1/creator,_:b3731
+_:b3752,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b3752,http://xmlns.com/foaf/0.1/name,Dyvynarth Pelc
+_:b3906,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b3906,http://xmlns.com/foaf/0.1/name,Vaughan Autullo
+_:b4003,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4003,http://xmlns.com/foaf/0.1/name,Rodger Merrihew
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://purl.org/dc/elements/1.1/title,mangy mineralized uprooters
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://purl.org/dc/terms/issued,1966
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.pockmarked.tld/oldsters/mineralized.html
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://swrc.ontoware.org/ontology#pages,33
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://xmlns.com/foaf/0.1/homepage,http://www.oldsters.tld/uprooters/reechoed.html
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://purl.org/dc/elements/1.1/creator,_:b3510
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://localhost/vocabulary/bench/booktitle,rasing mangy oldsters
+http://localhost/publications/inprocs/Proceeding5/1966/Inproceeding206,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding5/1966
+_:b4103,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4103,http://xmlns.com/foaf/0.1/name,Veronica Thurmond
+http://localhost/publications/articles/Journal1/1967/Article3,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal1/1967/Article3,http://purl.org/dc/elements/1.1/title,progs bints doggy
+http://localhost/publications/articles/Journal1/1967/Article3,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.stiffest.tld/sawers/bints.html
+http://localhost/publications/articles/Journal1/1967/Article3,http://swrc.ontoware.org/ontology#pages,41
+http://localhost/publications/articles/Journal1/1967/Article3,http://xmlns.com/foaf/0.1/homepage,http://www.sawers.tld/doggy/nankeen.html
+http://localhost/publications/articles/Journal1/1967/Article3,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal1/1967
+http://localhost/publications/articles/Journal1/1967/Article3,http://purl.org/dc/elements/1.1/creator,_:b3733
+http://localhost/publications/articles/Journal3/1967/Article96,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal3/1967/Article96,http://purl.org/dc/elements/1.1/title,thieveries dowse swooper
+http://localhost/publications/articles/Journal3/1967/Article96,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.tropically.tld/stalemates/dowse.html
+http://localhost/publications/articles/Journal3/1967/Article96,http://swrc.ontoware.org/ontology#pages,145
+http://localhost/publications/articles/Journal3/1967/Article96,http://xmlns.com/foaf/0.1/homepage,http://www.stalemates.tld/swooper/covetously.html
+http://localhost/publications/articles/Journal3/1967/Article96,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal3/1967
+http://localhost/publications/articles/Journal3/1967/Article96,http://purl.org/dc/elements/1.1/creator,_:b4174
+http://localhost/publications/articles/Journal4/1967/Article129,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1967/Article129,http://purl.org/dc/elements/1.1/title,consortiums pedicurist bigmouths
+http://localhost/publications/articles/Journal4/1967/Article129,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.unreservedly.tld/anatomical/pedicurist.html
+http://localhost/publications/articles/Journal4/1967/Article129,http://swrc.ontoware.org/ontology#pages,142
+http://localhost/publications/articles/Journal4/1967/Article129,http://xmlns.com/foaf/0.1/homepage,http://www.anatomical.tld/bigmouths/overfly.html
+http://localhost/publications/articles/Journal4/1967/Article129,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1967
+http://localhost/publications/articles/Journal4/1967/Article129,http://purl.org/dc/elements/1.1/creator,_:b4216
+_:b4216,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4216,http://xmlns.com/foaf/0.1/name,Aretina Tarwater
+_:b4218,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4218,http://xmlns.com/foaf/0.1/name,Emerald Dwornik
+http://localhost/publications/articles/Journal5/1967/Article175,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal5/1967/Article175,http://purl.org/dc/elements/1.1/title,speleology treated reticulation
+http://localhost/publications/articles/Journal5/1967/Article175,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.expectorants.tld/aqueducts/treated.html
+http://localhost/publications/articles/Journal5/1967/Article175,http://swrc.ontoware.org/ontology#note,phylum pervertedness gifted fingerprints alleviating indwells aboral embroiling ponchos concluder debouching
+http://localhost/publications/articles/Journal5/1967/Article175,http://swrc.ontoware.org/ontology#pages,60
+http://localhost/publications/articles/Journal5/1967/Article175,http://xmlns.com/foaf/0.1/homepage,http://www.aqueducts.tld/reticulation/asyla.html
+http://localhost/publications/articles/Journal5/1967/Article175,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal5/1967
+http://localhost/publications/articles/Journal5/1967/Article175,http://purl.org/dc/elements/1.1/creator,_:b4274
+_:b4275,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4275,http://xmlns.com/foaf/0.1/name,Viridiana Zenker
+_:b4331,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4331,http://xmlns.com/foaf/0.1/name,Khianna Nau
+_:b4384,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4384,http://xmlns.com/foaf/0.1/name,Sauveur Boeving
+http://localhost/publications/articles/Journal7/1967/Article273,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal7/1967/Article273,http://purl.org/dc/elements/1.1/title,brownouts legalize comportment
+http://localhost/publications/articles/Journal7/1967/Article273,http://swrc.ontoware.org/ontology#pages,152
+http://localhost/publications/articles/Journal7/1967/Article273,http://xmlns.com/foaf/0.1/homepage,http://www.prophases.tld/comportment/printed.html
+http://localhost/publications/articles/Journal7/1967/Article273,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal7/1967
+http://localhost/publications/articles/Journal7/1967/Article273,http://purl.org/dc/elements/1.1/creator,_:b4391
+_:b4435,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4435,http://xmlns.com/foaf/0.1/name,Aikaterini Cundick
+_:b4515,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4515,http://xmlns.com/foaf/0.1/name,Domeng Bascombe
+http://localhost/publications/articles/Journal10/1967/Article380,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal10/1967/Article380,http://purl.org/dc/elements/1.1/title,alaskans cumbering initiatives
+http://localhost/publications/articles/Journal10/1967/Article380,http://swrc.ontoware.org/ontology#pages,167
+http://localhost/publications/articles/Journal10/1967/Article380,http://xmlns.com/foaf/0.1/homepage,http://www.kakogenic.tld/initiatives/pendents.html
+http://localhost/publications/articles/Journal10/1967/Article380,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal10/1967
+http://localhost/publications/articles/Journal10/1967/Article380,http://purl.org/dc/elements/1.1/creator,_:b4525
+_:b4583,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4583,http://xmlns.com/foaf/0.1/name,Tobei Arm
+http://localhost/publications/articles/Journal2/1968/Article57,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal2/1968/Article57,http://purl.org/dc/elements/1.1/title,marbleized conventionality varlet
+http://localhost/publications/articles/Journal2/1968/Article57,http://swrc.ontoware.org/ontology#pages,166
+http://localhost/publications/articles/Journal2/1968/Article57,http://xmlns.com/foaf/0.1/homepage,http://www.speedway.tld/varlet/elegize.html
+http://localhost/publications/articles/Journal2/1968/Article57,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal2/1968
+http://localhost/publications/articles/Journal2/1968/Article57,http://purl.org/dc/elements/1.1/creator,_:b4374
+http://localhost/publications/articles/Journal2/1968/Article57,http://purl.org/dc/elements/1.1/creator,_:b4375
+http://localhost/publications/articles/Journal2/1968/Article72,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal2/1968/Article72,http://purl.org/dc/elements/1.1/title,sybaritic loadstar breathiest
+http://localhost/publications/articles/Journal2/1968/Article72,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.conditionality.tld/squidded/loadstar.html
+http://localhost/publications/articles/Journal2/1968/Article72,http://swrc.ontoware.org/ontology#pages,96
+http://localhost/publications/articles/Journal2/1968/Article72,http://xmlns.com/foaf/0.1/homepage,http://www.squidded.tld/breathiest/provocateurs.html
+http://localhost/publications/articles/Journal2/1968/Article72,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal2/1968
+http://localhost/publications/articles/Journal2/1968/Article72,http://purl.org/dc/elements/1.1/creator,_:b4701
+http://localhost/publications/articles/Journal3/1968/Article77,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal3/1968/Article77,http://purl.org/dc/elements/1.1/title,posturer jabbing appalling
+http://localhost/publications/articles/Journal3/1968/Article77,http://swrc.ontoware.org/ontology#pages,16
+http://localhost/publications/articles/Journal3/1968/Article77,http://xmlns.com/foaf/0.1/homepage,http://www.stabilize.tld/appalling/scrimmaging.html
+http://localhost/publications/articles/Journal3/1968/Article77,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal3/1968
+http://localhost/publications/articles/Journal3/1968/Article77,http://purl.org/dc/elements/1.1/creator,_:b4706
+_:b4791,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4791,http://xmlns.com/foaf/0.1/name,Gilla Naborg
+http://localhost/publications/articles/Journal7/1968/Article268,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal7/1968/Article268,http://purl.org/dc/elements/1.1/title,tufaceous pryer imbalmer
+http://localhost/publications/articles/Journal7/1968/Article268,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.dyslexia.tld/nephews/pryer.html
+http://localhost/publications/articles/Journal7/1968/Article268,http://swrc.ontoware.org/ontology#pages,90
+http://localhost/publications/articles/Journal7/1968/Article268,http://xmlns.com/foaf/0.1/homepage,http://www.nephews.tld/imbalmer/contently.html
+http://localhost/publications/articles/Journal7/1968/Article268,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal7/1968
+http://localhost/publications/articles/Journal7/1968/Article268,http://purl.org/dc/elements/1.1/creator,_:b4953
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://purl.org/dc/elements/1.1/title,tameable garnishes rungs
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://purl.org/dc/terms/issued,1968
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.perdy.tld/showup/garnishes.html
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://swrc.ontoware.org/ontology#pages,94
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://xmlns.com/foaf/0.1/homepage,http://www.showup.tld/rungs/endocrinologic.html
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://purl.org/dc/elements/1.1/creator,_:b4637
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://purl.org/dc/elements/1.1/creator,_:b4638
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://localhost/vocabulary/bench/booktitle,unfits tameable showup
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding123,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding4/1968
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://purl.org/dc/elements/1.1/title,mongeese restudied blimey
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://purl.org/dc/terms/issued,1968
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.legit.tld/whizzer/restudied.html
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://swrc.ontoware.org/ontology#pages,64
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://xmlns.com/foaf/0.1/homepage,http://www.whizzer.tld/blimey/workwoman.html
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://purl.org/dc/elements/1.1/creator,_:b4642
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://localhost/vocabulary/bench/booktitle,magniloquence mongeese whizzer
+http://localhost/publications/inprocs/Proceeding4/1968/Inproceeding131,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding4/1968
+_:b4997,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b4997,http://xmlns.com/foaf/0.1/name,Nerthach Vuono
+_:b5003,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5003,http://xmlns.com/foaf/0.1/name,Seniang Parrillo
+http://localhost/publications/articles/Journal9/1968/Article356,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal9/1968/Article356,http://purl.org/dc/elements/1.1/title,cleans pressrun lippers
+http://localhost/publications/articles/Journal9/1968/Article356,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.semisweet.tld/marbled/pressrun.html
+http://localhost/publications/articles/Journal9/1968/Article356,http://swrc.ontoware.org/ontology#pages,148
+http://localhost/publications/articles/Journal9/1968/Article356,http://xmlns.com/foaf/0.1/homepage,http://www.marbled.tld/lippers/resulting.html
+http://localhost/publications/articles/Journal9/1968/Article356,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal9/1968
+http://localhost/publications/articles/Journal9/1968/Article356,http://purl.org/dc/elements/1.1/creator,_:b5074
+http://localhost/publications/inprocs/Proceeding5/1968/Inproceeding180,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding5/1968/Inproceeding180,http://purl.org/dc/elements/1.1/title,redoubles humbly hawkbill
+http://localhost/publications/inprocs/Proceeding5/1968/Inproceeding180,http://purl.org/dc/terms/issued,1968
+http://localhost/publications/inprocs/Proceeding5/1968/Inproceeding180,http://swrc.ontoware.org/ontology#pages,76
+http://localhost/publications/inprocs/Proceeding5/1968/Inproceeding180,http://xmlns.com/foaf/0.1/homepage,http://www.howdah.tld/hawkbill/histolysis.html
+http://localhost/publications/inprocs/Proceeding5/1968/Inproceeding180,http://purl.org/dc/elements/1.1/creator,_:b4673
+http://localhost/publications/inprocs/Proceeding5/1968/Inproceeding180,http://localhost/vocabulary/bench/booktitle,vigours howdah humbly
+http://localhost/publications/inprocs/Proceeding5/1968/Inproceeding180,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding5/1968
+http://localhost/publications/articles/Journal10/1968/Article381,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal10/1968/Article381,http://purl.org/dc/elements/1.1/title,treads wringer faddier
+http://localhost/publications/articles/Journal10/1968/Article381,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.ruleless.tld/pinged/wringer.html
+http://localhost/publications/articles/Journal10/1968/Article381,http://swrc.ontoware.org/ontology#pages,123
+http://localhost/publications/articles/Journal10/1968/Article381,http://xmlns.com/foaf/0.1/homepage,http://www.pinged.tld/faddier/tractive.html
+http://localhost/publications/articles/Journal10/1968/Article381,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal10/1968
+http://localhost/publications/articles/Journal10/1968/Article381,http://purl.org/dc/elements/1.1/creator,_:b5102
+http://localhost/publications/articles/Journal10/1968/Article381,http://purl.org/dc/elements/1.1/creator,_:b5103
+_:b5139,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5139,http://xmlns.com/foaf/0.1/name,Elmar Okrent
+_:b5207,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5207,http://xmlns.com/foaf/0.1/name,Zebadiah Gansert
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://purl.org/dc/elements/1.1/title,buttonholing noninflectional actiniums
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://purl.org/dc/terms/issued,1968
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.cheesecloths.tld/noosers/noninflectional.html
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://swrc.ontoware.org/ontology#pages,189
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://xmlns.com/foaf/0.1/homepage,http://www.noosers.tld/actiniums/slobs.html
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://purl.org/dc/elements/1.1/creator,_:b4199
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://localhost/vocabulary/bench/booktitle,dissipaters buttonholing noosers
+http://localhost/publications/inprocs/Proceeding6/1968/Inproceeding204,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding6/1968
+http://localhost/publications/articles/Journal12/1968/Article472,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal12/1968/Article472,http://purl.org/dc/elements/1.1/title,spathic infrequence leninists
+http://localhost/publications/articles/Journal12/1968/Article472,http://swrc.ontoware.org/ontology#pages,73
+http://localhost/publications/articles/Journal12/1968/Article472,http://xmlns.com/foaf/0.1/homepage,http://www.fawningly.tld/leninists/demineralized.html
+http://localhost/publications/articles/Journal12/1968/Article472,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal12/1968
+http://localhost/publications/articles/Journal12/1968/Article472,http://purl.org/dc/elements/1.1/creator,_:b5223
+http://localhost/publications/articles/Journal12/1968/Article472,http://purl.org/dc/elements/1.1/creator,_:b5224
+_:b5319,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5319,http://xmlns.com/foaf/0.1/name,Philippus Puccio
+_:b5333,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5333,http://xmlns.com/foaf/0.1/name,Musaaid Alampi
+http://localhost/publications/articles/Journal3/1969/Article91,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal3/1969/Article91,http://purl.org/dc/elements/1.1/title,grapevines yardarm whiskey
+http://localhost/publications/articles/Journal3/1969/Article91,http://swrc.ontoware.org/ontology#pages,185
+http://localhost/publications/articles/Journal3/1969/Article91,http://xmlns.com/foaf/0.1/homepage,http://www.terrapins.tld/whiskey/unneedfully.html
+http://localhost/publications/articles/Journal3/1969/Article91,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal3/1969
+http://localhost/publications/articles/Journal3/1969/Article91,http://purl.org/dc/elements/1.1/creator,_:b5365
+_:b5420,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5420,http://xmlns.com/foaf/0.1/name,Isocrates Bakeley
+http://localhost/publications/articles/Journal4/1969/Article167,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1969/Article167,http://purl.org/dc/elements/1.1/title,enchantments kilty scrawliest
+http://localhost/publications/articles/Journal4/1969/Article167,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.hairband.tld/toyon/kilty.html
+http://localhost/publications/articles/Journal4/1969/Article167,http://swrc.ontoware.org/ontology#pages,19
+http://localhost/publications/articles/Journal4/1969/Article167,http://xmlns.com/foaf/0.1/homepage,http://www.toyon.tld/scrawliest/faut.html
+http://localhost/publications/articles/Journal4/1969/Article167,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1969
+http://localhost/publications/articles/Journal4/1969/Article167,http://purl.org/dc/elements/1.1/creator,_:b5462
+_:b5570,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5570,http://xmlns.com/foaf/0.1/name,Chanise Bourdeau
+http://localhost/publications/articles/Journal9/1969/Article315,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal9/1969/Article315,http://purl.org/dc/elements/1.1/title,dottily reavowing bleeder
+http://localhost/publications/articles/Journal9/1969/Article315,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.filberts.tld/promiscuously/reavowing.html
+http://localhost/publications/articles/Journal9/1969/Article315,http://swrc.ontoware.org/ontology#pages,167
+http://localhost/publications/articles/Journal9/1969/Article315,http://xmlns.com/foaf/0.1/homepage,http://www.promiscuously.tld/bleeder/jettied.html
+http://localhost/publications/articles/Journal9/1969/Article315,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal9/1969
+http://localhost/publications/articles/Journal9/1969/Article315,http://purl.org/dc/elements/1.1/creator,_:b5653
+http://localhost/publications/articles/Journal9/1969/Article319,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal9/1969/Article319,http://purl.org/dc/elements/1.1/title,neophytes butting manufacturable
+http://localhost/publications/articles/Journal9/1969/Article319,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.dissipator.tld/aqueously/butting.html
+http://localhost/publications/articles/Journal9/1969/Article319,http://swrc.ontoware.org/ontology#pages,106
+http://localhost/publications/articles/Journal9/1969/Article319,http://xmlns.com/foaf/0.1/homepage,http://www.aqueously.tld/manufacturable/hoggish.html
+http://localhost/publications/articles/Journal9/1969/Article319,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal9/1969
+http://localhost/publications/articles/Journal9/1969/Article319,http://purl.org/dc/elements/1.1/creator,_:b5657
+http://localhost/publications/articles/Journal10/1969/Article368,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal10/1969/Article368,http://purl.org/dc/elements/1.1/title,biconvex pourers reenlists
+http://localhost/publications/articles/Journal10/1969/Article368,http://swrc.ontoware.org/ontology#pages,6
+http://localhost/publications/articles/Journal10/1969/Article368,http://xmlns.com/foaf/0.1/homepage,http://www.soothsaying.tld/reenlists/legalistically.html
+http://localhost/publications/articles/Journal10/1969/Article368,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal10/1969
+http://localhost/publications/articles/Journal10/1969/Article368,http://purl.org/dc/elements/1.1/creator,_:b5714
+_:b5735,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5735,http://xmlns.com/foaf/0.1/name,Paolina Mikolon
+http://localhost/publications/inprocs/Proceeding6/1969/Inproceeding248,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding6/1969/Inproceeding248,http://purl.org/dc/elements/1.1/title,revitalizes bankable hypercritically
+http://localhost/publications/inprocs/Proceeding6/1969/Inproceeding248,http://purl.org/dc/terms/issued,1969
+http://localhost/publications/inprocs/Proceeding6/1969/Inproceeding248,http://swrc.ontoware.org/ontology#pages,141
+http://localhost/publications/inprocs/Proceeding6/1969/Inproceeding248,http://xmlns.com/foaf/0.1/homepage,http://www.androgen.tld/hypercritically/antipathetic.html
+http://localhost/publications/inprocs/Proceeding6/1969/Inproceeding248,http://purl.org/dc/elements/1.1/creator,_:b4873
+http://localhost/publications/inprocs/Proceeding6/1969/Inproceeding248,http://localhost/vocabulary/bench/booktitle,beachcombers androgen bankable
+http://localhost/publications/inprocs/Proceeding6/1969/Inproceeding248,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding6/1969
+http://localhost/publications/articles/Journal12/1969/Article431,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal12/1969/Article431,http://purl.org/dc/elements/1.1/title,eighteenths barometry thickens
+http://localhost/publications/articles/Journal12/1969/Article431,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.atonable.tld/fourflushers/barometry.html
+http://localhost/publications/articles/Journal12/1969/Article431,http://swrc.ontoware.org/ontology#pages,3
+http://localhost/publications/articles/Journal12/1969/Article431,http://xmlns.com/foaf/0.1/homepage,http://www.fourflushers.tld/thickens/acidified.html
+http://localhost/publications/articles/Journal12/1969/Article431,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal12/1969
+http://localhost/publications/articles/Journal12/1969/Article431,http://purl.org/dc/elements/1.1/creator,_:b5796
+http://localhost/publications/articles/Journal12/1969/Article431,http://purl.org/dc/elements/1.1/creator,_:b5797
+_:b5819,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5819,http://xmlns.com/foaf/0.1/name,Colette Wentzell
+http://localhost/publications/articles/Journal13/1969/Article499,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal13/1969/Article499,http://purl.org/dc/elements/1.1/title,reprobing scupper kirkmen
+http://localhost/publications/articles/Journal13/1969/Article499,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.mournfulness.tld/gestapos/scupper.html
+http://localhost/publications/articles/Journal13/1969/Article499,http://swrc.ontoware.org/ontology#pages,84
+http://localhost/publications/articles/Journal13/1969/Article499,http://xmlns.com/foaf/0.1/homepage,http://www.gestapos.tld/kirkmen/elderly.html
+http://localhost/publications/articles/Journal13/1969/Article499,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal13/1969
+http://localhost/publications/articles/Journal13/1969/Article499,http://purl.org/dc/elements/1.1/creator,_:b5881
+http://localhost/publications/articles/Journal13/1969/Article499,http://purl.org/dc/elements/1.1/creator,_:b5882
+_:b5909,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5909,http://xmlns.com/foaf/0.1/name,Qoli Yarosh
+_:b5948,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5948,http://xmlns.com/foaf/0.1/name,Ashqar Lovenduski
+_:b5953,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b5953,http://xmlns.com/foaf/0.1/name,Julienne Chriss
+http://localhost/publications/articles/Journal15/1969/Article561,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal15/1969/Article561,http://purl.org/dc/elements/1.1/title,latherer inches epithalamium
+http://localhost/publications/articles/Journal15/1969/Article561,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.bitable.tld/arachnids/inches.html
+http://localhost/publications/articles/Journal15/1969/Article561,http://swrc.ontoware.org/ontology#pages,20
+http://localhost/publications/articles/Journal15/1969/Article561,http://xmlns.com/foaf/0.1/homepage,http://www.arachnids.tld/epithalamium/unsighting.html
+http://localhost/publications/articles/Journal15/1969/Article561,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal15/1969
+http://localhost/publications/articles/Journal15/1969/Article561,http://purl.org/dc/elements/1.1/creator,_:b5958
+_:b6005,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6005,http://xmlns.com/foaf/0.1/name,Faarooq Lindfors
+_:b6091,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6091,http://xmlns.com/foaf/0.1/name,Marnix Hagadone
+_:b6161,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6161,http://xmlns.com/foaf/0.1/name,Evan Arbolida
+_:b6213,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6213,http://xmlns.com/foaf/0.1/name,Gweir Lambertson
+_:b6238,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6238,http://xmlns.com/foaf/0.1/name,Sirajuddeen Shryock
+_:b6265,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6265,http://xmlns.com/foaf/0.1/name,Paraskova Hodum
+http://localhost/publications/articles/Journal4/1970/Article150,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1970/Article150,http://purl.org/dc/elements/1.1/title,quadruplicates creepily adroitness
+http://localhost/publications/articles/Journal4/1970/Article150,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.smudgily.tld/kinghoods/creepily.html
+http://localhost/publications/articles/Journal4/1970/Article150,http://swrc.ontoware.org/ontology#pages,180
+http://localhost/publications/articles/Journal4/1970/Article150,http://xmlns.com/foaf/0.1/homepage,http://www.kinghoods.tld/adroitness/constructed.html
+http://localhost/publications/articles/Journal4/1970/Article150,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1970
+http://localhost/publications/articles/Journal4/1970/Article150,http://purl.org/dc/elements/1.1/creator,_:b6290
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://purl.org/dc/elements/1.1/title,homespuns contentedness spiniest
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://purl.org/dc/terms/issued,1970
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://localhost/vocabulary/bench/cdrom,http://www.sandburrs.tld/homespuns/ironies.html
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.panoramas.tld/ironies/contentedness.html
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://swrc.ontoware.org/ontology#pages,164
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://xmlns.com/foaf/0.1/homepage,http://www.ironies.tld/spiniest/lenses.html
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://purl.org/dc/elements/1.1/creator,_:b5760
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://purl.org/dc/elements/1.1/creator,_:b5762
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://localhost/vocabulary/bench/booktitle,ogling panoramas homespuns
+http://localhost/publications/inprocs/Proceeding3/1970/Inproceeding107,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding3/1970
+_:b6372,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6372,http://xmlns.com/foaf/0.1/name,Steffon Bottenfield
+_:b6384,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6384,http://xmlns.com/foaf/0.1/name,Arnaldo Pusateri
+http://localhost/publications/articles/Journal7/1970/Article231,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal7/1970/Article231,http://purl.org/dc/elements/1.1/title,supersonically aliened soleplate
+http://localhost/publications/articles/Journal7/1970/Article231,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.whoring.tld/lividness/aliened.html
+http://localhost/publications/articles/Journal7/1970/Article231,http://swrc.ontoware.org/ontology#pages,95
+http://localhost/publications/articles/Journal7/1970/Article231,http://xmlns.com/foaf/0.1/homepage,http://www.lividness.tld/soleplate/pestled.html
+http://localhost/publications/articles/Journal7/1970/Article231,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal7/1970
+http://localhost/publications/articles/Journal7/1970/Article231,http://purl.org/dc/elements/1.1/creator,_:b6408
+http://localhost/publications/articles/Journal7/1970/Article231,http://purl.org/dc/elements/1.1/creator,_:b6409
+http://localhost/publications/articles/Journal7/1970/Article233,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal7/1970/Article233,http://purl.org/dc/elements/1.1/title,disuse menstruated abating
+http://localhost/publications/articles/Journal7/1970/Article233,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.creaks.tld/dodderers/menstruated.html
+http://localhost/publications/articles/Journal7/1970/Article233,http://swrc.ontoware.org/ontology#pages,34
+http://localhost/publications/articles/Journal7/1970/Article233,http://xmlns.com/foaf/0.1/homepage,http://www.dodderers.tld/abating/cussedly.html
+http://localhost/publications/articles/Journal7/1970/Article233,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal7/1970
+http://localhost/publications/articles/Journal7/1970/Article233,http://purl.org/dc/elements/1.1/creator,_:b6411
+http://localhost/publications/articles/Journal9/1970/Article308,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal9/1970/Article308,http://purl.org/dc/elements/1.1/title,rescheduled demodulated quietude
+http://localhost/publications/articles/Journal9/1970/Article308,http://swrc.ontoware.org/ontology#pages,152
+http://localhost/publications/articles/Journal9/1970/Article308,http://xmlns.com/foaf/0.1/homepage,http://www.unfilial.tld/quietude/processional.html
+http://localhost/publications/articles/Journal9/1970/Article308,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal9/1970
+http://localhost/publications/articles/Journal9/1970/Article308,http://purl.org/dc/elements/1.1/creator,_:b6525
+_:b6526,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6526,http://xmlns.com/foaf/0.1/name,Fedosya Azeem
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://purl.org/dc/elements/1.1/title,possessiveness calor corvet
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://purl.org/dc/terms/issued,1970
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.ransacks.tld/kart/calor.html
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://swrc.ontoware.org/ontology#pages,145
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://xmlns.com/foaf/0.1/homepage,http://www.kart.tld/corvet/verbless.html
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://purl.org/dc/elements/1.1/creator,_:b5830
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://localhost/vocabulary/bench/booktitle,locoisms possessiveness kart
+http://localhost/publications/inprocs/Proceeding5/1970/Inproceeding160,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding5/1970
+_:b6586,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6586,http://xmlns.com/foaf/0.1/name,Temina Bumpus
+http://localhost/publications/articles/Journal11/1970/Article377,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal11/1970/Article377,http://purl.org/dc/elements/1.1/title,symbols microphotographic postulating
+http://localhost/publications/articles/Journal11/1970/Article377,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.blankness.tld/scarers/microphotographic.html
+http://localhost/publications/articles/Journal11/1970/Article377,http://swrc.ontoware.org/ontology#pages,123
+http://localhost/publications/articles/Journal11/1970/Article377,http://xmlns.com/foaf/0.1/homepage,http://www.scarers.tld/postulating/wrasses.html
+http://localhost/publications/articles/Journal11/1970/Article377,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal11/1970
+http://localhost/publications/articles/Journal11/1970/Article377,http://purl.org/dc/elements/1.1/creator,_:b6626
+_:b6677,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6677,http://xmlns.com/foaf/0.1/name,Alberto Surridge
+http://localhost/publications/articles/Journal13/1970/Article437,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal13/1970/Article437,http://purl.org/dc/elements/1.1/title,associates backpacking ornerier
+http://localhost/publications/articles/Journal13/1970/Article437,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.canned.tld/conscripted/backpacking.html
+http://localhost/publications/articles/Journal13/1970/Article437,http://swrc.ontoware.org/ontology#pages,83
+http://localhost/publications/articles/Journal13/1970/Article437,http://xmlns.com/foaf/0.1/homepage,http://www.conscripted.tld/ornerier/paining.html
+http://localhost/publications/articles/Journal13/1970/Article437,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal13/1970
+http://localhost/publications/articles/Journal13/1970/Article437,http://purl.org/dc/elements/1.1/creator,_:b6713
+http://localhost/publications/articles/Journal13/1970/Article437,http://purl.org/dc/elements/1.1/creator,_:b6714
+_:b6724,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6724,http://xmlns.com/foaf/0.1/name,Ralph Clearo
+http://localhost/publications/inprocs/Proceeding7/1970/Inproceeding276,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding7/1970/Inproceeding276,http://purl.org/dc/elements/1.1/title,mislayers tightest misplaces
+http://localhost/publications/inprocs/Proceeding7/1970/Inproceeding276,http://purl.org/dc/terms/issued,1970
+http://localhost/publications/inprocs/Proceeding7/1970/Inproceeding276,http://swrc.ontoware.org/ontology#pages,125
+http://localhost/publications/inprocs/Proceeding7/1970/Inproceeding276,http://xmlns.com/foaf/0.1/homepage,http://www.emasculated.tld/misplaces/extinguishing.html
+http://localhost/publications/inprocs/Proceeding7/1970/Inproceeding276,http://purl.org/dc/elements/1.1/creator,_:b5454
+http://localhost/publications/inprocs/Proceeding7/1970/Inproceeding276,http://localhost/vocabulary/bench/booktitle,housewarming emasculated tightest
+http://localhost/publications/inprocs/Proceeding7/1970/Inproceeding276,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding7/1970
+http://localhost/publications/articles/Journal14/1970/Article459,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal14/1970/Article459,http://purl.org/dc/elements/1.1/title,corruptibility tenpence acculturation
+http://localhost/publications/articles/Journal14/1970/Article459,http://swrc.ontoware.org/ontology#pages,192
+http://localhost/publications/articles/Journal14/1970/Article459,http://xmlns.com/foaf/0.1/homepage,http://www.lamplighter.tld/acculturation/dogberries.html
+http://localhost/publications/articles/Journal14/1970/Article459,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal14/1970
+http://localhost/publications/articles/Journal14/1970/Article459,http://purl.org/dc/elements/1.1/creator,_:b6746
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://purl.org/dc/elements/1.1/title,hibernators comped creditability
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://purl.org/dc/terms/issued,1970
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://swrc.ontoware.org/ontology#pages,15
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://xmlns.com/foaf/0.1/homepage,http://www.aggregates.tld/creditability/overinflates.html
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://purl.org/dc/elements/1.1/creator,_:b6853
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://purl.org/dc/elements/1.1/creator,_:b6854
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://localhost/vocabulary/bench/booktitle,impenitent aggregates comped
+http://localhost/publications/inprocs/Proceeding8/1970/Inproceeding324,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding8/1970
+_:b6856,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6856,http://xmlns.com/foaf/0.1/name,Degenhard Purgason
+_:b6861,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b6861,http://xmlns.com/foaf/0.1/name,Consuela Deberry
+http://localhost/publications/articles/Journal17/1970/Article590,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal17/1970/Article590,http://purl.org/dc/elements/1.1/title,deteriorated rictus factotum
+http://localhost/publications/articles/Journal17/1970/Article590,http://swrc.ontoware.org/ontology#pages,50
+http://localhost/publications/articles/Journal17/1970/Article590,http://xmlns.com/foaf/0.1/homepage,http://www.ripply.tld/factotum/tartuffes.html
+http://localhost/publications/articles/Journal17/1970/Article590,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal17/1970
+http://localhost/publications/articles/Journal17/1970/Article590,http://purl.org/dc/elements/1.1/creator,_:b6948
+http://localhost/publications/journals/Journal18/1970,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Journal
+http://localhost/publications/journals/Journal18/1970,http://swrc.ontoware.org/ontology#number,1
+http://localhost/publications/journals/Journal18/1970,http://purl.org/dc/elements/1.1/title,Journal 18 (1970)
+http://localhost/publications/journals/Journal18/1970,http://swrc.ontoware.org/ontology#volume,1
+http://localhost/publications/journals/Journal18/1970,http://purl.org/dc/terms/issued,1970
+http://localhost/publications/articles/Journal19/1970/Article632,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal19/1970/Article632,http://purl.org/dc/elements/1.1/title,potsherds redye ransomed
+http://localhost/publications/articles/Journal19/1970/Article632,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.shoddiness.tld/perfumed/redye.html
+http://localhost/publications/articles/Journal19/1970/Article632,http://swrc.ontoware.org/ontology#pages,192
+http://localhost/publications/articles/Journal19/1970/Article632,http://xmlns.com/foaf/0.1/homepage,http://www.perfumed.tld/ransomed/panhandled.html
+http://localhost/publications/articles/Journal19/1970/Article632,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal19/1970
+http://localhost/publications/articles/Journal19/1970/Article632,http://purl.org/dc/elements/1.1/creator,_:b7074
+http://localhost/publications/articles/Journal19/1970/Article632,http://purl.org/dc/elements/1.1/creator,_:b7075
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://purl.org/dc/elements/1.1/title,wiedersehen pollutants unspoiled
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://purl.org/dc/terms/issued,1971
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://localhost/vocabulary/bench/cdrom,http://www.refortifying.tld/quivered/pollutants.html
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://swrc.ontoware.org/ontology#pages,112
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://xmlns.com/foaf/0.1/homepage,http://www.quivered.tld/unspoiled/sanger.html
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://purl.org/dc/elements/1.1/creator,_:b7027
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://purl.org/dc/elements/1.1/creator,_:b7028
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://localhost/vocabulary/bench/booktitle,tunability wiedersehen quivered
+http://localhost/publications/inprocs/Proceeding1/1971/Inproceeding26,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding1/1971
+http://localhost/publications/articles/Journal4/1971/Article124,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1971/Article124,http://purl.org/dc/elements/1.1/title,catamaran unallied freakishly
+http://localhost/publications/articles/Journal4/1971/Article124,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.endows.tld/flappable/unallied.html
+http://localhost/publications/articles/Journal4/1971/Article124,http://swrc.ontoware.org/ontology#pages,145
+http://localhost/publications/articles/Journal4/1971/Article124,http://xmlns.com/foaf/0.1/homepage,http://www.flappable.tld/freakishly/tattooists.html
+http://localhost/publications/articles/Journal4/1971/Article124,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1971
+http://localhost/publications/articles/Journal4/1971/Article124,http://purl.org/dc/elements/1.1/creator,_:b7155
+http://localhost/publications/articles/Journal4/1971/Article128,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1971/Article128,http://purl.org/dc/elements/1.1/title,chroniclers lauds consumed
+http://localhost/publications/articles/Journal4/1971/Article128,http://swrc.ontoware.org/ontology#pages,192
+http://localhost/publications/articles/Journal4/1971/Article128,http://xmlns.com/foaf/0.1/homepage,http://www.lopsidedness.tld/consumed/glads.html
+http://localhost/publications/articles/Journal4/1971/Article128,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1971
+http://localhost/publications/articles/Journal4/1971/Article128,http://purl.org/dc/elements/1.1/creator,_:b7159
+http://localhost/publications/articles/Journal4/1971/Article128,http://purl.org/dc/elements/1.1/creator,_:b7160
+_:b7159,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b7159,http://xmlns.com/foaf/0.1/name,Hawraa Butterworth
+_:b7193,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b7193,http://xmlns.com/foaf/0.1/name,Stasy Etling
+http://localhost/publications/articles/Journal4/1971/Article157,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal4/1971/Article157,http://purl.org/dc/elements/1.1/title,yeshivahs bloodies unselective
+http://localhost/publications/articles/Journal4/1971/Article157,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.spectrographs.tld/endings/bloodies.html
+http://localhost/publications/articles/Journal4/1971/Article157,http://swrc.ontoware.org/ontology#pages,8
+http://localhost/publications/articles/Journal4/1971/Article157,http://xmlns.com/foaf/0.1/homepage,http://www.endings.tld/unselective/argentine.html
+http://localhost/publications/articles/Journal4/1971/Article157,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal4/1971
+http://localhost/publications/articles/Journal4/1971/Article157,http://purl.org/dc/elements/1.1/creator,_:b7195
+_:b7207,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b7207,http://xmlns.com/foaf/0.1/name,Karysha Weigert
+http://localhost/publications/articles/Journal5/1971/Article187,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal5/1971/Article187,http://purl.org/dc/elements/1.1/title,autoed counterplea enroll
+http://localhost/publications/articles/Journal5/1971/Article187,http://swrc.ontoware.org/ontology#pages,26
+http://localhost/publications/articles/Journal5/1971/Article187,http://xmlns.com/foaf/0.1/homepage,http://www.brusker.tld/enroll/mambos.html
+http://localhost/publications/articles/Journal5/1971/Article187,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal5/1971
+http://localhost/publications/articles/Journal5/1971/Article187,http://purl.org/dc/elements/1.1/creator,_:b7230
+_:b7238,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b7238,http://xmlns.com/foaf/0.1/name,Danijela Kellin
+http://localhost/publications/articles/Journal6/1971/Article202,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal6/1971/Article202,http://purl.org/dc/elements/1.1/title,mutuals fleeciest jilted
+http://localhost/publications/articles/Journal6/1971/Article202,http://swrc.ontoware.org/ontology#pages,15
+http://localhost/publications/articles/Journal6/1971/Article202,http://xmlns.com/foaf/0.1/homepage,http://www.mocker.tld/jilted/outfacing.html
+http://localhost/publications/articles/Journal6/1971/Article202,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal6/1971
+http://localhost/publications/articles/Journal6/1971/Article202,http://purl.org/dc/elements/1.1/creator,_:b7247
+http://localhost/publications/articles/Journal6/1971/Article224,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal6/1971/Article224,http://purl.org/dc/elements/1.1/title,doers wallowing lycanthrope
+http://localhost/publications/articles/Journal6/1971/Article224,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.adapted.tld/preachers/wallowing.html
+http://localhost/publications/articles/Journal6/1971/Article224,http://swrc.ontoware.org/ontology#pages,18
+http://localhost/publications/articles/Journal6/1971/Article224,http://xmlns.com/foaf/0.1/homepage,http://www.preachers.tld/lycanthrope/diamondbacks.html
+http://localhost/publications/articles/Journal6/1971/Article224,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal6/1971
+http://localhost/publications/articles/Journal6/1971/Article224,http://purl.org/dc/elements/1.1/creator,_:b7278
+_:b7304,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b7304,http://xmlns.com/foaf/0.1/name,Chimislava Niedzielski
+http://localhost/publications/inprocs/Proceeding6/1971/Inproceeding230,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding6/1971/Inproceeding230,http://purl.org/dc/elements/1.1/title,accompanies lackeys holdbacks
+http://localhost/publications/inprocs/Proceeding6/1971/Inproceeding230,http://purl.org/dc/terms/issued,1971
+http://localhost/publications/inprocs/Proceeding6/1971/Inproceeding230,http://swrc.ontoware.org/ontology#pages,30
+http://localhost/publications/inprocs/Proceeding6/1971/Inproceeding230,http://xmlns.com/foaf/0.1/homepage,http://www.hotted.tld/holdbacks/imperceptibleness.html
+http://localhost/publications/inprocs/Proceeding6/1971/Inproceeding230,http://purl.org/dc/elements/1.1/creator,_:b6681
+http://localhost/publications/inprocs/Proceeding6/1971/Inproceeding230,http://localhost/vocabulary/bench/booktitle,grizzles hotted lackeys
+_:b7576,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b7576,http://xmlns.com/foaf/0.1/name,Henrike Iwanski
+http://localhost/publications/articles/Journal12/1971/Article478,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal12/1971/Article478,http://purl.org/dc/elements/1.1/title,sibilation groomers fixated
+http://localhost/publications/articles/Journal12/1971/Article478,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.celebrates.tld/peptids/groomers.html
+http://localhost/publications/articles/Journal12/1971/Article478,http://swrc.ontoware.org/ontology#pages,88
+http://localhost/publications/articles/Journal12/1971/Article478,http://xmlns.com/foaf/0.1/homepage,http://www.peptids.tld/fixated/unnumbered.html
+http://localhost/publications/articles/Journal12/1971/Article478,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal12/1971
+http://localhost/publications/articles/Journal12/1971/Article478,http://purl.org/dc/elements/1.1/creator,_:b7600
+_:b7656,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b7656,http://xmlns.com/foaf/0.1/name,Maria Ronson
+http://localhost/publications/inprocs/Proceeding7/1971/Inproceeding433,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding7/1971/Inproceeding433,http://purl.org/dc/elements/1.1/title,demonize globularity woodier
+http://localhost/publications/inprocs/Proceeding7/1971/Inproceeding433,http://purl.org/dc/terms/issued,1971
+http://localhost/publications/inprocs/Proceeding7/1971/Inproceeding433,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.pugilist.tld/narraters/globularity.html
+http://localhost/publications/inprocs/Proceeding7/1971/Inproceeding433,http://xmlns.com/foaf/0.1/homepage,http://www.narraters.tld/woodier/vesiculate.html
+http://localhost/publications/inprocs/Proceeding7/1971/Inproceeding433,http://purl.org/dc/elements/1.1/creator,_:b6475
+http://localhost/publications/inprocs/Proceeding7/1971/Inproceeding433,http://localhost/vocabulary/bench/booktitle,frothing demonize narraters
+http://localhost/publications/inprocs/Proceeding7/1971/Inproceeding433,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding7/1971
+http://localhost/publications/articles/Journal16/1971/Article612,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal16/1971/Article612,http://purl.org/dc/elements/1.1/title,scots chields democratizing
+http://localhost/publications/articles/Journal16/1971/Article612,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.maunderers.tld/bolero/chields.html
+http://localhost/publications/articles/Journal16/1971/Article612,http://xmlns.com/foaf/0.1/homepage,http://www.bolero.tld/democratizing/motile.html
+http://localhost/publications/articles/Journal16/1971/Article612,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal16/1971
+http://localhost/publications/articles/Journal16/1971/Article612,http://purl.org/dc/elements/1.1/creator,_:b7772
+_:b7792,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b7792,http://xmlns.com/foaf/0.1/name,Zaviera Truskowski
+http://localhost/publications/articles/Journal16/1971/Article626,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal16/1971/Article626,http://purl.org/dc/elements/1.1/title,hirable decidual castrators
+http://localhost/publications/articles/Journal16/1971/Article626,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.eagerly.tld/astrologists/decidual.html
+http://localhost/publications/articles/Journal16/1971/Article626,http://swrc.ontoware.org/ontology#pages,43
+http://localhost/publications/articles/Journal16/1971/Article626,http://xmlns.com/foaf/0.1/homepage,http://www.astrologists.tld/castrators/objurgations.html
+http://localhost/publications/articles/Journal16/1971/Article626,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal16/1971
+http://localhost/publications/articles/Journal16/1971/Article626,http://purl.org/dc/elements/1.1/creator,_:b7793
+http://localhost/publications/articles/Journal16/1971/Article626,http://purl.org/dc/elements/1.1/creator,_:b7794
+http://localhost/publications/articles/Journal16/1971/Article639,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal16/1971/Article639,http://purl.org/dc/elements/1.1/title,leafstalk clamored padishahs
+http://localhost/publications/articles/Journal16/1971/Article639,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.supernova.tld/discommodes/clamored.html
+http://localhost/publications/articles/Journal16/1971/Article639,http://swrc.ontoware.org/ontology#pages,36
+http://localhost/publications/articles/Journal16/1971/Article639,http://xmlns.com/foaf/0.1/homepage,http://www.discommodes.tld/padishahs/aeons.html
+http://localhost/publications/articles/Journal16/1971/Article639,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal16/1971
+http://localhost/publications/articles/Journal16/1971/Article639,http://purl.org/dc/elements/1.1/creator,_:b7813
+http://localhost/publications/articles/Journal18/1971/Article724,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal18/1971/Article724,http://purl.org/dc/elements/1.1/title,pean busybody chares
+http://localhost/publications/articles/Journal18/1971/Article724,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.preservable.tld/narcissists/busybody.html
+http://localhost/publications/articles/Journal18/1971/Article724,http://swrc.ontoware.org/ontology#pages,67
+http://localhost/publications/articles/Journal18/1971/Article724,http://xmlns.com/foaf/0.1/homepage,http://www.narcissists.tld/chares/ammeters.html
+http://localhost/publications/articles/Journal18/1971/Article724,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal18/1971
+http://localhost/publications/articles/Journal18/1971/Article724,http://purl.org/dc/elements/1.1/creator,_:b7922
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://purl.org/dc/elements/1.1/title,oxblood comforters adjudicators
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://purl.org/dc/terms/issued,1971
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.incorporatedness.tld/fatuities/comforters.html
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://swrc.ontoware.org/ontology#pages,40
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://xmlns.com/foaf/0.1/homepage,http://www.fatuities.tld/adjudicators/clanking.html
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://purl.org/dc/elements/1.1/creator,_:b6408
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://localhost/vocabulary/bench/booktitle,repasts oxblood fatuities
+http://localhost/publications/inprocs/Proceeding10/1971/Inproceeding388,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding10/1971
+http://localhost/publications/articles/Journal1/1972/Article37,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal1/1972/Article37,http://purl.org/dc/elements/1.1/title,aggregation monthly washingtonian
+http://localhost/publications/articles/Journal1/1972/Article37,http://swrc.ontoware.org/ontology#pages,149
+http://localhost/publications/articles/Journal1/1972/Article37,http://xmlns.com/foaf/0.1/homepage,http://www.insulars.tld/washingtonian/proudness.html
+http://localhost/publications/articles/Journal1/1972/Article37,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal1/1972
+http://localhost/publications/articles/Journal1/1972/Article37,http://purl.org/dc/elements/1.1/creator,_:b7457
+http://localhost/publications/articles/Journal1/1972/Article37,http://purl.org/dc/elements/1.1/creator,_:b7458
+_:b8110,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b8110,http://xmlns.com/foaf/0.1/name,Nathaniel Brosnahan
+http://localhost/publications/articles/Journal5/1972/Article848,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal5/1972/Article848,http://purl.org/dc/elements/1.1/title,constables boweled dragonflies
+http://localhost/publications/articles/Journal5/1972/Article848,http://swrc.ontoware.org/ontology#pages,171
+http://localhost/publications/articles/Journal5/1972/Article848,http://xmlns.com/foaf/0.1/homepage,http://www.barfs.tld/dragonflies/nutty.html
+http://localhost/publications/articles/Journal5/1972/Article848,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal5/1972
+http://localhost/publications/articles/Journal5/1972/Article848,http://purl.org/dc/elements/1.1/creator,_:b8144
+http://localhost/publications/articles/Journal6/1972/Article193,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Article
+http://localhost/publications/articles/Journal6/1972/Article193,http://purl.org/dc/elements/1.1/title,vagrancies unasked nonchargeable
+http://localhost/publications/articles/Journal6/1972/Article193,http://www.w3.org/2000/01/rdf-schema#seeAlso,http://www.karakul.tld/scrimpier/unasked.html
+http://localhost/publications/articles/Journal6/1972/Article193,http://swrc.ontoware.org/ontology#pages,135
+http://localhost/publications/articles/Journal6/1972/Article193,http://xmlns.com/foaf/0.1/homepage,http://www.scrimpier.tld/nonchargeable/keratitis.html
+http://localhost/publications/articles/Journal6/1972/Article193,http://swrc.ontoware.org/ontology#journal,http://localhost/publications/journals/Journal6/1972
+http://localhost/publications/articles/Journal6/1972/Article193,http://purl.org/dc/elements/1.1/creator,_:b8180
+_:b8218,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://xmlns.com/foaf/0.1/Person
+_:b8218,http://xmlns.com/foaf/0.1/name,Yalgonata Trippett
+http://localhost/publications/inprocs/Proceeding5/1972/Inproceeding176,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://localhost/vocabulary/bench/Inproceedings
+http://localhost/publications/inprocs/Proceeding5/1972/Inproceeding176,http://purl.org/dc/elements/1.1/title,cliffy ablest sporter
+http://localhost/publications/inprocs/Proceeding5/1972/Inproceeding176,http://purl.org/dc/terms/issued,1972
+http://localhost/publications/inprocs/Proceeding5/1972/Inproceeding176,http://swrc.ontoware.org/ontology#pages,7
+http://localhost/publications/inprocs/Proceeding5/1972/Inproceeding176,http://xmlns.com/foaf/0.1/homepage,http://www.sendoff.tld/sporter/treasonable.html
+http://localhost/publications/inprocs/Proceeding5/1972/Inproceeding176,http://purl.org/dc/elements/1.1/creator,_:b7959
+http://localhost/publications/inprocs/Proceeding5/1972/Inproceeding176,http://localhost/vocabulary/bench/booktitle,gasmen sendoff ablest
+http://localhost/publications/inprocs/Proceeding5/1972/Inproceeding176,http://purl.org/dc/terms/partOf,http://localhost/publications/procs/Proceeding5/1972

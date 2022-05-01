@@ -1,0 +1,17 @@
+	SO Statistic
+---------------------------------------------------------
+<<http://example.org/property/givenname>><<http://example.org/property/givenname>>	2	3	0.67	Infinity
+<<http://example.org/property/givenname>><<http://example.org/property/pro1>>	2	3	0.67	Infinity
+<<http://example.org/property/pro1>><<http://example.org/property/givenname>>	9	13	0.69	Infinity
+<<http://example.org/property/pro1>><<http://example.org/property/pro1>>	9	13	0.69	Infinity
+<<http://example.org/property/pro1>><<http://example.org/property/pro2>>	1	13	0.08	Infinity
+<<http://example.org/property/pro1>><<http://example.org/property/pro3>>	1	13	0.08	Infinity
+<<http://example.org/property/pro2>><<http://example.org/property/pro2>>	1	1	1.00	Infinity
+<<http://example.org/property/pro3>><<http://example.org/property/givenname>>	2	7	0.29	Infinity
+<<http://example.org/property/pro3>><<http://example.org/property/pro1>>	2	7	0.29	Infinity
+<<http://example.org/property/pro3>><<http://example.org/property/pro3>>	1	7	0.14	Infinity
+<example:pred1><example:pred2>	2	2	1.00	Infinity
+---------------------------------------------------------
+Saved tabels ->9
+Unsaved non-empty tables ->2
+Empty tables ->89
