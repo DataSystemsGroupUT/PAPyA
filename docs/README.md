@@ -1,4 +1,5 @@
 # PAPyA
+### Performance Analysis of Large RDF Graphs Processing Made Easy
 
 <p align="center">
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/papayalogo.png" width="100"/>
