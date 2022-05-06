@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/figs/papayalogo.png" width="100"/>
+<img src="../figs/papayalogo.png" width="100"/>
 </p>
 
 # PAPyA
