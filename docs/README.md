@@ -4,7 +4,7 @@
 
 # PAPyA
 
-Prescriptive Performance Analysis  in Python Actions 
+Prescriptive Performance Analysis in Python Actions 
 
 [![DOI](https://zenodo.org/badge/487547762.svg)](https://zenodo.org/badge/latestdoi/487547762)
 
