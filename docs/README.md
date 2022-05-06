@@ -1,8 +1,9 @@
+# PAPyA
+
 <p align="center">
-<img src="../figs/papayalogo.png" width="100"/>
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/papayalogo.png" width="100"/>
 </p>
 
-# PAPyA
 
 Prescriptive Performance Analysis in Python Actions 
 
