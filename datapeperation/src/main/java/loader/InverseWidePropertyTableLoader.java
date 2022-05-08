@@ -17,7 +17,7 @@ public class InverseWidePropertyTableLoader extends PropertyTableLoader {
 
 	public InverseWidePropertyTableLoader(final Settings settings, final SparkSession spark,
                                           final DatabaseStatistics statistics) {
-		super(settings.getDatabaseName(), spark, settings.isIwptPartitionedByObject(), IWPT_TABLE_NAME, statistics);
+		super(settings.getDatabaseName(), spark, false, IWPT_TABLE_NAME, statistics);
 	}
 
 	@Override

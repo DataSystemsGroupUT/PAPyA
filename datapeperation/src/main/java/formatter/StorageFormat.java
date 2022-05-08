@@ -18,4 +18,7 @@ public class StorageFormat {
          df.write().format("avro").save(path);
      }
 
+    public void toParquet(Dataset<Row> df, String path) {
+          df.write().format("parquet").save(path);
+    }
 }

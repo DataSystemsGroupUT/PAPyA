@@ -44,10 +44,19 @@ public class Settings {
 	// options for physical partitioning
 	private boolean ttPartitionedByPredicate = false;
 	private boolean ttPartitionedBySubject = false;
-	private boolean wptPartitionedBySubject = false;
-	private boolean iwptPartitionedByObject = false;
-	private boolean jwptPartitionedByResource = false;
+	private boolean ttPartitionedHorizontally = true;
+
 	private boolean vpPartitionedBySubject = false;
+	private boolean vpPartitionedHorizontally = true;
+
+	private boolean extvpPartitionedBySubject = false;
+	private boolean extvpPartitionedHorizontally = true;
+
+	private boolean wptPartitionedBySubject = false;
+	private boolean wptPartitionedHorizontally = false;
+
+
+
 
 
 	//options for storage formats
@@ -55,24 +64,24 @@ public class Settings {
 	private boolean generateVPCSV=false;
 	private boolean generateVPORC=false;
 	private boolean generateVPAvro=false;
-//	private boolean generateVPParquet=false;
+	private boolean generateVPParquet=false;
 
 
 	private boolean generateTTCSV=false;
 	private boolean generateTTORC=false;
 	private boolean generateTTAvro=false;
-//	private boolean generateTTParquet=false;
+	private boolean generateTTParquet=false;
 
 
 	private boolean generateEXTVPCSV=false;
 	private boolean generateEXTVPORC=false;
 	private boolean generateEXTVPAvro=false;
-//	private boolean generateEXTVPParquet=false;
+	private boolean generateEXTVPParquet=false;
 
 	private boolean generateWPTCSV=false;
 	private boolean generateWPTORC=false;
 	private boolean generateWPTAvro=false;
-//	private boolean generateWPTParquet=false;
+	private boolean generateWPTParquet=false;
 
 	//misc options
 	private boolean droppingDB = false;
@@ -107,26 +116,36 @@ public class Settings {
 			this.generateTTCSV = settings.get("storage", "TTcsv", Boolean.class);
 			this.generateTTORC = settings.get("storage", "TTorc", Boolean.class);
 			this.generateTTAvro = settings.get("storage", "TTavro", Boolean.class);
+			this.generateTTParquet = settings.get("storage", "TTParquet", Boolean.class);
 
 			this.generateVPCSV = settings.get("storage", "VPcsv", Boolean.class);
 			this.generateVPORC = settings.get("storage", "VPorc", Boolean.class);
 			this.generateVPAvro = settings.get("storage", "VPavro", Boolean.class);
+			this.generateVPParquet = settings.get("storage", "VPParquet", Boolean.class);
 
 			this.generateWPTCSV = settings.get("storage", "WPTcsv", Boolean.class);
 			this.generateWPTORC = settings.get("storage", "WPTorc", Boolean.class);
 			this.generateWPTAvro = settings.get("storage", "WPTavro", Boolean.class);
+			this.generateWPTParquet = settings.get("storage", "WPTParquet", Boolean.class);
 
 			this.generateEXTVPCSV = settings.get("storage", "EXTVPcsv", Boolean.class);
 			this.generateEXTVPORC = settings.get("storage", "EXTVPorc", Boolean.class);
 			this.generateEXTVPAvro = settings.get("storage", "EXTVPavro", Boolean.class);
+			this.generateEXTVPParquet  = settings.get("storage", "EXTVPParquet", Boolean.class);
 
 
-			this.ttPartitionedByPredicate = settings.get("physicalPartitioning", "ttp", boolean.class);
-			this.ttPartitionedBySubject = settings.get("physicalPartitioning", "tts", boolean.class);
-			this.wptPartitionedBySubject = settings.get("physicalPartitioning", "wpts", boolean.class);
-			this.iwptPartitionedByObject = settings.get("physicalPartitioning", "iwpto", boolean.class);
-			this.jwptPartitionedByResource = settings.get("physicalPartitioning", "jwptr", boolean.class);
-			this.vpPartitionedBySubject = settings.get("physicalPartitioning", "vps", boolean.class);
+			this.ttPartitionedByPredicate = settings.get("physicalPartitioning", "TTp", boolean.class);
+			this.ttPartitionedBySubject = settings.get("physicalPartitioning", "TTs", boolean.class);
+			this.ttPartitionedHorizontally = settings.get("physicalPartitioning", "TTh", boolean.class);
+
+			this.vpPartitionedBySubject = settings.get("physicalPartitioning", "VPs", boolean.class);
+			this.vpPartitionedHorizontally = settings.get("physicalPartitioning", "VPh", boolean.class);
+
+			this.extvpPartitionedBySubject = settings.get("physicalPartitioning", "EXTVPs", boolean.class);
+			this.extvpPartitionedHorizontally = settings.get("physicalPartitioning", "EXTVPh", boolean.class);
+
+			this.wptPartitionedBySubject = settings.get("physicalPartitioning", "WPTs", boolean.class);
+			this.wptPartitionedHorizontally= settings.get("physicalPartitioning", "WPTh", boolean.class);
 
 			this.droppingDB = settings.get("misc", "dropDB", boolean.class);
 		} else  {
@@ -330,41 +349,30 @@ public class Settings {
 	}
 
 
-	public boolean isGeneratingJWPTOuter() {
-		return generateJWPTOuter;
-	}
-
-	public boolean isGeneratingJWPTInner() {
-		return generateJWPTInner;
-	}
-
-	public boolean isGeneratingJWPTLeftOuter() {
-		return generateJWPTLeftOuter;
-	}
-
 	public boolean isTtPartitionedByPredicate() {
 		return ttPartitionedByPredicate;
 	}
-
 	public boolean isTtPartitionedBySubject() {
 		return ttPartitionedBySubject;
+	}
+	public boolean isTtPartitionedHorizontally() {
+		return ttPartitionedHorizontally;
 	}
 
 	public boolean isWptPartitionedBySubject() {
 		return wptPartitionedBySubject;
 	}
-
-	public boolean isIwptPartitionedByObject() {
-		return iwptPartitionedByObject;
-	}
-
-	public boolean isJwptPartitionedByResource() {
-		return jwptPartitionedByResource;
-	}
+	public boolean isWptPartitionedHorizontally() { return wptPartitionedHorizontally; }
 
 	public boolean isVpPartitionedBySubject() {
 		return vpPartitionedBySubject;
 	}
+	public boolean isVpPartitionedHorizontally() { return vpPartitionedHorizontally;}
+
+	public boolean isExtvpPartitionedBySubject() {
+		return extvpPartitionedBySubject;
+	}
+	public boolean isExtvpPartitionedHorizontally() { return extvpPartitionedHorizontally;}
 
 	public boolean isDroppingDB() {
 		return droppingDB;
@@ -382,6 +390,9 @@ public class Settings {
 		return generateTTAvro;
 	}
 
+		public boolean isGeneratingTTParquet() {
+		return generateTTParquet;
+	}
 
 	public boolean isGeneratingVPCSV() {
 		return generateVPCSV;
@@ -394,10 +405,12 @@ public class Settings {
 	public boolean isGeneratingVPAvro() {
 		return generateVPAvro;
 	}
+	public boolean isGeneratingVPParquet() {
+		return generateVPParquet;
+	}
 
 
-
-		public boolean isGeneratingWPTCSV() {
+	public boolean isGeneratingWPTCSV() {
 		return generateWPTCSV;
 	}
 
@@ -409,8 +422,11 @@ public class Settings {
 		return generateWPTAvro;
 	}
 
+	public boolean isGeneratingWPTParquet() {
+		return generateWPTParquet;
+	}
 
-		public boolean isGeneratingEXTVPCSV() {
+	public boolean isGeneratingEXTVPCSV() {
 		return generateEXTVPCSV;
 	}
 
@@ -422,8 +438,9 @@ public class Settings {
 		return generateEXTVPAvro;
 	}
 
-
-
+	public boolean isGeneratingEXTVPParquet() {
+		return generateEXTVPParquet;
+	}
 
 
 	/**
@@ -434,17 +451,24 @@ public class Settings {
 		private String inputPath = "/";
 		private boolean ttPartitionedBySubject = false;
 		private boolean ttPartitionedByPredicate = false;
-		private boolean jwptPartitionedByResource = false;
+		private boolean ttPartitionedHorizontally= false;
+
+		private boolean vpPartitionedHorizontally= false;
+		private boolean vpPartitionedBySubject= false;
+
+		private boolean extvpPartitionedHorizontally= false;
+		private boolean extvpPartitionedBySubject= false;
+
+		private boolean wptPartitionedBySubject = false;
+		private boolean wptPartitionedHorizontally= false;
+
 		private boolean dropDuplicateTriples = false;
 		private boolean computePropertyStatistics = false;
 		private boolean computeCharacteristicSets = false;
 		private boolean generateVP = false;
 		private boolean generateEXTVP = false;
 		private boolean generateWpt = false;
-		private boolean generateIwpt = false;
-		private boolean generateJwptOuter = false;
-		private boolean generateJwptLeftOuter = false;
-		private boolean generateJwptInner = false;
+
 
 		public Builder(final String databaseName) {
 			this.databaseName = databaseName;
@@ -465,10 +489,6 @@ public class Settings {
 			return this;
 		}
 
-		public Builder withJWPTPartitionedByResource() {
-			this.jwptPartitionedByResource = true;
-			return this;
-		}
 
 		public Builder droppingDuplicateTriples() {
 			this.dropDuplicateTriples = true;
@@ -495,43 +515,30 @@ public class Settings {
 			return this;
 		}
 
-		public Builder generateIwpt() {
-			this.generateIwpt = true;
-			return this;
-		}
 
-		public Builder generateJwptOuter() {
-			this.generateJwptOuter = true;
-			return this;
-		}
-
-		public Builder generateJwptLeftOuter() {
-			this.generateJwptLeftOuter = true;
-			return this;
-		}
-
-		public Builder generateJwptInner() {
-			this.generateJwptInner = true;
-			return this;
-		}
 
 		public Settings build() {
 			final Settings settings = new Settings();
 			settings.databaseName = this.databaseName;
 			settings.inputPath = this.inputPath;
-			settings.ttPartitionedBySubject = this.ttPartitionedBySubject;
+
 			settings.ttPartitionedByPredicate = this.ttPartitionedByPredicate;
-			settings.jwptPartitionedByResource = this.jwptPartitionedByResource;
+			settings.ttPartitionedBySubject = this.ttPartitionedBySubject;
+			settings.ttPartitionedHorizontally = this.ttPartitionedHorizontally;
+
+			settings.vpPartitionedBySubject = this.vpPartitionedBySubject;
+			settings.vpPartitionedHorizontally = this.vpPartitionedHorizontally;
+			settings.extvpPartitionedBySubject = this.extvpPartitionedBySubject;
+			settings.extvpPartitionedHorizontally = this.extvpPartitionedHorizontally;
+			settings.wptPartitionedBySubject = this.wptPartitionedBySubject;
+			settings.wptPartitionedHorizontally = this.wptPartitionedHorizontally;
+
 			settings.dropDuplicateTriples = this.dropDuplicateTriples;
 			settings.computeCharacteristicSets = this.computeCharacteristicSets;
 			settings.computePropertyStatistics = this.computePropertyStatistics;
 			settings.generateVP = this.generateVP;
 			settings.generateEXTVP = this.generateEXTVP;
 			settings.generateWPT = this.generateWpt;
-			settings.generateIWPT = this.generateIwpt;
-			settings.generateJWPTOuter = this.generateJwptOuter;
-			settings.generateJWPTLeftOuter = this.generateJwptLeftOuter;
-			settings.generateJWPTInner = this.generateJwptInner;
 
 			return settings;
 		}

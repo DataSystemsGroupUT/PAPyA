@@ -24,7 +24,7 @@ public class JoinedWidePropertyTableLoader extends PropertyTableLoader {
 
 	public JoinedWidePropertyTableLoader(final Settings settings, final SparkSession spark, final JoinType joinType,
                                          final DatabaseStatistics statistics) {
-		super(settings.getDatabaseName(), spark, settings.isJwptPartitionedByResource(),
+		super(settings.getDatabaseName(), spark, false,
 				JWPT_TABLE_NAME + "_" + joinType.toString(), statistics);
 		this.joinType = joinType.toString();
 		this.settings = settings;
