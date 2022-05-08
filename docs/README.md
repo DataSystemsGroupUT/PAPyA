@@ -12,7 +12,9 @@ Prescriptive Performance Analysis in Python Actions
 
 This library provides prescriptive analysis for the complex solution space of (RDF relational schema, Partitioning, and Storage Formats) that emerges with querying large RDF graphs over Relational Big Data (BD) System, e.g., Apache Spark-SQL.
 
-![](https://github.com/DataSystemsGroupUT/PAPyA/tree/main/images/systemArchitecture.png)
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/systemArchitecture.png"/>
+</p>
 
 | Questions | True  | False  | Description |
 | :---:   | :-: | :-: | :-: |
