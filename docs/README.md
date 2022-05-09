@@ -16,9 +16,12 @@ This library provides prescriptive analysis for the complex solution space of (R
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/systemArchitecture.png"/>
 </p>
 
-| Questions | True  | False  | Description |
+
+#### PAPyA Impact, Design Aspects and Resuability 
+
+
 | :---:   | :-: | :-: | :-: |
-| Does the resource break new ground? |  | :heavy_check_mark: | This work is derived from previous paper |
+| Does PAPya break new ground? |  | :heavy_check_mark: | This work is derived from previous paper |
 | Does the resource fill an important gap? | :heavy_check_mark: |  | This system help reduce the time needed to perform a prescriptive performance analysis of BD engine|
 
 
