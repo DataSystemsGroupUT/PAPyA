@@ -8,3 +8,6 @@ To make the module scalable over the configurations space, Bench-Ranker allows p
 ### Single Dimension Ranking
 Bench-Ranker apply the ranking criteria for each dimension using ranking function _R_  which is the rank score of the ranked dimension (i.e. shcemas, partition, storage formats). A rank set _R_ is an ordered set of elements ordered by a score. Below is the generalized version of the ranking function which calculates the rank scores for the configurations:
 
+<p>
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/rankingFunction.png" width="100"/>
+</p>
