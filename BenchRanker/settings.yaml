@@ -1,0 +1,8 @@
+dimensions:
+    # storage: ["csv", "avro"]
+    schemas: ["st", "vt", "pt"]
+    partition: ["horizontal", "predicate", "subject"]
+    storage: ["csv", "avro"]
+    # newDimension: ["option1", "option2"]
+
+query: 11

@@ -8,15 +8,6 @@ import scipy.stats as ss
 import numpy as np
 from abc import ABC, abstractmethod
 
-# class Calculations(ABC):
-#     @abstractmethod
-#     def forsingledimension(self):
-#         pass
-#     @abstractmethod
-#     def mdpareto(self):
-#         pass
-from abc import ABC, abstractmethod
-
 class Rank(ABC):
     # @abstractmethod
     # #new method that works for ranking in sd and md
@@ -942,8 +933,3 @@ class Validator(Ranker):
                 kendall = self.normalised_kendall_tau_distance(var1, var2)
                 result.append(kendall)
         return pd.DataFrame(result, index = li, columns = ['Kendall\'s Index'])
-    
-coherence_set = ['schemas', 'partition', 'paretoQ', 'paretoAgg']
-obj1 = Validator()
-testing = obj1.coherence(coherence_set, '100M','250M')
-print(testing)
