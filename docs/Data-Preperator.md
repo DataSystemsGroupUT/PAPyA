@@ -11,11 +11,11 @@ This figure shows example of schema generation in Data Preparator module. First,
 
 ### Relational Schema
 Currently, Data Preparator includes three relational schemas commonly used in RDF processing:
-- Single Statement (ST)
--> storing triples using a ternary relation (subject, predicate, object), which often requires many self-joins
-- Vertical-Partitioned Table (VP)
--> mitigate some issues of self-joins in ST schema by using binary relations (subject, object) for each unique predicate in dataset
-- Wide Property Table (WPT)
--> attempts to encode the entire dataset into a single denormalized table
-- Extended Vertical-Partitioned Table (ExtVP)
--> precomputes semi-joins VP tables to reduce data shuffling
+__Single Statement (ST)__ <br>
+: storing triples using a ternary relation (subject, predicate, object), which often requires many self-joins
+__Vertical-Partitioned Table (VP)__ <br>
+: mitigate some issues of self-joins in ST schema by using binary relations (subject, object) for each unique predicate in dataset
+__Wide Property Table (WPT)__ <br>
+: attempts to encode the entire dataset into a single denormalized table
+__Extended Vertical-Partitioned Table (ExtVP)__ <br>
+: precomputes semi-joins VP tables to reduce data shuffling
