@@ -31,7 +31,7 @@ Bench-Ranker provides a ranking solution validation for all ranking criteria (i.
 <p>
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformanceFormula.png"/>
 </p>
-We calculate conformance using this equation by positioning the element in the initial ranking score. For example, let’s consider the _Rs_ ranking and the top-3 ranked configurations are {c1,c2,c3}, that overlaps only with the bottom-3 ranked configurations in query Q. That is, {c4,c2,c5}, i.e c2 is in the 59th position out of 60 ranks/positions (i.e., the rank before last). Thus, A(R) = 1 − 1/(11 ∗ 3), when k = 3 and Q = 11.
+We calculate conformance using this equation by positioning the element in the initial ranking score. For example, let’s consider the _Rs_ ranking and the top-3 ranked configurations are {c1,c2,c3}, that overlaps only with the bottom-3 ranked configurations in query Q. That is, {c4,c2,c5}, i.e c2 is in the 59th position out of 60 ranks/positions (i.e., the rank before last). Thus, A(R) = 1 − 1/(11 ∗ 3), when k = 3 and Q = 11.<br>
 
 - __Coherence__ <br>
 : Ranking coherence is a measure of the number of dis(agreements) using _Kendall's Index_ between two ranking sets that uses the same ranking criteria across different experiments
