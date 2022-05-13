@@ -41,13 +41,10 @@ We calculate conformance using this equation by positioning the element in the i
 In this experiment, we assume that rank sets have the same number of elements. Kendall’s distance between two rank sets R1 and R2, where P represents the set of unique pairs of distinct elements in the two sets. For instance, the K index between R1={c1,c2,c3} and R2={c1,c2,c4} for 100M and 250M is 0.33, i.e., one disagreement out of three pair comparisons.
 
 ### Visualization
-<figure>
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/rankingFunction.png" alt="Trulli" style="width:100%">
-<figcaption align = "center">testing caption</figcaption>
-</figure>
-<!-- <p>
-    <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/rankingFunction.png" alt>
+To get better insights of the experiment's data, Bench-Ranker gives visualization for both single dimensional ranking solution and multi dimensional ranking solution. In addition, it also provides visualization that shows the trade-offs of using the single dimensional ranking criteria with a radar plot. A default data visualization for the rank shall be specified. However, this can be specified by the user due to the specificity of the visualization.
+<p align="center">
+    <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/visualizations.png" alt>
 </p>
 <p align="center">
     <em>testing caption</em>
-</p> -->
+</p>
