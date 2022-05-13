@@ -30,12 +30,11 @@ Bench-Ranker provides a ranking solution validation for all ranking criteria (i.
 : Ranking conformance is a measure of adherence to the top ranked configurations according to the query positions of the configurations<br>
 <p>
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformanceFormula.png"/>
-</p><br>
-We calculate conformance using this equation by positioning the element in the initial ranking score. For example, let’s consider the _Rs_ ranking and the top-3 ranked configurations are {c1,c2,c3}, that overlaps only with the bottom-3 ranked configurations in query Q. That is, {c4,c2,c5}, i.e c2 is in the 59th position out of 60 ranks/positions (i.e., the rank before last). Thus, A(R) = 1 − 1/(11 ∗ 3), when k = 3 and Q = 11. <br>
-
+</p>
+We calculate conformance using this equation by positioning the element in the initial ranking score. For example, let’s consider the _Rs_ ranking and the top-3 ranked configurations are {c1,c2,c3}, that overlaps only with the bottom-3 ranked configurations in query Q. That is, {c4,c2,c5}, i.e c2 is in the 59th position out of 60 ranks/positions (i.e., the rank before last). Thus, A(R) = 1 − 1/(11 ∗ 3), when k = 3 and Q = 11.
 - __Coherence__ <br>
 : Ranking coherence is a measure of the number of dis(agreements) using _Kendall's Index_ between two ranking sets that uses the same ranking criteria across different experiments
 <p>
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/coherenceFormula.png"/>
-</p><br>
+</p>
 In this experiment, we assume that rank sets have the same number of elements. Kendall’s distance between two rank sets R1 and R2, where P represents the set of unique pairs of distinct elements in the two sets. For instance, the K index between R1={c1,c2,c3} and R2={c1,c2,c4} for 100M and 250M is 0.33, i.e., one disagreement out of three pair comparisons.
