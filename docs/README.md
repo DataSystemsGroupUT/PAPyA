@@ -30,7 +30,6 @@ This library provides prescriptive analysis for the complex solution space of (R
 |Is the resource of interest to the Semantic Web community?|Yes, PAPyA uses querying large RDF graphs on top of relational engines as an exmplar for showing complex solution space, that prescriptive analysis going to directly impact|
 |Is the resource of interest to society in general?|Yes, PAPyA can be of interest for society in general but it is mainly used for BigData practitioners|
 |Will/has the resource have/had an impact, especially in supporting the adoption of Semantic Web technologies?|Yes, with Papaya practitioners can easily choose the best-performing configurations in an experimental setup of processing large RDF graphs, as well as setting up the pipeline using our automated Data Preperator.|
-|Does the resource description clearly state what the resource can and cannot do, and the rationale for the exclusion of some functionality?|Yes, We explained that in our paper, and in each of the modules (e.g., BenchRanker, and Data Preperator)|
 
 #### Reusability
 
@@ -41,7 +40,7 @@ This library provides prescriptive analysis for the complex solution space of (R
 |Is the resource general enough to be applied in a wider set of scenarios, not just for the originally designed use? If it is specific, is there substantial demand.|PAPyA is independance from both the key performance indicator and their experimental dimensions, therefore applicable to any rank sets|
 |Is there potential for extensibility to meet future requirements?|Yes, the system is extensible in terms of architectures and programming abstractions|
 |Does the resource include a clear explanation of how others use the data and software? Or (for new resources) how others are expected to use the data and software?|Yes, PAPyA has explanation detailing how others could use the resource|
-|Does the resource description clearly state what the resource can and cannot do, and the rationale for the exclusion of some functionality?|Yes|
+|Does the resource description clearly state what the resource can and cannot do, and the rationale for the exclusion of some functionality?|Yes, We explained that in our paper, and in each of the modules (e.g., BenchRanker, and Data Preperator)|
 
 #### Design & Technical Quality
 
