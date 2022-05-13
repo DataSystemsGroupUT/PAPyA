@@ -44,6 +44,6 @@ In this experiment, we assume that rank sets have the same number of elements. K
 <p>
     <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/rankingFunction.png" alt>
 </p>
-<p>
+<p align="center">
     <em>testing caption</em>
 </p>
