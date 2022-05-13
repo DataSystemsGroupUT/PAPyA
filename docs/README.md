@@ -23,11 +23,11 @@ This library provides prescriptive analysis for the complex solution space of (R
 
 | Impact  | Description |
 | ------------- | ------------- |
-| Does the resource break new ground? | No, PAPyA is derived from previous paper |
+| Does the resource break new ground? | To best of our knowledge, PAPyA is the first effort to enable prescriptive analysis in a form and automated and extensible tool |
 | Does the resource fill an important gap? | Yes, PAPyA helps reduce the time needed to perform a prescriptive performance analysis of BD engine |
-|How does the resource advance the state of the art?||
-|Has the resource been compared to other existing resources (if any) of similar scope?|No, to the best of our knowledge currently there are no framework that applies the prescriptive performance approach of big data analysis|
-|Is the resource of interest to the Semantic Web community?|Yes, PAPyA aims to automate performance analysis of big data solutions by using a prescriptive performance analysis approach|
+|How does the resource advance the state of the art?|PAPYA provides an automation for the techniques we offered in our previous work for providing prescriptive analyis for BD.|
+|Has the resource been compared to other existing resources (if any) of similar scope?|Yes, there are other tools that aim at automating the pipleionies of BD, but to the best of our knowledge, none of these frameworks applies prescriptive performance for BD analysis|
+|Is the resource of interest to the Semantic Web community?|Yes, PAPyA uses querying large RDF graphs on top of relational engines as an exmplar for showing complex solution space, that prescriptive analysis going to directly impact|
 |Is the resource of interest to society in general?|Yes, PAPyA can be of interest for society in general but it is mainly used for BigData practitioners|
 |Will/has the resource have/had an impact, especially in supporting the adoption of Semantic Web technologies?|Yes, with Papaya practitioners can easily choose the best-performing configurations in an experimental setup of processing large RDF graphs, as well as setting up the pipeline using our automated Data Preperator.|
 |Does the resource description clearly state what the resource can and cannot do, and the rationale for the exclusion of some functionality?|Yes, We explained that in our paper, and in each of the modules (e.g., BenchRanker, and Data Preperator)|
