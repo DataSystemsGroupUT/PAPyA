@@ -30,3 +30,8 @@ Data Preparator supports three different partitioning techniques:
 : distribute data across various partitions according to the hash value computed for the predicate keys
 
 ### Storage Formats
+Data Preparator allows storing data using various HDFS file formats. In particular, the system has two types of storage format:
+- Row-Store (_CSV_ and _Avro_) <br>
+: storing data by record, keeping all of the data associated with a record next to each other in memory. Optimized for reading and writing rows efficiently
+- Columnar-Store (_ORC_ and _Parquet_) <br>
+: storing data by field, keeping all of the data associated with a field next to each other in memory. Optimized for reading and writing columns efficiently
