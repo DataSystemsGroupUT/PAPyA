@@ -9,7 +9,7 @@ This module generates an exemplare pipeline for testing PAPyA Bench-Ranking for 
 
 This figure shows example of schema generation in Data Preparator module. First, the Data Preparator transforms the input RDF graph into an Single Statement schema, and then other schemas are generated using parameterized SQL queries. For example, Vertical-Partitioned schema and Wide Property Table schema are generated using SQL queries against the Single Statement table. While, Extended Vertical-Partitioned schema generation relies on Vertical-Partitioned schema to exist first.
 
-### Relational Schema
+### Relational Schemas
 Currently, Data Preparator includes three relational schemas commonly used in RDF processing:
 - __Single Statement (ST)__ <br>
 : storing triples using a ternary relation (subject, predicate, object), which often requires many self-joins <br>
@@ -19,3 +19,14 @@ Currently, Data Preparator includes three relational schemas commonly used in RD
 : attempts to encode the entire dataset into a single denormalized table <br>
 - __Extended Vertical-Partitioned Table (ExtVP)__ <br>
 : precomputes semi-joins VP tables to reduce data shuffling <br>
+
+### Partitioning Techniques
+Data Preparator supports three different partitioning techniques:
+- Horizontal Partitioning
+divides data evenly over the number of machines in the cluster  
+- Subject Based Partitioning
+divides data across partitions according to the subject keys
+- Predicate Based Partitioning
+distribute data across various partitions according to the hash value computed for the predicate keys
+
+### Storage Formats
