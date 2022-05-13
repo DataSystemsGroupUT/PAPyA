@@ -21,4 +21,6 @@ Bench-Ranker provides two ways to apply NSGA-II algorithm:
 - __ParetoQ__ <br>
 : apllies the NSGA-II algorithm by considering the rank sets obtained while sorting each query results individually. Using this method, the algorithm aims to minimize the query runtimes accross all dimensions
 - __ParetoAgg__ <br>
-: 
+: applies NSGA-II algorithm by operating on the single dimension ranking criteria. This method aims to maximize the rank scores of the single dimensions ranking criteria altogether
+
+### Ranking Validation  
