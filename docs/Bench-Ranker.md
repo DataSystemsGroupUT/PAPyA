@@ -45,6 +45,3 @@ To get better insights of the experiment's data, Bench-Ranker gives visualizatio
 <p align="center">
     <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/visualizations.png" alt>
 </p>
-<p align="center">
-    <em>testing caption</em>
-</p>
