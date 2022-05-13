@@ -12,6 +12,13 @@ Bench-Ranker apply the ranking criteria for each dimension using ranking functio
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/rankingFunction.png"/>
 </p>
 
-_R_ is the rank score of the ranked dimension. Such that _d_ represents the total number of parameters (configurations) under that dimension, O _dim_ (r) denotes the number of occurences of the dimension being placed at the rank _r_ (1st, 2nd, ...), and |Q| represents the total number of queries, as we have 11 query executions in the experiment (i.e. |Q| = 11).
+_R_ is the rank score of the ranked dimension. Such that _d_ represents the total number of parameters (configurations) under that dimension, O _dim_ (r) denotes the number of occurences of the dimension being placed at the rank _r_ (1st, 2nd, ...), and Q represents the total number of queries, as we have 11 query executions in the experiment (i.e. Q = 11).
 
 ### Multi Dimension Ranking
+Single dimensional ranking optimizes the configurations towards a single particular dimension ignoring the trade-offs to other dimensions. This shows that Single Dimension ranking criteria maximizes the scores only for one dimension while ignoring the others. This leads to the idea of a Multi Dimensional Ranking criteria which aims to optimize all dimensions at the same time. Bench-Ranker utilizes the Non-Dominated Sorting Genetic Algorithm 2 (NSGA-II) to find the best performing configuration solution in a complex solution space.<br>
+
+Bench-Ranker provides two ways to apply NSGA-II algorithm:
+- __ParetoQ__ <br>
+: apllies the NSGA-II algorithm by considering the rank sets obtained while sorting each query results individually. Using this method, the algorithm aims to minimize the query runtimes accross all dimensions
+- __ParetoAgg__ <br>
+: 
