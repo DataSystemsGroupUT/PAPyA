@@ -22,11 +22,11 @@ Currently, Data Preparator includes three relational schemas commonly used in RD
 
 ### Partitioning Techniques
 Data Preparator supports three different partitioning techniques:
-- Horizontal Partitioning
+- Horizontal Partitioning <br>
 divides data evenly over the number of machines in the cluster  
-- Subject Based Partitioning
+- Subject Based Partitioning <br>
 divides data across partitions according to the subject keys
-- Predicate Based Partitioning
+- Predicate Based Partitioning <br>
 distribute data across various partitions according to the hash value computed for the predicate keys
 
 ### Storage Formats
