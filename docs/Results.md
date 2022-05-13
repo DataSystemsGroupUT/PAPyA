@@ -65,7 +65,7 @@ Both of these methods can take a list of ranking criterions the users want to ev
 
 ### Performance Analysis
 || 100M  | 250M |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 |SD Storage|st.predicate.orc|st.predicate.orc|
 |SD Partition|st.subject.parquet|vt.subject.orc|
 |SD Schema|st.predicate.orc|st.predicate.orc|
