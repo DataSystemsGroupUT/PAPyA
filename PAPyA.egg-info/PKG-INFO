@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: PAPyA
-Version: 0.0.1
+Version: 0.0.3
 Summary: Prescriptive Performance Analysis for Big Data Problems
-Home-page: UNKNOWN
+Home-page: https://datasystemsgrouput.github.io/PAPyA/
 Author: Data Systems Group
 Author-email: <mail@testing.com>
-License: UNKNOWN
+License: MIT
 Keywords: python,Benchmarking,RDF,Big Data,Analytics
 Platform: UNKNOWN
 Classifier: Development Status :: 1 - Planning
@@ -14,7 +14,26 @@ Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: Unix
 Classifier: Operating System :: MacOS :: MacOS X
 Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
 License-File: LICENSE
 
-UNKNOWN
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/figs/papayalogo.png" width="100"/>
+</p>
+
+# PAPyA
+
+Prescriptive Performance Analysis  in Python Actions 
+
+[![DOI](https://zenodo.org/badge/487547762.svg)](https://zenodo.org/badge/latestdoi/487547762)
+
+This library provides prescriptive analysis for the complex solution space of (RDF relational schema, Partitioning, and Storage Formats) that emerges with querying large RDF graphs over Relational Big Data (BD) System, e.g., Apache Spark-SQL.
+
+![](images/systemArchitecture.png)
+
+| Questions | True  | False  | Description |
+| :---:   | :-: | :-: | :-: |
+| Does Papya breaks new ground? |  | :heavy_check_mark: | This work is derived from previous paper |
+| Does the resource fill an important gap? | :heavy_check_mark: |  | This system help reduce the time needed to perform a prescriptive performance analysis of BD engine|
+
 

@@ -1,24 +1,23 @@
 from setuptools import setup, find_packages
-import codecs
-import os
 
-here = os.path.abspath(os.path.dirname(__file__))
-
-with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
-    long_description = "\n" + fh.read()
-
-VERSION = '0.0.1'
-DESCRIPTION = 'Prescriptive Performance Analysis for Big Data Problems'
+def readme():
+    with open('README.md') as f:
+        README = f.read()
+    return README
 
 # Setting up
 setup(
     name="PAPyA",
-    version=VERSION,
+    version="0.0.3",
     author="Data Systems Group",
     author_email="<mail@testing.com>",
-    description=DESCRIPTION,
-    packages=find_packages(),
-    install_requires=[],
+    description="Prescriptive Performance Analysis for Big Data Problems",
+    long_description=readme(),
+    long_description_content_type="text/markdown",
+    url="https://datasystemsgrouput.github.io/PAPyA/",
+    license="MIT",
+    packages=['PAPyA'],
+    include_package_data=True,
     keywords=['python', 'Benchmarking', 'RDF', 'Big Data', 'Analytics'],
     classifiers=[
         "Development Status :: 1 - Planning",
