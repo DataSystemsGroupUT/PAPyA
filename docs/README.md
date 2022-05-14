@@ -40,6 +40,32 @@ The module enables prescriptive performance analysis over complex big data solut
 - <a href="https://datasystemsgrouput.github.io/PAPyA/Bench-Ranker"><em>Bench-Ranker</em></a> <br>
 
 #### UI
+This is a running code example of the PAPyA pipeline
+```python
+import Ranker
+
+#(1) SD - Ranking Criteria
+schemaSDRank = Ranker.SDRank().calculateRankScore('schemas', '100M') # schema SDranking, 100M dataset size
+partitionSDRank = Ranker.SDRank().calculateRankScore('partition', '250M') # partition SDranking, 250M dataset size
+storageSDRank = Ranker.SDRank().calculateRankScore('storage', '100M') # storage SDranking, 100M dataset size
+
+#(2) MD - Ranking ( Pareto )
+paretoFronts_Q = Ranker.MDRank().paretoQ('250M')
+paretoFronts_Agg = Ranker.MDRank().paretoAgg('100M')
+
+# Visualization
+Ranker.SDRank().plot('schemas', '100M', 'horizontal') # plot SD ranking for schemas
+Ranker.MDRank().plot('100M') # plot MD ranking paretoAgg
+
+# Ranking Validation
+conformance_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
+coherence_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
+
+conf = Ranker.Validator().conformance(conformance_set, '100M', 5, 28)
+coh = Ranker.Validator().coherence(coherence_set, '100M', '250M')
+```
+
+In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/BenchRanker.ipynb"><em>notebook</em></a>, we provide a pre-run cells of the jupyter notebook along with the configuration file in <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/settings.yaml"><em>settings.yaml</em></a> to perform the analysis over the provided performance logs from the _Data Preparator_ module.
 
 ### PAPyA Impact, Design Aspects, Avaiblability and Resuability 
 
