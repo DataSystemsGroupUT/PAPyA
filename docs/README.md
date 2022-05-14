@@ -18,6 +18,10 @@ This library provides prescriptive analysis for the complex solution space of (R
 </p>
 
 ### PAPyA Components
+#### Data Preparator
+#### Executor
+#### Ranker
+#### UI
 
 #### PAPyA Impact, Design Aspects, Avaiblability and Resuability 
 
