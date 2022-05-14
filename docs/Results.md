@@ -71,3 +71,16 @@ Both of these methods can take a list of ranking criterions the users want to ev
 |SD Schema|st.predicate.orc|st.predicate.orc|
 |ParetoAgg|pt.subject.csv|vt.predicate.parquet|
 |ParetoQ|wpt.subject.orc|vt.subject.parquet|
+
+This table shows the top ranked configurations for each ranking criteria (i.e. Single Dimension and Multi Dimension Ranking) for 100M and 250M datasets.<br>
+
+<!-- <table>
+    <tr>
+        <td colspan="2">Three</td>
+        <td>Conformance</td>
+    </tr>
+    <tr>
+        <td>One</td>
+        <td>Two</td>
+    </tr>
+</table> -->

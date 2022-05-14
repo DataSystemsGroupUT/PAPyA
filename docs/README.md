@@ -35,28 +35,28 @@ This library provides prescriptive analysis for the complex solution space of (R
 
 | Reusability  | Description |
 | ------------- | ------------- |
-|Is there evidence of usage by a wider community beyond the resource creators or their project? Alternatively (for new resources), what is the resource’s potential for being (re)used; for example, based on the activity volume on discussion fora, mailing lists, issue trackers, support portal, etc?|PAPyA is extensible from both programming architecture and abstractions, therefore making it easy to reuse on a new project|
-|Is the resource easy to (re)use? For example, does it have high-quality documentation? Are there tutorials available?|Yes, PAPya provides good example to run the experiments along with documentations on the system's webpage|
-|Is the resource general enough to be applied in a wider set of scenarios, not just for the originally designed use? If it is specific, is there substantial demand.|PAPyA is independance from both the key performance indicator and their experimental dimensions, therefore applicable to any rank sets|
+|Is there evidence of usage by a wider community beyond the resource creators or their project? Alternatively (for new resources), what is the resource’s potential for being (re)used; for example, based on the activity volume on discussion fora, mailing lists, issue trackers, support portal, etc?|PAPyA can be used from practitioners of two communities, big data and the semantic web|
+|Is the resource easy to (re)use? For example, does it have high-quality documentation? Are there tutorials available?|Yes, we provide a github webpage for the resource <a href="https://datasystemsgrouput.github.io/PAPyA/">PAPyA</a>|
+|Is the resource general enough to be applied in a wider set of scenarios, not just for the originally designed use? If it is specific, is there substantial demand.|PAPyA is extensible from both programming architecture and abstractions, therefore making it easy to reuse on a new project|
 |Is there potential for extensibility to meet future requirements?|Yes, the system is extensible in terms of architectures and programming abstractions|
-|Does the resource include a clear explanation of how others use the data and software? Or (for new resources) how others are expected to use the data and software?|Yes, PAPyA has explanation detailing how others could use the resource|
+|Does the resource include a clear explanation of how others use the data and software? Or (for new resources) how others are expected to use the data and software?|Yes, we have a good documentation for using PAPyA along with jupyter notebook with running examples on how to use it|
 |Does the resource description clearly state what the resource can and cannot do, and the rationale for the exclusion of some functionality?|Yes, We explained that in our paper, and in each of the modules (e.g., BenchRanker, and Data Preperator)|
 
 #### Design & Technical Quality
 
 | Design  | Description |
 | ------------- | ------------- |
-|Does the design of the resource follow resource-specific best practices?||
-|Did the authors perform an appropriate reuse or extension of suitable high-quality resources? For example, in the case of ontologies, authors might extend upper ontologies and/or reuse ontology design patterns.||
-|Is the resource suitable for solving the task at hand?||
-|Does the resource provide an appropriate description (both human- and machine-readable), thus encouraging the adoption of FAIR principles? Is there a schema diagram? For datasets, is the description available in terms of VoID/DCAT/DublinCore?||
+|Does the design of the resource follow resource-specific best practices?|We designed PAPyA to use standard python libraries and also enable abstractions for extending|
+|Did the authors perform an appropriate reuse or extension of suitable high-quality resources? For example, in the case of ontologies, authors might extend upper ontologies and/or reuse ontology design patterns.|PAPyA uses standard ranking functions using standard python libraries (we don't use other external resources)|
+|Is the resource suitable for solving the task at hand?|Yes, PAPyA helps automating the perscriptive analysis for big data relational engines|
+|Does the resource provide an appropriate description (both human- and machine-readable), thus encouraging the adoption of FAIR principles? Is there a schema diagram? For datasets, is the description available in terms of VoID/DCAT/DublinCore?|We provide examples of relational RDF datasets along with descriptions of logical and physical storage options (in data preparator module)|
 
-#### Reusability
+#### Availability
 
-| Design  | Description |
+| Availability  | Description |
 | ------------- | ------------- |
-|Is the resource (and related results) published at a persistent URI (PURL, DOI, w3id)?||
-|Is there a canonical citation associated with the resource?||
+|Is the resource (and related results) published at a persistent URI (PURL, DOI, w3id)?|Yes, [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6509898.svg)](https://doi.org/10.5281/zenodo.6509898)|
+|Is there a canonical citation associated with the resource?|We keep better version of the library in Zenodo|
 |Does the resource provide a licence specification? (See creativecommons.org, opensource.org for more information)|Yes, PAPyA is an open source library under MIT license|
 |Is the resource publicly available? For example as API, Linked Open Data, Download, Open Code Repository.|Yes, PAPyA is published at persistent URI on the GitHub repository as an open-source library|
 |Is the resource publicly findable? Is it registered in (community) registries (e.g. Linked Open Vocabularies, BioPortal, or DataHub)? Is it registered in generic repositories such as FigShare, Zenodo or GitHub?|PAPyA is registered in the GitHub repository|
