@@ -23,7 +23,7 @@ This library provides prescriptive analysis for the complex solution space of (R
 #### Ranker
 #### UI
 
-#### PAPyA Impact, Design Aspects, Avaiblability and Resuability 
+### PAPyA Impact, Design Aspects, Avaiblability and Resuability 
 
 #### Impact
 
