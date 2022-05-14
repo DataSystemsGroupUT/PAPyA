@@ -19,8 +19,9 @@ This library provides prescriptive analysis for the complex solution space of (R
 
 ### PAPyA Components
 #### Data Preparator
+The module builds an exemplar pipeline for testing PAPyA Bench-Ranking module in the context of querying Big RDF datasets.<br>
+
 - <a href="https://datasystemsgrouput.github.io/PAPyA/Data-Preperator"><em>Data Preparator</em></a> <br>
-This module builds an exemplar pipeline for testing PAPyA Bench-Ranking module in the context of querying Big RDF datasets.
 
 #### Executor
 This is the system that is subject to the experimentation which offers an abstract API to be extended.
@@ -32,7 +33,11 @@ class Executor(ABC):
         pass
 ```
 Executor starts the execution pipeline in the external system and get the performance logs which are currently persists on a file system (i.e. _HDFS_)
+
 #### Ranker
+The module enables prescriptive performance analysis over complex big data solution space. It calculate rankings and obtain useful data visualizations which could help determine the best performing configuration of the performance logs from previous modules.<br>
+
+- <a href="https://datasystemsgrouput.github.io/PAPyA/Bench-Ranker"><em>Bench-Ranker</em></a> <br>
 
 #### UI
 
