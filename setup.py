@@ -8,7 +8,7 @@ def readme():
 # Setting up
 setup(
     name="PAPyA",
-    version="0.0.3",
+    version="3.0.0",
     author="Data Systems Group",
     author_email="<mail@testing.com>",
     description="Prescriptive Performance Analysis for Big Data Problems",
@@ -18,6 +18,7 @@ setup(
     license="MIT",
     packages=['PAPyA'],
     include_package_data=True,
+    install_requires=['PyYAML', 'plotly', 'pandas', 'matplotlib', 'scipy', 'numpy'],
     keywords=['python', 'Benchmarking', 'RDF', 'Big Data', 'Analytics'],
     classifiers=[
         "Development Status :: 1 - Planning",
