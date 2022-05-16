@@ -39,8 +39,23 @@ Data Preparator allows storing data using various HDFS file formats. In particul
 
 ### Getting Started with PAPyA Data Preperator:
 
-For compiling and generating a ```jar``` with all dependenceies in DP module, one should run the following command 
+For compiling and generating a ```jar``` with all dependenceies in DP module, one should run the following command inside the DP main directory:
 
 ```shell
 mvn package assembly:single
 ```
+
+For Directly Run the DP module, we uploaded the fat jar, into the ```target``` directory with the name (```PapyaDP-1.0-SNAPSHOT-jar-with-dependencies.jar```)
+
+
+The user should specify the required schema, partioning techniques, and storage options inside the file ```loader-default.ini```.
+
+The jar file is submmitted as spark job:
+
+```shell
+spark-submit --class run.PapyaDPMain  --master local[*] PapyaDP-1.0-SNAPSHOT-jar-with-dependencies.jar <OUTPUT_DIR> -db <dbName>  -i <RDF_SOURCE_DIR>
+```
+*Note:* make sure that the ```loader-default.ini``` file should be loacated besides the jar file. 
+
+
+
