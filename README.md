@@ -1,8 +1,8 @@
 <p align="center">
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/figs/papayalogo.png" width="100"/>
+<a href='https://datasystemsgrouput.github.io/PAPyA/'><img src="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/figs/papayalogo.png" width="100"/> </a>
 </p>
 
-# PAPyA
+# <a href='https://datasystemsgrouput.github.io/PAPyA/'>PAPyA</a>
 
 Prescriptive Performance Analysis  in Python Actions 
 
@@ -10,9 +10,4 @@ Prescriptive Performance Analysis  in Python Actions
 
 This library provides prescriptive analysis for the complex solution space of (RDF relational schema, Partitioning, and Storage Formats) that emerges with querying large RDF graphs over Relational Big Data (BD) System, e.g., Apache Spark-SQL.
 
-![](images/systemArchitecture.png)
-
-| Questions | True  | False  | Description |
-| :---:   | :-: | :-: | :-: |
-| Does Papya breaks new ground? |  | :heavy_check_mark: | This work is derived from previous paper |
-| Does the resource fill an important gap? | :heavy_check_mark: |  | This system help reduce the time needed to perform a prescriptive performance analysis of BD engine|
+* Documentation and more details about <a href='https://datasystemsgrouput.github.io/PAPyA/'> PAPya </a>
