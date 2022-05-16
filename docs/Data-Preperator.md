@@ -39,4 +39,8 @@ Data Preparator allows storing data using various HDFS file formats. In particul
 
 ### Getting Started with PAPyA Data Preperator:
 
+For compiling and generating a ```jar``` with all dependenceies in DP module, one should run the following command 
 
+```shell
+mvn package assembly:single
+```
