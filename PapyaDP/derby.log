@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon May 16 15:14:48 EEST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0180-ccca-dbd9-00001d4aa290 
+on database directory /Users/ragab/IdeaProjects/PapyaDP/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@6380e9e9 
+Loaded from file:/Users/ragab/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Amazon.com Inc.
+java.runtime.version=1.8.0_312-b07
+user.dir=/Users/ragab/IdeaProjects/PapyaDP
+os.name=Mac OS X
+os.arch=x86_64
+os.version=12.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
