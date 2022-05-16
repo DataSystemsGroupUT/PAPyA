@@ -55,7 +55,9 @@ The jar file is submmitted as spark job:
 ```shell
 spark-submit --class run.PapyaDPMain  --master local[*] PapyaDP-1.0-SNAPSHOT-jar-with-dependencies.jar <OUTPUT_DIR> -db <dbName>  -i <RDF_SOURCE_DIR>
 ```
-*Note:* make sure that the ```loader-default.ini``` file should be loacated besides the jar file. 
+* *Note:* make sure that the ```loader-default.ini``` file should be loacated besides the jar file.
+* The DP can directly generate the database into HDFS by specifying the ```<OUTPUT_DIR>``` as HDFS directory (```HDFS://...```). Otherwise, PAPyA DP loads the data locally (```FILE://...```).
+
 
 
 
