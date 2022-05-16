@@ -58,6 +58,42 @@ TT		= false
 WPT		= false
 VP		= false
 EXTVP   = false
+
+[storage]
+TTcsv=false
+TTorc=false
+TTavro=false
+TTParquet=false
+
+VPcsv=false
+VPorc=false
+VPavro=false
+VPParquet=false
+
+WPTcsv=false
+WPTorc=false
+WPTavro=false
+WPTParquet=false
+
+EXTVPcsv=false
+EXTVPorc=false
+EXTVPavro=false
+EXTVPParquet=false
+
+[physicalPartitioning]
+TTp	= false
+TTs	= false
+TTh	= false
+
+VPs=false
+VPh=false
+
+EXTVPs=false
+EXTVPh=false
+
+WPTs= false
+WPTh= false
+
 ```
 
 
