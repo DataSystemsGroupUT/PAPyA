@@ -28,7 +28,7 @@ from PAPyA.Rank import SDRank
 SDRank(config, logs, '100M', 'schemas').calculateRank()
 ```
 <p align="center">
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/top5schemaRank"/>
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/top5schemaRank.png"/>
 </p><br>
 This is the top 5 rank scores of the schema dimension<br>
 
@@ -38,7 +38,7 @@ The user can plot individual rank scores by calling the plot method from the sin
 SDRank(config, logs, '100M', 'schemas').plot('csv')
 ```
 <p align="center">
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDiagram"/>
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDiagram.png"/>
 </p>
 
 To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This method takes one argument, the dataset sizes.
