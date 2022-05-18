@@ -47,14 +47,14 @@ from PAPyA.Rank import MDRank
 MDRank(config, logs, '100M').paretoQ()
 MDRank(config, logs, '100M').paretoAgg()
 ```
-<figure>
+<figure align = "center">
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoQSolution.png">
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoAggSolution.png">
-  <figcaption>
+  <figcaption align = "center">
   Multi Dimensional Ranking Solutions
   </figcaption>
 </figure>
-
+<br>
 Users can plot paretoAgg method by calling the plot method from the MDRank class.
 
 ```python
@@ -75,14 +75,14 @@ coherence_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
 Conformance(config, logs, '100M', conformance_set, 5, 28).run()
 Coherence(config, logs, coherence_set, '100M', '250M').run()
 ```
-<figure>
+<figure align = "center">
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformanceScore.png">
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/coherenceScore.png">
-  <figcaption>
+  <figcaption align = "center">
   Ranking Validation Scores
   </figcaption>
 </figure>
-
+<br>
 Both of these methods can take a list of ranking criterions the users want to evaluate
 
 ### Performance Analysis
