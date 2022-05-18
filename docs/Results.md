@@ -47,22 +47,13 @@ from PAPyA.Rank import MDRank
 MDRank(config, logs, '100M').paretoQ()
 MDRank(config, logs, '100M').paretoAgg()
 ```
-<p align="left">
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoQSolution.png"/>
-</p>
-<p align="right">
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoAggSolution.png"/>
-</p>
-<!-- <figure>
+<figure>
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoQSolution.png">
-  <figcaption>
-  paretoQ Solutions.
-  </figcaption>
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoAggSolution.png">
   <figcaption>
   paretoAgg Solutions.
   </figcaption>
-</figure> -->
+</figure>
 
 Users can plot paretoAgg method by calling the plot method from the MDRank class.
 
