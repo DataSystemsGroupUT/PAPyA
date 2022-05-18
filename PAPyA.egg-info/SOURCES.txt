@@ -3,7 +3,13 @@ README.md
 setup.py
 PAPyA/Rank.py
 PAPyA/Ranker.py
-PAPyA/__init__.py
+PAPyA/best_of_k.py
+PAPyA/config_loader.py
+PAPyA/file_reader.py
+PAPyA/get_ranks.py
+PAPyA/joinTuple.py
+PAPyA/kendall_index.py
+PAPyA/nsga2.py
 PAPyA.egg-info/PKG-INFO
 PAPyA.egg-info/SOURCES.txt
 PAPyA.egg-info/dependency_links.txt

@@ -1,10 +1,10 @@
-from Methods.config_loader import Loader
-from Methods.get_ranks import getRanks
-from Methods.best_of_k import *
-from Methods.file_reader import FileReader
-from Methods.kendall_index import kendallIndex
-from Rank import SDRank
-from Rank import MDRank
+from PAPyA.config_loader import Loader
+from PAPyA.get_ranks import getRanks
+from PAPyA.best_of_k import bestOfParetoAgg, bestOfParetoQ, bestOfSD
+from PAPyA.file_reader import FileReader
+from PAPyA.kendall_index import kendallIndex
+from PAPyA.Rank import SDRank
+from PAPyA.Rank import MDRank
 import pandas as pd
 import numpy as np
 

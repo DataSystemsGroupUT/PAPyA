@@ -1,7 +1,7 @@
-from Methods.config_loader import Loader
-from Methods.file_reader import FileReader
-from Methods.get_ranks import getRanks
-from Methods.nsga2 import Nsga2
+from PAPyA.config_loader import Loader
+from PAPyA.file_reader import FileReader
+from PAPyA.get_ranks import getRanks
+from PAPyA.nsga2 import Nsga2
 import yaml
 import warnings
 import itertools

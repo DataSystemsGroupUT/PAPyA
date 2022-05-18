@@ -8,7 +8,7 @@ def readme():
 # Setting up
 setup(
     name="PAPyA",
-    version="3.0.0",
+    version="7.0.0",
     author="Data Systems Group",
     author_email="<mail@testing.com>",
     description="Prescriptive Performance Analysis for Big Data Problems",
