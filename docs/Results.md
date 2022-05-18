@@ -20,19 +20,26 @@ dimensions:
 query: 11
 ```
 
-In this experiment, we could get the single dimension ranking scores by calling the calculateRankScore which has two parameters, the single dimension and dataset sizes.
+In this experiment, we could get the single dimension ranking scores by calling the calculateRank function from the SDRank class which needs 4 parameters, the config file, logs file, dataset size, and the dimension we want to be ranked
 
 ```python
-import Ranker
+from PAPyA.Rank import SDRank
 
-Ranker.SDRank()calculateRankScore('schemas', '100M')
+SDRank(config, logs, '100M', 'schemas').calculateRank()
 ```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/top5schemaRank"/>
+</p><br>
+This is the top 5 rank scores of the schema dimension<br>
 
 The user can plot individual rank scores by calling the plot method from the single dimension class.
 
 ```python
-Ranker.SDRank().plot('schemas', '100M', 'csv')
+SDRank(config, logs, '100M', 'schemas').plot('csv')
 ```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDiagram"/>
+</p>
 
 To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This method takes one argument, the dataset sizes.
 
@@ -64,13 +71,6 @@ Ranker.Validator().coherence(coherence_set, '100M', '250M')
 Both of these methods can take a list of ranking criterions the users want to evaluate
 
 ### Performance Analysis
-<!-- |column1| 100M  | 250M |
-| ------------- | ------------- | ------------- |
-|SD Storage|st.predicate.orc|st.predicate.orc|
-|SD Partition|st.subject.parquet|vt.subject.orc|
-|SD Schema|st.predicate.orc|st.predicate.orc|
-|ParetoAgg|pt.subject.csv|vt.predicate.parquet|
-|ParetoQ|wpt.subject.orc|vt.subject.parquet| -->
 <table>
   <tr>
     <th></th>
