@@ -57,6 +57,8 @@ paretoFronts_Agg = MDRank(config, logs, dataset).paretoAgg()
 SDRank(config, logs, dataset, 'schemas').plot('horizontal') # plot SD ranking for schemas viewed by horizontal partitioning technique
 MDRank(config, logs, dataset).plot() # plot MD ranking paretoAgg
 
+from PAPyA.Ranker import Conformance
+from PAPyA.Ranker import Coherence
 # Ranking Validation
 conformance_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
 coherence_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
