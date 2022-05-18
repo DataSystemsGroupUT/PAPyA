@@ -64,13 +64,45 @@ Ranker.Validator().coherence(coherence_set, '100M', '250M')
 Both of these methods can take a list of ranking criterions the users want to evaluate
 
 ### Performance Analysis
-|column1| 100M  | 250M |
+<!-- |column1| 100M  | 250M |
 | ------------- | ------------- | ------------- |
 |SD Storage|st.predicate.orc|st.predicate.orc|
 |SD Partition|st.subject.parquet|vt.subject.orc|
 |SD Schema|st.predicate.orc|st.predicate.orc|
 |ParetoAgg|pt.subject.csv|vt.predicate.parquet|
-|ParetoQ|wpt.subject.orc|vt.subject.parquet|
+|ParetoQ|wpt.subject.orc|vt.subject.parquet| -->
+<table>
+  <tr>
+    <th></th>
+    <th>100M</th>
+    <th>250M</th>
+  </tr>
+  <tr>
+    <th>SD Storage</th>
+    <td>st.predicate.orc</td>
+    <td>st.predicate.orc</td>
+  </tr>
+  <tr>
+    <th>SD Partition</th>
+    <td>st.subject.parquet</td>
+    <td>vt.subject.orc</td>
+  </tr>
+  <tr>
+    <th>SD Schema</th>
+    <td>st.predicate.orc</td>
+    <td>st.predicate.orc</td>
+  </tr>
+  <tr>
+    <th>ParetoAgg</th>
+    <td>pt.subject.csv</td>
+    <td>vt.predicate.parquet</td>
+  </tr>
+  <tr>
+    <th>ParetoQ</th>
+    <td>wpt.subject.orc</td>
+    <td>vt.subject.parquet</td>
+  </tr>
+</table>
 
 This table shows the top ranked configurations for each ranking criteria (i.e. Single Dimension and Multi Dimension Ranking) for 100M and 250M datasets.<br>
 
