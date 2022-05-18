@@ -42,27 +42,27 @@ The module enables prescriptive performance analysis over complex big data solut
 #### UI
 This is a running code example of the PAPyA pipeline
 ```python
-import Ranker
-
+from PAPyA.Rank import SDRank
 #(1) SD - Ranking Criteria
-schemaSDRank = Ranker.SDRank().calculateRankScore('schemas', '100M') # schema SDranking, 100M dataset size
-partitionSDRank = Ranker.SDRank().calculateRankScore('partition', '250M') # partition SDranking, 250M dataset size
-storageSDRank = Ranker.SDRank().calculateRankScore('storage', '100M') # storage SDranking, 100M dataset size
+schemaSDRank = SDRank(config, logs, dataset, 'schemas').calculateRank() # schema SDranking, 100M dataset size
+partitionSDRank = SDRank(config, logs, dataset, 'partition').calculateRank() # partition SDranking, 250M dataset size
+storageSDRank = SDRank(config, logs, dataset, 'storage').calculateRank() # storage SDranking, 100M dataset size
 
+from PAPyA.Rank import MDRank
 #(2) MD - Ranking ( Pareto )
-paretoFronts_Q = Ranker.MDRank().paretoQ('250M')
-paretoFronts_Agg = Ranker.MDRank().paretoAgg('100M')
+paretoFronts_Q = MDRank(config, logs, dataset).paretoQ()
+paretoFronts_Agg = MDRank(config, logs, dataset).paretoAgg()
 
 # Visualization
-Ranker.SDRank().plot('schemas', '100M', 'horizontal') # plot SD ranking for schemas
-Ranker.MDRank().plot('100M') # plot MD ranking paretoAgg
+SDRank(config, logs, dataset, 'schemas').plot('horizontal') # plot SD ranking for schemas viewed by horizontal partitioning technique
+MDRank(config, logs, dataset).plot() # plot MD ranking paretoAgg
 
 # Ranking Validation
 conformance_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
 coherence_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
 
-conf = Ranker.Validator().conformance(conformance_set, '100M', 5, 28)
-coh = Ranker.Validator().coherence(coherence_set, '100M', '250M')
+conf = Conformance(config, logs, dataset, conformance_set, k_value, h_value)
+coh = Coherence(config, logs,conformance_set, rankset1, rankset2)
 ```
 
 In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/BenchRanker.ipynb"><em>notebook</em></a>, we provide a pre-run cells of the jupyter notebook along with the configuration file in <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/settings.yaml"><em>settings.yaml</em></a> to perform the analysis over the provided performance logs from the _Data Preparator_ module.
