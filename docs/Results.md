@@ -58,20 +58,30 @@ MDRank(config, logs, '100M').paretoAgg()
 Users can plot paretoAgg method by calling the plot method from the MDRank class.
 
 ```python
-Ranker.MDRank().plot('100M')
+MDRank(config, logs, '100M').plot()
 ```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoDiagram.png"/>
+</p>
 
 Lastly, the library provides two metrics of evaluation to evaluate the goodness of the ranking criteria which are the conformance and coherence which can be called from the validator class.
 
 ```python
-import Ranker
+from PAPyA.Ranker import Conformance, Coherence
 
 conformance_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
 coherence_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
 
-Ranker.Validator().conformance(conformance_set, '100M', 5, 28)
-Ranker.Validator().coherence(coherence_set, '100M', '250M')
+Conformance(config, logs, '100M', conformance_set, 5, 28).run()
+Coherence(config, logs, coherence_set, '100M', '250M').run()
 ```
+<figure>
+  <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformanceScore.png">
+  <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/coherenceScore.png">
+  <figcaption>
+  Ranking Validation Scores
+  </figcaption>
+</figure>
 
 Both of these methods can take a list of ranking criterions the users want to evaluate
 
