@@ -39,14 +39,20 @@ SDRank(config, logs, '100M', 'schemas').plot('csv')
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDigram.png"/>
 </p>
 
-To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This method takes one argument, the dataset sizes.
+To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This class takes three arguments, the config file, logs file, and the dataset size of our experiments.
 
 ```python
-import Ranker
+from PAPyA.Rank import MDRank
 
-Ranker.MDRank().paretoQ('250M')
-Ranker.MDRank().paretoAgg('100M')
+MDRank(config, logs, '100M').paretoQ()
+MDRank(config, logs, '100M').paretoAgg()
 ```
+<div id="fig:fig1">
+![paretoQ solutions](https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoQSolution.png){width=50%}
+![paretoAgg solutions](https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoAggSolution.png){width=50%}
+
+Multi Dimensional Ranking solutions
+</div>
 
 Users can plot paretoAgg method by calling the plot method from the MDRank class.
 
