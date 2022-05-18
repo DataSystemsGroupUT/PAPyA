@@ -51,7 +51,7 @@ MDRank(config, logs, '100M').paretoAgg()
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoQSolution.png">
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoAggSolution.png">
   <figcaption align = "center">
-  Multi Dimensional Ranking Solutions
+  <em>Multi Dimensional Ranking Solutions</em>
   </figcaption>
 </figure>
 <br>
@@ -79,7 +79,7 @@ Coherence(config, logs, coherence_set, '100M', '250M').run()
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformanceScore.png">
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/coherenceScore.png">
   <figcaption align = "center">
-  Ranking Validation Scores
+  <em>Ranking Validation Scores</em>
   </figcaption>
 </figure>
 <br>
