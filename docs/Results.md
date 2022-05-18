@@ -49,14 +49,10 @@ MDRank(config, logs, '100M').paretoAgg()
 ```
 <figure>
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoQSolution.png">
-  <figcaption>
-  paretoQ Solutions.
-  </figcaption>
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoAggSolution.png">
   <figcaption>
-  paretoAgg Solutions.
-  </figcaption>
   Multi Dimensional Ranking Solutions
+  </figcaption>
 </figure>
 
 Users can plot paretoAgg method by calling the plot method from the MDRank class.
