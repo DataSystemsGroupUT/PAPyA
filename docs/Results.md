@@ -29,16 +29,14 @@ SDRank(config, logs, '100M', 'schemas').calculateRank()
 ```
 <p align="center">
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/top5schemaRank.png"/>
-</p><br>
-This is the top 5 rank scores of the schema dimension<br>
-
+</p>
 The user can plot individual rank scores by calling the plot method from the single dimension class.
 
 ```python
 SDRank(config, logs, '100M', 'schemas').plot('csv')
 ```
 <p align="center">
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDiagram.png"/>
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDigram.png"/>
 </p>
 
 To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This method takes one argument, the dataset sizes.
