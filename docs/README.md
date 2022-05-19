@@ -112,9 +112,4 @@ In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/Be
 |Does PAPyA provide a licence specification? (See creativecommons.org, opensource.org for more information)|Yes, PAPyA is an open source library under MIT license|
 |Is PAPyA publicly available? For example as API, Linked Open Data, Download, Open Code Repository.|Yes, PAPyA is published at persistent URI on the GitHub repository as an open-source library|
 |Is PAPyA publicly findable? Is it registered in (community) registries (e.g. Linked Open Vocabularies, BioPortal, or DataHub)? Is it registered in generic repositories such as FigShare, Zenodo or GitHub?|PAPyA is registered in the GitHub repository|
-|Is there a sustainability plan specified for PAPyA? Is there a plan for the medium and long-term maintenance of PAPyA?|<ul>
-<li>provide support of SPARQL by incorporating native triple stores for query evaluation</li>       
-<li>incorporate SPARQL into SQL translation using advancement of R2RML mapping tool</li>
-<li>wraps other SQL on Hadoop executors to PAPyA</li>
-<li>use orchestration tools such as Apache Airflow to run PAPyA pipelines</li>
-<li>integrate PAPyA with other tools like gmark that generates graphs and workloads for distributed relational setups</li></ul>|
+|Is there a sustainability plan specified for PAPyA? Is there a plan for the medium and long-term maintenance of PAPyA?|- provide support of SPARQL by incorporating native triple stores for query evaluation<br>- incorporate SPARQL into SQL translation using advancement of R2RML mapping tool<br>- wraps other SQL on Hadoop executors to PAPyA<br>- use orchestration tools such as Apache Airflow to run PAPyA pipelines<br>- integrate PAPyA with other tools like gmark that generates graphs and workloads for distributed relational setups|
