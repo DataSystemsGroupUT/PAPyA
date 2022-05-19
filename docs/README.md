@@ -22,7 +22,7 @@ This library provides prescriptive analysis for the complex solution space of (R
 The module builds an exemplar pipeline for testing PAPyA Bench-Ranking module in the context of querying Big RDF datasets.<br>
 > <span class = "small">&#42;this work was build on top of an existing work, check the link for more information - <a href="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking"><em>SPARKSQL RDF Benchmarking</em></a></span><br>
 
-- <a href="https://datasystemsgrouput.github.io/PAPyA/Data-Preperator"><em>Data Preparator</em></a> <br>
+- <a href="https://datasystemsgrouput.github.io/PAPyA/Data-Preperator">Data Preparator</a> <br>
 
 #### Executor
 This is the system that is subject to the experimentation which offers an abstract API to be extended.
@@ -38,7 +38,7 @@ Executor starts the execution pipeline in the external system and get the perfor
 #### Ranker
 The module enables prescriptive performance analysis over complex big data solution space. It calculate rankings and obtain useful data visualizations which could help determine the best performing configuration of the performance logs from previous modules.<br>
 
-- <a href="https://datasystemsgrouput.github.io/PAPyA/Bench-Ranker"><em>Bench-Ranker</em></a> <br>
+- <a href="https://datasystemsgrouput.github.io/PAPyA/Bench-Ranker">Bench-Ranker</a> <br>
 
 #### UI
 This is a running code example of the PAPyA pipeline
@@ -68,7 +68,7 @@ conf = Conformance(config, logs, dataset, conformance_set, k_value, h_value)
 coh = Coherence(config, logs,conformance_set, rankset1, rankset2)
 ```
 
-In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/BenchRanker.ipynb"><em>notebook</em></a>, we provide a pre-run cells of the jupyter notebook along with the configuration file in <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/settings.yaml"><em>settings.yaml</em></a> to perform the analysis over the provided performance logs from the _Data Preparator_ module.
+In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/BenchRanker.ipynb">notebook</a>, we provide a pre-run cells of the jupyter notebook along with the configuration file in <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/settings.yaml">settings.yaml</a> to perform the analysis over the provided performance logs from the _Data Preparator_ module.
 
 ### PAPyA Impact, Design Aspects, Avaiblability and Resuability 
 
