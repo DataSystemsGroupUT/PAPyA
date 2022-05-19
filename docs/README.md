@@ -19,11 +19,8 @@ This library provides prescriptive analysis for the complex solution space of (R
 
 ### PAPyA Components
 #### Data Preparator
-<p>
-The module builds an exemplar pipeline for testing PAPyA Bench-Ranking module in the context of querying Big RDF datasets.</p>
-<br>
-<p><small>&#42;this work was build on top of an existing work, check the link for more information - <a href="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking"><em>SPARKSQL RDF Benchmarking</em></a><small></p>
-<br>
+The module builds an exemplar pipeline for testing PAPyA Bench-Ranking module in the context of querying Big RDF datasets.<br>
+> <span class = "small">&#42;this work was build on top of an existing work, check the link for more information - <a href="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking"><em>SPARKSQL RDF Benchmarking</em></a></span><br>
 
 - <a href="https://datasystemsgrouput.github.io/PAPyA/Data-Preperator"><em>Data Preparator</em></a> <br>
 
