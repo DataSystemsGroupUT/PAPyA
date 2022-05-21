@@ -257,7 +257,7 @@ class SDRank(FileReader):
             r = rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(fr'(?=.*\b{x}\b)(?=.*\b{y}\b)(?=.*\b{z}\b)', regex=True)]['Result']
             res.append(r[0])
 
-        df = pd.DataFrame(dict(r=res, theta=topConfig))
+        df = pd.DataFrame(dict(r=res, theta=dims))
         fig = px.line_polar(df, r='r', theta='theta', line_close=True)
         return fig.show()
         
