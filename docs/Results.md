@@ -20,7 +20,7 @@ dimensions:
     storage: ["csv", "avro", "parquet", "orc"]
 query: 11
 ```
-```javascript
+```xml
 # log file structures
 log
 └───100M
