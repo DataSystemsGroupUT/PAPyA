@@ -56,45 +56,45 @@ Example: generating the logical partitioning, i.e., the relational schema:
 
 ```python
 [logicalPartitioning]
-TT		= True
-WPT		= True
-VP    = True
+TT = True
+WPT = True
+VP = True
 EXTVP = True
 
 [storage]
-TTcsv     = True
-TTorc     = True
-TTavro    = True
+TTcsv = True
+TTorc = True
+TTavro = True
 TTParquet = True
 
-VPcsv     = True
-VPorc     = True
-VPavro    = True
+VPcsv = True
+VPorc = True
+VPavro = True
 VPParquet = True
 
-WPTcsv      = True
-WPTorc      = True
-WPTavro     = True
-WPTParquet  = True
+WPTcsv = True
+WPTorc = True
+WPTavro = True
+WPTParquet = True
 
-EXTVPcsv      = True
-EXTVPorc      = True
-EXTVPavro     = True
-EXTVPParquet  = True
+EXTVPcsv = True
+EXTVPorc = True
+EXTVPavro = True
+EXTVPParquet = True
 
 [physicalPartitioning]
 TTp = True
-TTs	= True
-TTh	= True
+TTs = True
+TTh = True
 
 VPs = True
 VPh = True
 
-EXTVPs  = True
-EXTVPh  = True
+EXTVPs = True
+EXTVPh = True
 
-WPTs  = True
-WPTh  = True
+WPTs = True
+WPTh = True
 ```
 
 
