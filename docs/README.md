@@ -38,7 +38,7 @@ Executor starts the execution pipeline in the external system and get the perfor
 
 The module enables prescriptive performance analysis over complex big data solution space. It calculate rankings and obtain useful data visualizations which could help determine the best performing configuration of the performance logs from previous modules.<br>
 
-<h4><a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/BenchRanker.ipynb">UI</a></h4>
+<h4><a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/UI%20Module/BenchRanker.ipynb">UI</a></h4>
 
 This is a running code example of the PAPyA pipeline
 ```python
@@ -67,7 +67,7 @@ conf = Conformance(config, logs, dataset, conformance_set, k_value, h_value)
 coh = Coherence(config, logs,conformance_set, rankset1, rankset2)
 ```
 
-In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/BenchRanker.ipynb">notebook</a>, we provide a pre-run cells of the jupyter notebook along with the configuration file in <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/settings.yaml">settings.yaml</a> to perform the analysis over the provided performance logs from the _Data Preparator_ module.
+In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/UI%20Module/BenchRanker.ipynb">notebook</a>, we provide a pre-run cells of the jupyter notebook along with the configuration file in <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/UI%20Module/settings.yaml">settings.yaml</a> to perform the analysis over the provided performance logs from the _Data Preparator_ module.
 
 ### PAPyA Impact, Design Aspects, Avaiblability and Resuability 
 
@@ -107,7 +107,7 @@ In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/Be
 
 | Availability  | Description |
 | ------------- | ------------- |
-|Is PAPyA (and related results) published at a persistent URI (PURL, DOI, w3id)?|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6509898.svg)](https://doi.org/10.5281/zenodo.6509898)|
+|Is PAPyA (and related results) published at a persistent URI (PURL, DOI, w3id)?| [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6509898.svg)](https://doi.org/10.5281/zenodo.6509898)|
 |Is there a canonical citation associated with PAPyA?|We keep better version of the library in Zenodo|
 |Does PAPyA provide a licence specification? (See creativecommons.org, opensource.org for more information)|Yes, PAPyA is an open source library under MIT license|
 |Is PAPyA publicly available? For example as API, Linked Open Data, Download, Open Code Repository.|Yes, PAPyA is published at persistent URI on the GitHub repository as an open-source library|
