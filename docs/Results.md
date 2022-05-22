@@ -27,11 +27,10 @@ log
 |    │   st.horizontal.csv.txt
 |    │   st.horizontal.avro.txt
 |    │   ...
-│
 └───250M
-|     |   st.horizontal.csv.txt
-|     │   st.horizontal.avro.txt
-|     │   ...
+|    |   st.horizontal.csv.txt
+|    │   st.horizontal.avro.txt
+|    │   ...
 ```
 
 In this experiment, we could get the single dimension ranking scores by calling the calculateRank function from the SDRank class which needs 4 parameters, the config file, logs file, dataset size, and the dimension we want to be ranked
