@@ -12,7 +12,7 @@ In our experiment, we evaluate the performance of SparkSQL as a relational engin
 ### Bench-Ranking
 Bench-Ranking phase starts when we have results from Data Preparator in log files in the log folder of our repository. To start the analysis, we need to specify all dimensions and their options along with our key performance index which in our case is the query runs.
 
-```python
+```yaml
 # configuration file
 dimensions:
     schemas: ["st", "vt", "pt", "extvt", "wpt"]
@@ -20,7 +20,7 @@ dimensions:
     storage: ["csv", "avro", "parquet", "orc"]
 query: 11
 ```
-```python
+```yaml
 # log file structures
 log
 └───100M
