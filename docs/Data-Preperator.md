@@ -58,43 +58,43 @@ Example: generating the logical partitioning, i.e., the relational schema:
 [logicalPartitioning]
 TT		= True
 WPT		= True
-VP		= True
-EXTVP   = True
+VP    = True
+EXTVP = True
 
 [storage]
-TTcsv=True
-TTorc=True
-TTavro=True
-TTParquet=True
+TTcsv     = True
+TTorc     = True
+TTavro    = True
+TTParquet = True
 
-VPcsv=True
-VPorc=True
-VPavro=True
-VPParquet=True
+VPcsv     = True
+VPorc     = True
+VPavro    = True
+VPParquet = True
 
-WPTcsv=True
-WPTorc=True
-WPTavro=True
-WPTParquet=True
+WPTcsv      = True
+WPTorc      = True
+WPTavro     = True
+WPTParquet  = True
 
-EXTVPcsv=True
-EXTVPorc=True
-EXTVPavro=True
-EXTVPParquet=True
+EXTVPcsv      = True
+EXTVPorc      = True
+EXTVPavro     = True
+EXTVPParquet  = True
 
 [physicalPartitioning]
-TTp	= True
+TTp = True
 TTs	= True
 TTh	= True
 
-VPs=True
-VPh=True
+VPs = True
+VPh = True
 
-EXTVPs=True
-EXTVPh=True
+EXTVPs  = True
+EXTVPh  = True
 
-WPTs= True
-WPTh= True
+WPTs  = True
+WPTh  = True
 ```
 
 
