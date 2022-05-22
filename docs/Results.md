@@ -13,11 +13,25 @@ In our experiment, we evaluate the performance of SparkSQL as a relational engin
 Bench-Ranking phase starts when we have results from Data Preparator in log files in the log folder of our repository. To start the analysis, we need to specify all dimensions and their options along with our key performance index which in our case is the query runs.
 
 ```python
+# configuration file
 dimensions:
     schemas: ["st", "vt", "pt", "extvt", "wpt"]
     partition: ["horizontal", "predicate", "subject"]
     storage: ["csv", "avro", "parquet", "orc"]
 query: 11
+```
+```
+# log file structures
+log
+└───100M
+|    │   st.horizontal.csv.txt
+|    │   st.horizontal.avro.txt
+|    │   ...
+│
+└───250M
+|     |   st.horizontal.csv.txt
+|     │   st.horizontal.avro.txt
+|     │   ...
 ```
 
 In this experiment, we could get the single dimension ranking scores by calling the calculateRank function from the SDRank class which needs 4 parameters, the config file, logs file, dataset size, and the dimension we want to be ranked
