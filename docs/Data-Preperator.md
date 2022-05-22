@@ -23,20 +23,13 @@ Currently, Data Preparator includes four relational schemas commonly used in RDF
 ### Partitioning Techniques
 Data Preparator supports three different partitioning techniques: <br>
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/partition_table.png"/>
-<ol type="a">
-  <li>Horizontal Partitioning</li>
-  : divides data evenly over the number of machines in the cluster
-  <li>Subject Based Partitioning</li>
-  : divides data across partitions according to the subject keys
-  <li>Predicate Based Partitioning</li>
-  : distribute data across various partitions according to the hash value computed for the predicate keys
-</ol>
-<!-- - Horizontal Partitioning <br>
+
+- Horizontal Partitioning <br>
 : divides data evenly over the number of machines in the cluster  
 - Subject Based Partitioning <br>
 : divides data across partitions according to the subject keys
 - Predicate Based Partitioning <br>
-: distribute data across various partitions according to the hash value computed for the predicate keys -->
+: distribute data across various partitions according to the hash value computed for the predicate keys
 
 ### Storage Formats
 Data Preparator allows storing data using various HDFS file formats. In particular, the system has two types of storage format:
