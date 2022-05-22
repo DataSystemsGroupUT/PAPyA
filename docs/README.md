@@ -19,6 +19,7 @@ This library provides prescriptive analysis for the complex solution space of (R
 
 ### PAPyA Components
 <h4><a href="https://datasystemsgrouput.github.io/PAPyA/Data-Preperator">Data Preparator</a></h4>
+
 The module builds an exemplar pipeline for testing PAPyA Bench-Ranking module in the context of querying Big RDF datasets.<br>
 > <span class = "small">&#42;this work was build on top of an existing work, check the link for more information - <a href="https://github.com/DataSystemsGroupUT/SPARKSQLRDFBenchmarking"><em>SPARKSQL RDF Benchmarking</em></a></span><br>
 
@@ -33,12 +34,12 @@ class Executor(ABC):
 ```
 Executor starts the execution pipeline in the external system and get the performance logs which are currently persists on a file system (i.e. _HDFS_)
 
-#### Ranker
+<h4><a href="https://datasystemsgrouput.github.io/PAPyA/Bench-Ranker">Bench-Ranker</a></h4>
+
 The module enables prescriptive performance analysis over complex big data solution space. It calculate rankings and obtain useful data visualizations which could help determine the best performing configuration of the performance logs from previous modules.<br>
 
-- <a href="https://datasystemsgrouput.github.io/PAPyA/Bench-Ranker">Bench-Ranker</a> <br>
+<h4><a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/BenchRanker.ipynb">UI</a></h4>
 
-#### UI
 This is a running code example of the PAPyA pipeline
 ```python
 from PAPyA.Rank import SDRank
@@ -106,7 +107,7 @@ In <a href="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/BenchRanker/Be
 
 | Availability  | Description |
 | ------------- | ------------- |
-|Is PAPyA (and related results) published at a persistent URI (PURL, DOI, w3id)?|Yes, [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6509898.svg)](https://doi.org/10.5281/zenodo.6509898)|
+|Is PAPyA (and related results) published at a persistent URI (PURL, DOI, w3id)?|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6509898.svg)](https://doi.org/10.5281/zenodo.6509898)|
 |Is there a canonical citation associated with PAPyA?|We keep better version of the library in Zenodo|
 |Does PAPyA provide a licence specification? (See creativecommons.org, opensource.org for more information)|Yes, PAPyA is an open source library under MIT license|
 |Is PAPyA publicly available? For example as API, Linked Open Data, Download, Open Code Repository.|Yes, PAPyA is published at persistent URI on the GitHub repository as an open-source library|
