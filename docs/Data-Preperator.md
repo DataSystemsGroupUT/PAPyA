@@ -54,48 +54,47 @@ The user can specify the required schema, partioning techniques, and storage opt
 
 Example: generating the logical partitioning, i.e., the relational schema:
 
-```yaml
+```python
 [logicalPartitioning]
-TT		= false
-WPT		= false
-VP		= false
-EXTVP   = false
+TT		= True
+WPT		= True
+VP		= True
+EXTVP   = True
 
 [storage]
-TTcsv=false
-TTorc=false
-TTavro=false
-TTParquet=false
+TTcsv=True
+TTorc=True
+TTavro=True
+TTParquet=True
 
-VPcsv=false
-VPorc=false
-VPavro=false
-VPParquet=false
+VPcsv=True
+VPorc=True
+VPavro=True
+VPParquet=True
 
-WPTcsv=false
-WPTorc=false
-WPTavro=false
-WPTParquet=false
+WPTcsv=True
+WPTorc=True
+WPTavro=True
+WPTParquet=True
 
-EXTVPcsv=false
-EXTVPorc=false
-EXTVPavro=false
-EXTVPParquet=false
+EXTVPcsv=True
+EXTVPorc=True
+EXTVPavro=True
+EXTVPParquet=True
 
 [physicalPartitioning]
-TTp	= false
-TTs	= false
-TTh	= false
+TTp	= True
+TTs	= True
+TTh	= True
 
-VPs=false
-VPh=false
+VPs=True
+VPh=True
 
-EXTVPs=false
-EXTVPh=false
+EXTVPs=True
+EXTVPh=True
 
-WPTs= false
-WPTh= false
-
+WPTs= True
+WPTh= True
 ```
 
 
