@@ -20,7 +20,7 @@ dimensions:
     storage: ["csv", "avro", "parquet", "orc"]
 query: 11
 ```
-```yaml
+```java
 # log file structures
 log
 └───100M
