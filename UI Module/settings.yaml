@@ -3,5 +3,4 @@ dimensions:
     schemas: ["st", "vp", "pt", "extvp", "wpt"]
     partition: ["horizontal", "predicate", "subject"]
     
-
 query: 20
