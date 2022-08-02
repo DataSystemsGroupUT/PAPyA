@@ -1,0 +1,6 @@
+dimensions:
+  schemas: ["st", "vt", "pt", "extvt"]
+  partition: ["horizontal", "predicate", "subject"]
+  storage: ["csv", "avro", "parquet", "orc"]
+
+query: 11
