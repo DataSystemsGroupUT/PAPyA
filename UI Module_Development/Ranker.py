@@ -276,6 +276,7 @@ class Coherence(FileReader):
 
         # for x in self.li:
         if dimension in dims:
+            # DATASET 1
             self.sd = dimension
             var1 = SDRank(self.config_path, self.log_path,
                           self.rankset1, self.sd).calculateRank()
@@ -285,7 +286,7 @@ class Coherence(FileReader):
             scores = var1.to_numpy()
             order1 = np.argsort(-scores)
             order1 = order1 + 1
-
+            # DATASET 2
             var2 = SDRank(self.config_path, self.log_path,
                           self.rankset2, self.sd).calculateRank()
             scores = var2['Result'].to_numpy()
@@ -300,27 +301,54 @@ class Coherence(FileReader):
             order2_list = var2[:].tolist()
             order2 = [x+1 for x in order2_list]
             order2 = np.asarray(order2)
+            # DATASET 3
+            var3 = SDRank(self.config_path, self.log_path,
+                          '500M', self.sd).calculateRank()
+            scores = var3['Result'].to_numpy()
+            val = np.argsort(-scores)
+            # Drop that column
+            var3.drop(['Result'], axis=1, inplace=True)
+            # Put whatever series you want in its place
+            var3['Result'] = val
+            var3 = var3['Result']
 
-            ylabels = [str(self.rankset1), str(self.rankset2)]
-            # orders = np.stack((order1), axis=0)
-            orders = np.subtract(order1, order2)
-            orders = orders * (-1)
+            var3 = var3.loc[idx]
+            order3_list = var3[:].tolist()
+            order3 = [x+1 for x in order3_list]
+            order3 = np.asarray(order3)
 
-            new_df_subtract = pd.DataFrame(
-                orders, index=var1.index.values.tolist(), columns=['Order'])
-            new_df_subtract = new_df_subtract.sort_values('Order')
+            # ORDERING PART
+            ylabels = [str(self.rankset1 + "-" + str(self.rankset2)),
+                       str(self.rankset1 + "-" + "500M"), str(self.rankset2 + "-" + "500M")]
+            order1_2 = np.subtract(order1, order2)
+            order1_2 = np.absolute(order1_2)
+            order1 = np.sort(order1_2)
 
-            xlabels = new_df_subtract.index.tolist()
-            data = new_df_subtract.values.flatten()
+            order1_3 = np.subtract(order1, order3)
+            order1_3 = np.absolute(order1_3)
+            order2 = np.sort(order1_3)
 
-            plt.rc('xtick', labelsize=10)
+            order2_3 = np.subtract(order2, order3)
+            order2_3 = np.absolute(order2_3)
+            order3 = np.sort(order2_3)
+
+            orders = np.stack((order1, order2, order3), axis=0)
+
+            # new_df_subtract = pd.DataFrame(
+            #     orders, index=var1.index.values.tolist(), columns=['Order'])
+            # new_df_subtract = new_df_subtract.sort_values('Order')
+
+            xlabels = idx
+            # data = new_df_subtract.values.flatten()
+
+            plt.rc('xtick', labelsize=8)
             plt.rc('ytick', labelsize=14)
             plt.figure(figsize=(22, 5))
-            sns.heatmap([data],
+            sns.heatmap(orders,
                         cmap='YlOrBr',
                         vmin=0,
                         xticklabels=xlabels,
-                        yticklabels=['100M-250M'],
+                        yticklabels=ylabels,
                         annot=True,
                         square=True,
                         annot_kws={'fontsize': 8, 'fontweight': 'bold'})
