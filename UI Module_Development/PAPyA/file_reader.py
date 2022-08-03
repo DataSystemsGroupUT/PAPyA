@@ -28,7 +28,7 @@ class FileReader(Loader, joinTuple):
             df = pd.read_csv(
                 f'{self.log_path}/{self.size}/{i}.txt', sep=',', header=None)
             df = df.fillna(0)
-            mean = df.mean(axis=0)
+            mean = df.mean(axis=0, numeric_only=True)
             avg.append(mean)
 
         df = pd.DataFrame(avg, index=self.joined_string)

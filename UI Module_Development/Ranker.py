@@ -268,78 +268,50 @@ class Coherence(FileReader):
                 result.append(kendall)
         return pd.DataFrame(result, index=self.li, columns=['Kendall\'s Index'])
 
-    def showTable2(self, dimension: str):
+    def showTable2(self, *args, dimension: str):
         loader = Loader(self.config_path)
         data = loader.loader()
         d = data.get('dimensions')
         dims = list(d.keys())
 
         # for x in self.li:
-        if dimension in dims:
-            # DATASET 1
-            self.sd = dimension
-            var1 = SDRank(self.config_path, self.log_path,
-                          self.rankset1, self.sd).calculateRank()
-            var1 = var1['Result']
-            var1 = var1.nlargest(n=10, keep='first')
-            idx = var1.index.tolist()
-            scores = var1.to_numpy()
-            order1 = np.argsort(-scores)
-            order1 = order1 + 1
-            # DATASET 2
-            var2 = SDRank(self.config_path, self.log_path,
-                          self.rankset2, self.sd).calculateRank()
-            scores = var2['Result'].to_numpy()
-            val = np.argsort(-scores)
-            # Drop that column
-            var2.drop(['Result'], axis=1, inplace=True)
-            # Put whatever series you want in its place
-            var2['Result'] = val
-            var2 = var2['Result']
+        if dimension in self.li:
+            var = SDRank(self.config_path, self.log_path,
+                         args[0], dimension).calculateRank()
+            var = var['Result']
+            var = var.nlargest(n=10, keep='first')
+            idx = var.index.tolist()
+            scores = var.to_numpy()
+            order = np.argsort(-scores)
+            order = order + 1
 
-            var2 = var2.loc[idx]
-            order2_list = var2[:].tolist()
-            order2 = [x+1 for x in order2_list]
-            order2 = np.asarray(order2)
-            # DATASET 3
-            var3 = SDRank(self.config_path, self.log_path,
-                          '500M', self.sd).calculateRank()
-            scores = var3['Result'].to_numpy()
-            val = np.argsort(-scores)
-            # Drop that column
-            var3.drop(['Result'], axis=1, inplace=True)
-            # Put whatever series you want in its place
-            var3['Result'] = val
-            var3 = var3['Result']
+            ylabels = []
+            ordering = []
+            for x in args[1:]:
+                var2 = SDRank(self.config_path, self.log_path,
+                              x, dimension).calculateRank()
+                scores = var2['Result'].to_numpy()
+                val = np.argsort(-scores, kind='stable')
+                # Drop that column
+                var2.drop(['Result'], axis=1, inplace=True)
+                # Put whatever series you want in its place
+                var2['Result'] = val
+                var2 = var2['Result']
 
-            var3 = var3.loc[idx]
-            order3_list = var3[:].tolist()
-            order3 = [x+1 for x in order3_list]
-            order3 = np.asarray(order3)
+                var2 = var2.loc[idx]
+                order2_list = var2[:].tolist()
+                order2 = [x+1 for x in order2_list]
+                order2 = np.asarray(order2)
 
-            # ORDERING PART
-            ylabels = [str(self.rankset1 + "-" + str(self.rankset2)),
-                       str(self.rankset1 + "-" + "500M"), str(self.rankset2 + "-" + "500M")]
-            order1_2 = np.subtract(order1, order2)
-            order1_2 = np.absolute(order1_2)
-            order1 = np.sort(order1_2)
+                # CREATE YLABEL AND ORDERING
+                ylabels.append(str(args[0]) + "-" + str(x))
+                order1_2 = np.subtract(order, order2)
+                order1_2 = np.absolute(order1_2)
+                order_subtract = np.sort(order1_2)
+                ordering.append(order_subtract)
 
-            order1_3 = np.subtract(order1, order3)
-            order1_3 = np.absolute(order1_3)
-            order2 = np.sort(order1_3)
-
-            order2_3 = np.subtract(order2, order3)
-            order2_3 = np.absolute(order2_3)
-            order3 = np.sort(order2_3)
-
-            orders = np.stack((order1, order2, order3), axis=0)
-
-            # new_df_subtract = pd.DataFrame(
-            #     orders, index=var1.index.values.tolist(), columns=['Order'])
-            # new_df_subtract = new_df_subtract.sort_values('Order')
-
+            orders = np.stack((ordering), axis=0)
             xlabels = idx
-            # data = new_df_subtract.values.flatten()
 
             plt.rc('xtick', labelsize=8)
             plt.rc('ytick', labelsize=14)
@@ -360,6 +332,92 @@ class Coherence(FileReader):
                 labelbottom=False,
                 labeltop=True)
             return plt.tight_layout()
+        else:
+            raise Exception("Dimension is not in set")
+        #     # DATASET 1
+        #     self.sd = dimension
+        #     var1 = SDRank(self.config_path, self.log_path,
+        #                   self.rankset1, self.sd).calculateRank()
+        #     var1 = var1['Result']
+        #     var1 = var1.nlargest(n=10, keep='first')
+        #     idx = var1.index.tolist()
+        #     scores = var1.to_numpy()
+        #     order1 = np.argsort(-scores)
+        #     order1 = order1 + 1
+        #     # DATASET 2
+        #     var2 = SDRank(self.config_path, self.log_path,
+        #                   self.rankset2, self.sd).calculateRank()
+        #     scores = var2['Result'].to_numpy()
+        #     val = np.argsort(-scores)
+        #     # Drop that column
+        #     var2.drop(['Result'], axis=1, inplace=True)
+        #     # Put whatever series you want in its place
+        #     var2['Result'] = val
+        #     var2 = var2['Result']
+
+        #     var2 = var2.loc[idx]
+        #     order2_list = var2[:].tolist()
+        #     order2 = [x+1 for x in order2_list]
+        #     order2 = np.asarray(order2)
+        #     # DATASET 3
+        #     var3 = SDRank(self.config_path, self.log_path,
+        #                   '500M', self.sd).calculateRank()
+        #     scores = var3['Result'].to_numpy()
+        #     val = np.argsort(-scores)
+        #     # Drop that column
+        #     var3.drop(['Result'], axis=1, inplace=True)
+        #     # Put whatever series you want in its place
+        #     var3['Result'] = val
+        #     var3 = var3['Result']
+
+        #     var3 = var3.loc[idx]
+        #     order3_list = var3[:].tolist()
+        #     order3 = [x+1 for x in order3_list]
+        #     order3 = np.asarray(order3)
+
+        #     # ORDERING PART
+        #     ylabels = [str(self.rankset1 + "-" + str(self.rankset2)),
+        #                str(self.rankset1 + "-" + "500M"), str(self.rankset2 + "-" + "500M")]
+        #     order1_2 = np.subtract(order1, order2)
+        #     order1_2 = np.absolute(order1_2)
+        #     order1 = np.sort(order1_2)
+
+        #     order1_3 = np.subtract(order1, order3)
+        #     order1_3 = np.absolute(order1_3)
+        #     order2 = np.sort(order1_3)
+
+        #     order2_3 = np.subtract(order2, order3)
+        #     order2_3 = np.absolute(order2_3)
+        #     order3 = np.sort(order2_3)
+
+        #     orders = np.stack((order1, order2, order3), axis=0)
+
+        #     # new_df_subtract = pd.DataFrame(
+        #     #     orders, index=var1.index.values.tolist(), columns=['Order'])
+        #     # new_df_subtract = new_df_subtract.sort_values('Order')
+
+        #     xlabels = idx
+        #     # data = new_df_subtract.values.flatten()
+
+        #     plt.rc('xtick', labelsize=8)
+        #     plt.rc('ytick', labelsize=14)
+        #     plt.figure(figsize=(22, 5))
+        #     sns.heatmap(orders,
+        #                 cmap='YlOrBr',
+        #                 vmin=0,
+        #                 xticklabels=xlabels,
+        #                 yticklabels=ylabels,
+        #                 annot=True,
+        #                 square=True,
+        #                 annot_kws={'fontsize': 8, 'fontweight': 'bold'})
+        #     plt.yticks(rotation=0)
+        #     plt.tick_params(
+        #         which='both',
+        #         bottom=False,
+        #         left=False,
+        #         labelbottom=False,
+        #         labeltop=True)
+        #     return plt.tight_layout()
 
     def showTable(self, dimension: str):
         loader = Loader(self.config_path)
