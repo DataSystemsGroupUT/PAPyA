@@ -1,6 +1,9 @@
 from .config_loader import Loader
 from .joinTuple import joinTuple
 import itertools
+import time
+import os.path
+import numpy as np
 import pandas as pd
 
 
@@ -12,7 +15,7 @@ class FileReader(Loader, joinTuple):
         self.sd = sd
         self.joined_string = joined_string
 
-    def file_reader(self, args=None):
+    def file_reader(self):
         loader = Loader(self.config_path)
         data = loader.loader()
         d = data.get('dimensions')
@@ -24,20 +27,35 @@ class FileReader(Loader, joinTuple):
         self.joined_string = list(self.joined_string)
 
         avg = []
+        time_to_wait = 10
+        time_counter = 0
         for i in self.joined_string:
-            df = pd.read_csv(
-                f'{self.log_path}/{self.size}/{i}.txt', sep=',', header=None)
+            try:
+                pd.read_csv(f'{self.log_path}/{self.size}/{i}.txt',
+                                 sep=',', header=None)
+            except FileNotFoundError:
+                f = open(f"{self.log_path}/{self.size}/{i}.txt", "w+")
+                f.write(",".join(str(0) for i in range(query)))
+                f.close()
+                while not os.path.exists(f"{self.log_path}/{self.size}/{i}.txt"):
+                    time.sleep(1)
+                    time_counter += 1
+                    if time_counter > time_to_wait:
+                        break
+                    
+        for i in self.joined_string:
+            df = pd.read_csv(f'{self.log_path}/{self.size}/{i}.txt',
+                                 sep=',', header=None)
             df = df.fillna(0)
             mean = df.mean(axis=0, numeric_only=True)
             avg.append(mean)
 
         df = pd.DataFrame(avg, index=self.joined_string)
         df = df.set_axis(["Q"+str(i+1) for i in range(query)], axis=1)
-        # max_value = df.max(numeric_only=True).max()
-        # df = df.fillna(df.max())
+        df = df.replace(0, np.nan)
         max_value = df.max()
         max_value = max_value.apply(lambda x: x*(11/10))
-        df = df.fillna(max_value)
+        # df = df.fillna(max_value)
 
         if self.sd != list(d.keys())[-1]:
             li = []
@@ -47,31 +65,29 @@ class FileReader(Loader, joinTuple):
                 d_list, d_list.index(self.sd)+1, None))
             number_of_options = [d[x]for x in key_slice]
             total_length = len(list(itertools.product(*number_of_options)))
-
             for counter in range(total_length):
                 for x in range(int(len(config)/total_length)):
                     li.append(config[counter])
                     counter = counter+total_length
             df = df.reindex(index=li)
 
-        if args == None:
-            return df
+        return df
 
-        elif args != None:
-            options = []
-            store = []
-            for arg in args:
-                if isinstance(arg, str):
-                    if arg not in d.get(self.sd):
-                        options.append(arg)
-                    elif arg in d.get(self.sd):
-                        raise Exception(
-                            "Options cannot be in the choosen dimension")
-                else:
-                    pass
-            for x in range(len(options)):
-                c = fr'(?=.*\b{options[x]}\b)'
-                store.append(c)
-            command = "".join(store)
-            df = df.loc[df.index.str.contains(command, regex=True)]
-            return df
+        # elif args != None:
+        #     options = []
+        #     store = []
+        #     for arg in args:
+        #         if isinstance(arg, str):
+        #             if arg not in d.get(self.sd):
+        #                 options.append(arg)
+        #             elif arg in d.get(self.sd):
+        #                 raise Exception(
+        #                     "Options cannot be in the choosen dimension")
+        #         else:
+        #             pass
+        #     for x in range(len(options)):
+        #         c = fr'(?=.*\b{options[x]}\b)'
+        #         store.append(c)
+        #     command = "".join(store)
+        #     df = df.loc[df.index.str.contains(command, regex=True)]
+        #     return df

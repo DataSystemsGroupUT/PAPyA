@@ -36,7 +36,7 @@ class SDRank(FileReader):
         # splitting dataframe according to SD
         load = FileReader(self.config_path, self.log_path, self.size, self.sd)
         delRows = []
-        df = load.file_reader(args)
+        df = load.file_reader()
 
         for arg in args:
             if isinstance(arg, list):
