@@ -55,7 +55,7 @@ class FileReader(Loader, joinTuple):
         df = df.replace(0, np.nan)
         max_value = df.max()
         max_value = max_value.apply(lambda x: x*(11/10))
-        # df = df.fillna(max_value)
+        df = df.fillna(max_value)
 
         if self.sd != list(d.keys())[-1]:
             li = []
