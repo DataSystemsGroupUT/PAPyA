@@ -32,7 +32,7 @@ class FileReader(Loader, joinTuple):
         for i in self.joined_string:
             try:
                 pd.read_csv(f'{self.log_path}/{self.size}/{i}.txt',
-                                 sep=',', header=None)
+                            sep=',', header=None)
             except FileNotFoundError:
                 f = open(f"{self.log_path}/{self.size}/{i}.txt", "w+")
                 f.write(",".join(str(0) for i in range(query)))
@@ -42,10 +42,10 @@ class FileReader(Loader, joinTuple):
                     time_counter += 1
                     if time_counter > time_to_wait:
                         break
-                    
+
         for i in self.joined_string:
             df = pd.read_csv(f'{self.log_path}/{self.size}/{i}.txt',
-                                 sep=',', header=None)
+                             sep=',', header=None)
             df = df.fillna(0)
             mean = df.mean(axis=0, numeric_only=True)
             avg.append(mean)
