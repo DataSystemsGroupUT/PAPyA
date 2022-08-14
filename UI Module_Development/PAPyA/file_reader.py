@@ -3,6 +3,7 @@ from .joinTuple import joinTuple
 import itertools
 import time
 import os.path
+import os
 import numpy as np
 import pandas as pd
 
@@ -27,6 +28,7 @@ class FileReader(Loader, joinTuple):
         self.joined_string = list(self.joined_string)
 
         avg = []
+        config_to_delete = []
         time_to_wait = 10
         time_counter = 0
         for i in self.joined_string:
@@ -34,6 +36,7 @@ class FileReader(Loader, joinTuple):
                 pd.read_csv(f'{self.log_path}/{self.size}/{i}.txt',
                             sep=',', header=None)
             except FileNotFoundError:
+                config_to_delete.append(i)
                 f = open(f"{self.log_path}/{self.size}/{i}.txt", "w+")
                 f.write(",".join(str(0) for i in range(query)))
                 f.close()
@@ -70,9 +73,17 @@ class FileReader(Loader, joinTuple):
                     li.append(config[counter])
                     counter = counter+total_length
             df = df.reindex(index=li)
+        
+        if len(config_to_delete) == 0:
+            return df
+        elif len(config_to_delete) != 0:
+            df = df.drop(config_to_delete, axis = 0)
 
-        return df
-
+            for i in config_to_delete:
+                os.remove(f"{self.log_path}/{self.size}/{i}.txt")
+            
+            return df
+        
         # elif args != None:
         #     options = []
         #     store = []
