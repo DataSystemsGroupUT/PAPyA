@@ -1,4 +1,4 @@
-from PAPyA.Rank import SDRank, MDRank 
+from Rank import SDRank, MDRank 
 
 class bestOfSD(SDRank):
     def __init__(self, config_path: str, log_path: str, size: str, sd: str, k:int):

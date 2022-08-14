@@ -4,8 +4,8 @@ from PAPyA.get_ranks import getRanks
 from PAPyA.best_of_k import bestOfParetoAgg, bestOfParetoQ, bestOfSD
 from PAPyA.file_reader import FileReader
 from PAPyA.kendall_index import kendallIndex
-from PAPyA.Rank import SDRank
-from PAPyA.Rank import MDRank
+from Rank import SDRank
+from Rank import MDRank
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -195,7 +195,6 @@ class Coherence(FileReader):
                               rankset2, self.sd).calculateRank()
                 var2 = var2['Result'].sort_index()
                 var2 = var2.to_numpy()
-
                 kendall = kendallIndex(
                     var1, var2).normalised_kendall_tau_distance()
                 result.append(kendall)
