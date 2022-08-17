@@ -77,13 +77,13 @@ class FileReader(Loader, joinTuple):
         if len(config_to_delete) == 0:
             return df
         elif len(config_to_delete) != 0:
-            df = df.drop(config_to_delete, axis = 0)
+            df = df.drop(config_to_delete, axis=0)
 
             for i in config_to_delete:
                 os.remove(f"{self.log_path}/{self.size}/{i}.txt")
-            
+
             return df
-        
+
         # elif args != None:
         #     options = []
         #     store = []
