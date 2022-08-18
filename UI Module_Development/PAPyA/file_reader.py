@@ -9,12 +9,16 @@ import pandas as pd
 
 
 class FileReader(Loader, joinTuple):
-    def __init__(self, config_path: str, log_path: str, size: str, sd: str, joined_string=None):
+    def __init__(self, config_path: str, log_path: str, size: str, sd: str, joined_string=None, deleted_config=None):
         super().__init__(config_path)
         self.log_path = log_path
         self.size = size
         self.sd = sd
         self.joined_string = joined_string
+        self.deleted_config = deleted_config
+    
+    def deleteConfig(self):
+        return self.deleted_config
 
     def file_reader(self):
         loader = Loader(self.config_path)
@@ -28,7 +32,7 @@ class FileReader(Loader, joinTuple):
         self.joined_string = list(self.joined_string)
 
         avg = []
-        config_to_delete = []
+        self.deleted_config = []
         time_to_wait = 10
         time_counter = 0
         for i in self.joined_string:
@@ -36,7 +40,7 @@ class FileReader(Loader, joinTuple):
                 pd.read_csv(f'{self.log_path}/{self.size}/{i}.txt',
                             sep=',', header=None)
             except FileNotFoundError:
-                config_to_delete.append(i)
+                self.deleted_config.append(i)
                 f = open(f"{self.log_path}/{self.size}/{i}.txt", "w+")
                 f.write(",".join(str(0) for i in range(query)))
                 f.close()
@@ -73,13 +77,11 @@ class FileReader(Loader, joinTuple):
                     li.append(config[counter])
                     counter = counter+total_length
             df = df.reindex(index=li)
-        
-        if len(config_to_delete) == 0:
-            return df
-        elif len(config_to_delete) != 0:
-            df = df.drop(config_to_delete, axis=0)
 
-            for i in config_to_delete:
+        if len(self.deleted_config) == 0:
+            return df
+        elif len(self.deleted_config) != 0:
+            for i in self.deleted_config:
                 os.remove(f"{self.log_path}/{self.size}/{i}.txt")
 
             return df

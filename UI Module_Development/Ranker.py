@@ -72,104 +72,103 @@ class Conformance(FileReader):
         table = pd.DataFrame(data, index=idx, columns=[self.size])
         return table
 
-    def showCriteriaTable(self, dimension: str):
+    def configurationQueryRanks(self, dimension: str, mode=0):
         loader = Loader(self.config_path)
         data = loader.loader()
         d = data.get('dimensions')
+        if mode == 0:
+            if dimension in self.li:
+                if dimension == "paretoQ":
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_paretoQ = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_paretoQ = criteria_table_paretoQ.loc[bestOfParetoQ(
+                        self.config_path, self.log_path, self.size, self.k).bestOfParetoQ()]
+                    return criteria_table_paretoQ
+                elif dimension == "paretoAgg":
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_paretoAgg = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_paretoAgg = criteria_table_paretoAgg.loc[bestOfParetoAgg(
+                        self.config_path, self.log_path, self.size, self.k).bestOfParetoAgg()]
+                    return criteria_table_paretoAgg
+                else:
+                    self.sd = dimension
+                    criteria_table = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table = criteria_table.loc[bestOfSD(
+                        self.config_path, self.log_path, self.size, self.sd, self.k).bestOfSD()]
+                    return criteria_table
 
-        if dimension in self.li:
-            if dimension == "paretoQ":
-                self.sd = list(d.keys())[-1]
-                criteria_table_paretoQ = getRanks(
-                    self.config_path, self.log_path, self.size, self.sd).getRanks()
-                criteria_table_paretoQ = criteria_table_paretoQ.loc[bestOfParetoQ(
-                    self.config_path, self.log_path, self.size, self.k).bestOfParetoQ()]
-                return criteria_table_paretoQ
-            elif dimension == "paretoAgg":
-                self.sd = list(d.keys())[-1]
-                criteria_table_paretoAgg = getRanks(
-                    self.config_path, self.log_path, self.size, self.sd).getRanks()
-                criteria_table_paretoAgg = criteria_table_paretoAgg.loc[bestOfParetoAgg(
-                    self.config_path, self.log_path, self.size, self.k).bestOfParetoAgg()]
-                return criteria_table_paretoAgg
-            else:
-                self.sd = dimension
-                criteria_table = getRanks(
-                    self.config_path, self.log_path, self.size, self.sd).getRanks()
-                criteria_table = criteria_table.loc[bestOfSD(
-                    self.config_path, self.log_path, self.size, self.sd, self.k).bestOfSD()]
-                return criteria_table
+            elif dimension not in self.li:
+                raise Exception("Dimension is not in set")
 
-        elif dimension not in self.li:
-            raise Exception("Dimension is not in set")
+        elif mode == 1:
+            def color_boolean(val):
+                color = ''
+                if val == 'True':
+                    color = 'red'
+                elif val == 'False':
+                    color = 'green'
+                return 'color: %s' % color
 
-    def showTable(self, dimension: str):
-        loader = Loader(self.config_path)
-        data = loader.loader()
-        d = data.get('dimensions')
+            if dimension in self.li:
+                if dimension == "paretoQ":
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_paretoQ = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_paretoQ = criteria_table_paretoQ.loc[bestOfParetoQ(
+                        self.config_path, self.log_path, self.size, self.k).bestOfParetoQ()]
+                    criteria_table_paretoQ = criteria_table_paretoQ[criteria_table_paretoQ > self.h]
+                    ordering = criteria_table_paretoQ.count(axis='columns')
+                    ordering = ordering.sort_values(ascending=True)
+                    ordering = ordering.index.to_list()
+                    criteria_table_paretoQ = criteria_table_paretoQ.loc[ordering]
+                    criteria_table_paretoQ = criteria_table_paretoQ[:].notnull(
+                    )
+                    criteria_table_paretoQ = criteria_table_paretoQ[:].astype(
+                        str)
+                    criteria_table_paretoQ = criteria_table_paretoQ.style.applymap(
+                        color_boolean)
+                    return criteria_table_paretoQ
+                elif dimension == "paretoAgg":
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_paretoAgg = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_paretoAgg = criteria_table_paretoAgg.loc[bestOfParetoAgg(
+                        self.config_path, self.log_path, self.size, self.k).bestOfParetoAgg()]
+                    criteria_table_paretoAgg = criteria_table_paretoAgg[
+                        criteria_table_paretoAgg > self.h]
+                    ordering = criteria_table_paretoAgg.count(axis='columns')
+                    ordering = ordering.sort_values(ascending=True)
+                    ordering = ordering.index.to_list()
+                    criteria_table_paretoAgg = criteria_table_paretoAgg.loc[ordering]
+                    criteria_table_paretoAgg = criteria_table_paretoAgg[:].notnull(
+                    )
+                    criteria_table_paretoAgg = criteria_table_paretoAgg[:].astype(
+                        str)
+                    criteria_table_paretoAgg = criteria_table_paretoAgg.style.applymap(
+                        color_boolean)
+                    return criteria_table_paretoAgg
+                else:
+                    self.sd = dimension
+                    criteria_table = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table = criteria_table.loc[bestOfSD(
+                        self.config_path, self.log_path, self.size, self.sd, self.k).bestOfSD()]
+                    criteria_table = criteria_table[criteria_table > self.h]
+                    ordering = criteria_table.count(axis='columns')
+                    ordering = ordering.sort_values(ascending=True)
+                    ordering = ordering.index.to_list()
+                    criteria_table = criteria_table.loc[ordering]
+                    criteria_table = criteria_table[:].notnull()
+                    criteria_table = criteria_table[:].astype(str)
+                    criteria_table = criteria_table.style.applymap(
+                        color_boolean)
+                    return criteria_table
 
-        def color_boolean(val):
-            color = ''
-            if val == 'True':
-                color = 'red'
-            elif val == 'False':
-                color = 'green'
-            return 'color: %s' % color
-
-        # for x in self.li:
-        if dimension in self.li:
-            if dimension == "paretoQ":
-                self.sd = list(d.keys())[-1]
-                criteria_table_paretoQ = getRanks(
-                    self.config_path, self.log_path, self.size, self.sd).getRanks()
-                criteria_table_paretoQ = criteria_table_paretoQ.loc[bestOfParetoQ(
-                    self.config_path, self.log_path, self.size, self.k).bestOfParetoQ()]
-                criteria_table_paretoQ = criteria_table_paretoQ[criteria_table_paretoQ > self.h]
-                ordering = criteria_table_paretoQ.count(axis='columns')
-                ordering = ordering.sort_values(ascending=False)
-                ordering = ordering.index.to_list()
-                criteria_table_paretoQ = criteria_table_paretoQ.loc[ordering]
-                criteria_table_paretoQ = criteria_table_paretoQ[:].notnull()
-                criteria_table_paretoQ = criteria_table_paretoQ[:].astype(str)
-                criteria_table_paretoQ = criteria_table_paretoQ.style.applymap(
-                    color_boolean)
-                return criteria_table_paretoQ
-            elif dimension == "paretoAgg":
-                self.sd = list(d.keys())[-1]
-                criteria_table_paretoAgg = getRanks(
-                    self.config_path, self.log_path, self.size, self.sd).getRanks()
-                criteria_table_paretoAgg = criteria_table_paretoAgg.loc[bestOfParetoAgg(
-                    self.config_path, self.log_path, self.size, self.k).bestOfParetoAgg()]
-                criteria_table_paretoAgg = criteria_table_paretoAgg[criteria_table_paretoAgg > self.h]
-                ordering = criteria_table_paretoAgg.count(axis='columns')
-                ordering = ordering.sort_values(ascending=False)
-                ordering = ordering.index.to_list()
-                criteria_table_paretoAgg = criteria_table_paretoAgg.loc[ordering]
-                criteria_table_paretoAgg = criteria_table_paretoAgg[:].notnull(
-                )
-                criteria_table_paretoAgg = criteria_table_paretoAgg[:].astype(
-                    str)
-                criteria_table_paretoAgg = criteria_table_paretoAgg.style.applymap(
-                    color_boolean)
-                return criteria_table_paretoAgg
-            else:
-                self.sd = dimension
-                criteria_table = getRanks(
-                    self.config_path, self.log_path, self.size, self.sd).getRanks()
-                criteria_table = criteria_table.loc[bestOfSD(
-                    self.config_path, self.log_path, self.size, self.sd, self.k).bestOfSD()]
-                criteria_table = criteria_table[criteria_table > self.h]
-                ordering = criteria_table.count(axis='columns')
-                ordering = ordering.sort_values(ascending=False)
-                ordering = ordering.index.to_list()
-                criteria_table = criteria_table.loc[ordering]
-                criteria_table = criteria_table[:].notnull()
-                criteria_table = criteria_table[:].astype(str)
-                criteria_table = criteria_table.style.applymap(color_boolean)
-                return criteria_table
-
-        elif dimension not in self.li:
-            raise Exception("Dimension is not in set")
+            elif dimension not in self.li:
+                raise Exception("Dimension is not in set")
 
 
 class Coherence(FileReader):
@@ -274,62 +273,190 @@ class Coherence(FileReader):
 
     def heatMapSubtract(self, *args, dimension: str):
         if dimension in self.li:
-            var = SDRank(self.config_path, self.log_path,
-                         args[0], dimension).calculateRank()
-            var = var['Result']
-            var = var.nlargest(n=10, keep='first')
-            idx = var.index.tolist()
-            scores = var.to_numpy()
-            order = np.argsort(-scores)
-            order = order + 1
+            if dimension == "paretoAgg":
+                var = MDRank(self.config_path, self.log_path, args[0]).paretoAgg()
+                data1_1 = var['Solution']
+                data1_1.replace('', np.nan, inplace=True)
+                data1_1.dropna(inplace=True)
+                data1_2 = var['Dominated']
+                data1_2.replace('', np.nan, inplace=True)
+                data1_2.dropna(inplace=True)
+                data1 = pd.concat([data1_1, data1_2],
+                                  axis=0, ignore_index=True)
+                
+                data1 = data1[:10]
+                order1 = list(data1.index)
+                idx = data1.tolist()
+                order1 = [x+1 for x in order1]
+                
+                ylabels = []
+                ordering = []
+                for x in args[1:]:
+                    var2 = MDRank(self.config_path, self.log_path, x).paretoAgg()
+                    data2_1 = var2['Solution']
+                    data2_1.replace('', np.nan, inplace=True)
+                    data2_1.dropna(inplace=True)
+                    data2_2 = var2['Dominated']
+                    data2_2.replace('', np.nan, inplace=True)
+                    data2_2.dropna(inplace=True)
+                    data2 = pd.concat([data2_1, data2_2],
+                                    axis=0, ignore_index=True)
+                    
+                    data2 = pd.Series(data2.index.values, index=data2)
+                    data2 = data2.loc[idx]
+                    data2 = data2.tolist()
+                    order2 = [x+1 for x in data2]
+                    
+                    # CREATE YLABEL AND ORDERING
+                    ylabels.append(str(args[0]) + "-" + str(x))
+                    order1_2 = np.subtract(order1, order2)
+                    order1_2 = np.absolute(order1_2)
+                    ordering.append(order1_2)
+                
+                orders = np.stack((ordering), axis=0)
+                xlabels = idx
 
-            ylabels = []
-            ordering = []
-            for x in args[1:]:
-                var2 = SDRank(self.config_path, self.log_path,
-                              x, dimension).calculateRank()
-                scores = var2['Result'].to_numpy()
-                val = np.argsort(-scores, kind='stable')
-                # Drop that column
-                var2.drop(['Result'], axis=1, inplace=True)
-                # Put whatever series you want in its place
-                var2['Result'] = val
-                var2 = var2['Result']
+                plt.rc('xtick', labelsize=8)
+                plt.rc('ytick', labelsize=14)
+                plt.figure(figsize=(22, 5))
+                sns.heatmap(orders,
+                            cmap='YlOrBr',
+                            vmin=0,
+                            xticklabels=xlabels,
+                            yticklabels=ylabels,
+                            annot=True,
+                            square=True,
+                            annot_kws={'fontsize': 8, 'fontweight': 'bold'})
+                plt.yticks(rotation=0)
+                plt.tick_params(
+                    which='both',
+                    bottom=False,
+                    left=False,
+                    labelbottom=False,
+                    labeltop=True)
+                return plt.tight_layout()
+            
+            elif dimension == "paretoQ":
+                var = MDRank(self.config_path, self.log_path, args[0]).paretoQ()
+                data1_1 = var['Solution']
+                data1_1.replace('', np.nan, inplace=True)
+                data1_1.dropna(inplace=True)
+                data1_2 = var['Dominated']
+                data1_2.replace('', np.nan, inplace=True)
+                data1_2.dropna(inplace=True)
+                data1 = pd.concat([data1_1, data1_2],
+                                  axis=0, ignore_index=True)
+                
+                data1 = data1[:10]
+                order1 = list(data1.index)
+                idx = data1.tolist()
+                order1 = [x+1 for x in order1]
+                
+                ylabels = []
+                ordering = []
+                for x in args[1:]:
+                    var2 = MDRank(self.config_path, self.log_path, x).paretoQ()
+                    data2_1 = var2['Solution']
+                    data2_1.replace('', np.nan, inplace=True)
+                    data2_1.dropna(inplace=True)
+                    data2_2 = var2['Dominated']
+                    data2_2.replace('', np.nan, inplace=True)
+                    data2_2.dropna(inplace=True)
+                    data2 = pd.concat([data2_1, data2_2],
+                                    axis=0, ignore_index=True)
+                    
+                    data2 = pd.Series(data2.index.values, index=data2)
+                    data2 = data2.loc[idx]
+                    data2 = data2.tolist()
+                    order2 = [x+1 for x in data2]
+                    
+                    # CREATE YLABEL AND ORDERING
+                    ylabels.append(str(args[0]) + "-" + str(x))
+                    order1_2 = np.subtract(order1, order2)
+                    order1_2 = np.absolute(order1_2)
+                    ordering.append(order1_2)
+                
+                orders = np.stack((ordering), axis=0)
+                xlabels = idx
 
-                var2 = var2.loc[idx]
-                order2_list = var2[:].tolist()
-                order2 = [x+1 for x in order2_list]
-                order2 = np.asarray(order2)
+                plt.rc('xtick', labelsize=8)
+                plt.rc('ytick', labelsize=14)
+                plt.figure(figsize=(22, 5))
+                sns.heatmap(orders,
+                            cmap='YlOrBr',
+                            vmin=0,
+                            xticklabels=xlabels,
+                            yticklabels=ylabels,
+                            annot=True,
+                            square=True,
+                            annot_kws={'fontsize': 8, 'fontweight': 'bold'})
+                plt.yticks(rotation=0)
+                plt.tick_params(
+                    which='both',
+                    bottom=False,
+                    left=False,
+                    labelbottom=False,
+                    labeltop=True)
+                return plt.tight_layout()
+            
+            else:
+                var = SDRank(self.config_path, self.log_path,
+                            args[0], dimension).calculateRank()
+                var = var['Result']
+                var = var.nlargest(n=10, keep='first')
+                idx = var.index.tolist()
+                scores = var.to_numpy()
+                order = np.argsort(-scores)
+                order = order + 1
 
-                # CREATE YLABEL AND ORDERING
-                ylabels.append(str(args[0]) + "-" + str(x))
-                order1_2 = np.subtract(order, order2)
-                order1_2 = np.absolute(order1_2)
-                ordering.append(order1_2)
+                ylabels = []
+                ordering = []
+                for x in args[1:]:
+                    var2 = SDRank(self.config_path, self.log_path,
+                                x, dimension).calculateRank()
+                    scores = var2['Result'].to_numpy()
+                    val = np.argsort(-scores, kind='stable')
+                    # Drop that column
+                    var2.drop(['Result'], axis=1, inplace=True)
+                    # Put whatever series you want in its place
+                    var2['Result'] = val
+                    var2 = var2['Result']
 
-            orders = np.stack((ordering), axis=0)
-            xlabels = idx
+                    var2 = var2.loc[idx]
+                    order2_list = var2[:].tolist()
+                    order2 = [x+1 for x in order2_list]
+                    order2 = np.asarray(order2)
 
-            plt.rc('xtick', labelsize=8)
-            plt.rc('ytick', labelsize=14)
-            plt.figure(figsize=(22, 5))
-            sns.heatmap(orders,
-                        cmap='YlOrBr',
-                        vmin=0,
-                        xticklabels=xlabels,
-                        yticklabels=ylabels,
-                        annot=True,
-                        square=True,
-                        annot_kws={'fontsize': 8, 'fontweight': 'bold'})
-            plt.yticks(rotation=0)
-            plt.tick_params(
-                which='both',
-                bottom=False,
-                left=False,
-                labelbottom=False,
-                labeltop=True)
-            return plt.tight_layout()
-        else:
+                    # CREATE YLABEL AND ORDERING
+                    ylabels.append(str(args[0]) + "-" + str(x))
+                    order1_2 = np.subtract(order, order2)
+                    order1_2 = np.absolute(order1_2)
+                    ordering.append(order1_2)
+
+                orders = np.stack((ordering), axis=0)
+                xlabels = idx
+
+                plt.rc('xtick', labelsize=8)
+                plt.rc('ytick', labelsize=14)
+                plt.figure(figsize=(22, 5))
+                sns.heatmap(orders,
+                            cmap='YlOrBr',
+                            vmin=0,
+                            xticklabels=xlabels,
+                            yticklabels=ylabels,
+                            annot=True,
+                            square=True,
+                            annot_kws={'fontsize': 8, 'fontweight': 'bold'})
+                plt.yticks(rotation=0)
+                plt.tick_params(
+                    which='both',
+                    bottom=False,
+                    left=False,
+                    labelbottom=False,
+                    labeltop=True)
+                return plt.tight_layout()
+        
+        elif dimension not in self.li:
             raise Exception("Dimension is not in set")
 
     def heatMap(self, rankset1: str, rankset2: str, dimension: str):
@@ -340,28 +467,120 @@ class Coherence(FileReader):
 
         if dimension in self.li:
             if dimension == "paretoAgg":
-                self.sd = list(d.keys())[-1]
-                var1 = SDRank(self.config_path, self.log_path,
-                              rankset1, self.sd).calculateRank()
-                paretoAggSolution = MDRank(
-                    self.config_path, self.log_path, rankset1, self.sd).paretoAgg()
-                paretoAggSolution = paretoAggSolution['Solution'].replace(
-                    '', np.nan)
-                paretoAggSolution = paretoAggSolution.dropna()
-                var1 = var1.loc[paretoAggSolution]
-                var1 = var1['Result']
-                var2 = SDRank(self.config_path, self.log_path,
-                              rankset2, self.sd).calculateRank()
-                paretoAggSolution = MDRank(
-                    self.config_path, self.log_path, rankset2, self.sd).paretoAgg()
-                paretoAggSolution = paretoAggSolution['Solution'].replace(
-                    '', np.nan)
-                paretoAggSolution = paretoAggSolution.dropna()
-                var2 = var2.loc[paretoAggSolution]
-                var2 = var2['Result']
-                
-                print(var1)
-                print(var2)
+                data1 = MDRank(self.config_path, self.log_path,
+                               rankset1).paretoAgg()
+                data2 = MDRank(self.config_path, self.log_path,
+                               rankset2).paretoAgg()
+
+                data1_1 = data1['Solution']
+                data1_1.replace('', np.nan, inplace=True)
+                data1_1.dropna(inplace=True)
+                data1_2 = data1['Dominated']
+                data1_2.replace('', np.nan, inplace=True)
+                data1_2.dropna(inplace=True)
+                data1 = pd.concat([data1_1, data1_2],
+                                  axis=0, ignore_index=True)
+
+                data2_1 = data2['Solution']
+                data2_1.replace('', np.nan, inplace=True)
+                data2_1.dropna(inplace=True)
+                data2_2 = data2['Dominated']
+                data2_2.replace('', np.nan, inplace=True)
+                data2_2.dropna(inplace=True)
+                data2 = pd.concat([data2_1, data2_2],
+                                  axis=0, ignore_index=True)
+
+                data1 = data1[:10]
+                order1 = list(data1.index)
+                idx = data1.tolist()
+                order1 = [x+1 for x in order1]
+
+                data2 = pd.Series(data2.index.values, index=data2)
+                data2 = data2.loc[idx]
+                data2 = data2.tolist()
+                order2 = [x+1 for x in data2]
+
+                xlabels = idx
+                ylabels = [str(rankset1), str(rankset2)]
+                orders = np.stack((order1, order2), axis=0)
+
+                plt.rc('xtick', labelsize=10)
+                plt.rc('ytick', labelsize=14)
+                plt.figure(figsize=(22, 5))
+                sns.heatmap(orders,
+                            cmap='YlOrBr',
+                            vmin=0,
+                            xticklabels=xlabels,
+                            yticklabels=ylabels,
+                            annot=True,
+                            square=True,
+                            annot_kws={'fontsize': 8, 'fontweight': 'bold'})
+                plt.yticks(rotation=0)
+                plt.tick_params(
+                    which='both',
+                    bottom=False,
+                    left=False,
+                    labelbottom=False,
+                    labeltop=True)
+                return plt.tight_layout()
+            
+            elif dimension == "paretoQ":
+                data1 = MDRank(self.config_path, self.log_path,
+                               rankset1).paretoQ()
+                data2 = MDRank(self.config_path, self.log_path,
+                               rankset2).paretoQ()
+
+                data1_1 = data1['Solution']
+                data1_1.replace('', np.nan, inplace=True)
+                data1_1.dropna(inplace=True)
+                data1_2 = data1['Dominated']
+                data1_2.replace('', np.nan, inplace=True)
+                data1_2.dropna(inplace=True)
+                data1 = pd.concat([data1_1, data1_2],
+                                  axis=0, ignore_index=True)
+
+                data2_1 = data2['Solution']
+                data2_1.replace('', np.nan, inplace=True)
+                data2_1.dropna(inplace=True)
+                data2_2 = data2['Dominated']
+                data2_2.replace('', np.nan, inplace=True)
+                data2_2.dropna(inplace=True)
+                data2 = pd.concat([data2_1, data2_2],
+                                  axis=0, ignore_index=True)
+
+                data1 = data1[:10]
+                order1 = list(data1.index)
+                idx = data1.tolist()
+                order1 = [x+1 for x in order1]
+
+                data2 = pd.Series(data2.index.values, index=data2)
+                data2 = data2.loc[idx]
+                data2 = data2.tolist()
+                order2 = [x+1 for x in data2]
+
+                xlabels = idx
+                ylabels = [str(rankset1), str(rankset2)]
+                orders = np.stack((order1, order2), axis=0)
+
+                plt.rc('xtick', labelsize=10)
+                plt.rc('ytick', labelsize=14)
+                plt.figure(figsize=(22, 5))
+                sns.heatmap(orders,
+                            cmap='YlOrBr',
+                            vmin=0,
+                            xticklabels=xlabels,
+                            yticklabels=ylabels,
+                            annot=True,
+                            square=True,
+                            annot_kws={'fontsize': 8, 'fontweight': 'bold'})
+                plt.yticks(rotation=0)
+                plt.tick_params(
+                    which='both',
+                    bottom=False,
+                    left=False,
+                    labelbottom=False,
+                    labeltop=True)
+                return plt.tight_layout()
 
             else:
                 var1 = SDRank(self.config_path, self.log_path,

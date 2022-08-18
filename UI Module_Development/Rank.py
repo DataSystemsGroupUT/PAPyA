@@ -37,6 +37,7 @@ class SDRank(FileReader):
         load = FileReader(self.config_path, self.log_path, self.size, self.sd)
         delRows = []
         df = load.file_reader()
+        delete_config = load.deleteConfig()
 
         for arg in args:
             if isinstance(arg, list):
@@ -102,251 +103,257 @@ class SDRank(FileReader):
             rank_score = pd.concat([rank_table, rank_score], axis=1)
             rank_dataframe.append(rank_score)
         rank_dataframe_rscore = pd.concat(rank_dataframe)
+        
+        if len(delete_config) == 0:
+            pass
+        elif len(delete_config) != 0:
+            rank_dataframe_rscore = rank_dataframe_rscore.drop(delete_config, axis=0)
 
         if len(args) == 0:
-            return rank_dataframe_rscore.sort_values(by=['Result'], ascending=False)
+            return rank_dataframe_rscore.sort_values(by = ['Result'], ascending = False)
         elif len(args) != 0:
-            options = []
-            store = []
+            options=[]
+            store=[]
             for arg in args:
                 if isinstance(arg, str):
                     options.append(arg)
                 else:
                     pass
             for x in range(len(options)):
-                c = c = fr'(?=.*\b{options[x]}\b)'
+                c=c=fr'(?=.*\b{options[x]}\b)'
                 store.append(c)
-            command = "".join(store)
-            rank_dataframe_rscore = rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
-                command, regex=True)]
-            return rank_dataframe_rscore.sort_values(by=['Result'], ascending=False)
+            command="".join(store)
+            rank_dataframe_rscore=rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
+                command, regex = True)]
+            return rank_dataframe_rscore.sort_values(by = ['Result'], ascending = False)
 
     def plot(self, view: str):
         self.calculateRank()
-        loader = Loader(self.config_path)
-        data = loader.loader()
-        d = data.get('dimensions')
-        options = list(d.values())
-        dims = list(d.keys())
+        loader=Loader(self.config_path)
+        data=loader.loader()
+        d=data.get('dimensions')
+        options=list(d.values())
+        dims=list(d.keys())
+        d=list(d.keys())
 
         if len(dims) > 3:
             raise Exception("can only plot 3 dimensions")
 
         if self.sd == dims[0]:
             if view not in options[0]:
-                filter = rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
-                    fr'\b{view}\b', regex=True)]
+                filter=rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
+                    fr'\b{view}\b', regex = True)]
 
                 if view in options[1]:
-                    Dictionary = {}
-                    loop = len(options[0])
-                    count = 0
+                    Dictionary={}
+                    loop=len(options[0])
+                    count=0
                     for i in options[2]:
-                        Dictionary['{}'.format(i)] = filter[count:loop]
-                        count = loop
-                        loop = loop+len(options[0])
+                        Dictionary['{}'.format(i)]=filter[count:loop]
+                        count=loop
+                        loop=loop+len(options[0])
 
-                    key = list(Dictionary)
-                    Dictionary2 = {}
+                    key=list(Dictionary)
+                    Dictionary2={}
 
                     for j in range(len(options[2])):
-                        val = list(Dictionary[key[j]]['Result'])
-                        Dictionary2['val{}'.format(j)] = val
+                        val=list(Dictionary[key[j]]['Result'])
+                        Dictionary2['val{}'.format(j)]=val
 
-                    data = np.vstack(list(Dictionary2.values()))
-                    df2 = pd.DataFrame(data=data, index=list(
-                        Dictionary.keys()), columns=options[0])
-                    return df2.plot.bar(title=str(view), rot=0, fontsize=14, figsize=(10, 10))
+                    data=np.vstack(list(Dictionary2.values()))
+                    df2=pd.DataFrame(data = data, index = list(
+                        Dictionary.keys()), columns = options[0])
+                    return df2.plot.bar(title = str(self.sd).capitalize() + " SD Rank pivoting " + str(d[2]).capitalize() + " formats for " + str(view).capitalize() + " " + str(d[1]).capitalize(), rot = 0, fontsize = 14, figsize = (10, 10))
 
                 elif view in options[2]:
-                    Dictionary = {}
-                    loop = len(options[0])
-                    count = 0
+                    Dictionary={}
+                    loop=len(options[0])
+                    count=0
                     for i in options[1]:
-                        Dictionary['{}'.format(i)] = filter[count:loop]
-                        count = loop
-                        loop = loop+len(options[0])
+                        Dictionary['{}'.format(i)]=filter[count:loop]
+                        count=loop
+                        loop=loop+len(options[0])
 
-                    key = list(Dictionary)
-                    Dictionary2 = {}
+                    key=list(Dictionary)
+                    Dictionary2={}
 
                     for j in range(len(options[1])):
-                        val = list(Dictionary[key[j]]['Result'])
-                        Dictionary2['val{}'.format(j)] = val
+                        val=list(Dictionary[key[j]]['Result'])
+                        Dictionary2['val{}'.format(j)]=val
 
-                    data = np.vstack(list(Dictionary2.values()))
-                    df2 = pd.DataFrame(data=data, index=list(
-                        Dictionary.keys()), columns=options[0])
-                    return df2.plot.bar(title=str(view), rot=0, fontsize=14, figsize=(10, 10))
+                    data=np.vstack(list(Dictionary2.values()))
+                    df2=pd.DataFrame(data = data, index = list(
+                        Dictionary.keys()), columns = options[0])
+                    return df2.plot.bar(title = str(self.sd).capitalize() + " SD Rank pivoting " + str(d[1]).capitalize() + " formats for " + str(view).capitalize() + " " + str(d[2]).capitalize(), rot = 0, fontsize = 14, figsize = (10, 10))
             else:
                 return "the dimension is " + dims[0]
 
         elif self.sd == dims[1]:
             if view not in options[1]:
-                filter = rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
-                    fr'\b{view}\b', regex=True)]
+                filter=rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
+                    fr'\b{view}\b', regex = True)]
 
                 if view in options[2]:
-                    Dictionary = {}
-                    loop = len(options[1])
-                    count = 0
+                    Dictionary={}
+                    loop=len(options[1])
+                    count=0
                     for i in options[0]:
-                        Dictionary['{}'.format(i)] = filter[count:loop]
-                        count = loop
-                        loop = loop+len(options[1])
+                        Dictionary['{}'.format(i)]=filter[count:loop]
+                        count=loop
+                        loop=loop+len(options[1])
 
-                    key = list(Dictionary)
-                    Dictionary2 = {}
+                    key=list(Dictionary)
+                    Dictionary2={}
 
                     for j in range(len(options[0])):
-                        val = list(Dictionary[key[j]]['Result'])
-                        Dictionary2['val{}'.format(j)] = val
+                        val=list(Dictionary[key[j]]['Result'])
+                        Dictionary2['val{}'.format(j)]=val
 
-                    data = np.vstack(list(Dictionary2.values()))
-                    df2 = pd.DataFrame(data=data, index=list(
-                        Dictionary.keys()), columns=options[1])
-                    return df2.plot.bar(title=str(view), rot=0, fontsize=14, figsize=(10, 10))
+                    data=np.vstack(list(Dictionary2.values()))
+                    df2=pd.DataFrame(data = data, index = list(
+                        Dictionary.keys()), columns = options[1])
+                    return df2.plot.bar(title = str(self.sd).capitalize() + " SD Rank pivoting " + str(d[0]).capitalize() + " formats for " + str(view).capitalize() + " " + str(d[2]).capitalize(), rot = 0, fontsize = 14, figsize = (10, 10))
 
                 elif view in options[0]:
-                    Dictionary = {}
-                    loop = len(options[1])
-                    count = 0
+                    Dictionary={}
+                    loop=len(options[1])
+                    count=0
                     for i in options[2]:
-                        Dictionary['{}'.format(i)] = filter[count:loop]
-                        count = loop
-                        loop = loop+len(options[1])
+                        Dictionary['{}'.format(i)]=filter[count:loop]
+                        count=loop
+                        loop=loop+len(options[1])
 
-                    key = list(Dictionary)
-                    Dictionary2 = {}
+                    key=list(Dictionary)
+                    Dictionary2={}
 
                     for j in range(len(options[2])):
-                        val = list(Dictionary[key[j]]['Result'])
-                        Dictionary2['val{}'.format(j)] = val
+                        val=list(Dictionary[key[j]]['Result'])
+                        Dictionary2['val{}'.format(j)]=val
 
-                    data = np.vstack(list(Dictionary2.values()))
-                    df2 = pd.DataFrame(data=data, index=list(
-                        Dictionary.keys()), columns=options[1])
-                    return df2.plot.bar(title=str(view), rot=0, fontsize=14, figsize=(10, 10))
+                    data=np.vstack(list(Dictionary2.values()))
+                    df2=pd.DataFrame(data = data, index = list(
+                        Dictionary.keys()), columns = options[1])
+                    return df2.plot.bar(title = str(self.sd).capitalize() + " SD Rank pivoting " + str(d[2]).capitalize() + " formats for " + str(view).capitalize() + " " + str(d[0]).capitalize(), rot = 0, fontsize = 14, figsize = (10, 10))
             else:
                 return "the dimension is " + dims[1]
 
         elif self.sd == dims[2]:
             if view not in options[2]:
-                filter = rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
-                    fr'\b{view}\b', regex=True)]
+                filter=rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
+                    fr'\b{view}\b', regex = True)]
 
                 if view in options[0]:
-                    Dictionary = {}
-                    loop = len(options[2])
-                    count = 0
+                    Dictionary={}
+                    loop=len(options[2])
+                    count=0
                     for i in options[1]:
-                        Dictionary['{}'.format(i)] = filter[count:loop]
-                        count = loop
-                        loop = loop+len(options[2])
+                        Dictionary['{}'.format(i)]=filter[count:loop]
+                        count=loop
+                        loop=loop+len(options[2])
 
-                    key = list(Dictionary)
-                    Dictionary2 = {}
+                    key=list(Dictionary)
+                    Dictionary2={}
 
                     for j in range(len(options[1])):
-                        val = list(Dictionary[key[j]]['Result'])
-                        Dictionary2['val{}'.format(j)] = val
+                        val=list(Dictionary[key[j]]['Result'])
+                        Dictionary2['val{}'.format(j)]=val
 
-                    data = np.vstack(list(Dictionary2.values()))
-                    df2 = pd.DataFrame(data=data, index=list(
-                        Dictionary.keys()), columns=options[2])
-                    return df2.plot.bar(title=str(view), rot=0, fontsize=14, figsize=(10, 10))
+                    data=np.vstack(list(Dictionary2.values()))
+                    df2=pd.DataFrame(data = data, index = list(
+                        Dictionary.keys()), columns = options[2])
+                    return df2.plot.bar(title = str(self.sd).capitalize() + " SD Rank pivoting " + str(d[1]).capitalize() + " formats for " + str(view).capitalize() + " " + str(d[0]).capitalize(), rot = 0, fontsize = 14, figsize = (10, 10))
 
                 elif view in options[1]:
-                    Dictionary = {}
-                    loop = len(options[2])
-                    count = 0
+                    Dictionary={}
+                    loop=len(options[2])
+                    count=0
                     for i in options[0]:
-                        Dictionary['{}'.format(i)] = filter[count:loop]
-                        count = loop
-                        loop = loop+len(options[2])
+                        Dictionary['{}'.format(i)]=filter[count:loop]
+                        count=loop
+                        loop=loop+len(options[2])
 
-                    key = list(Dictionary)
-                    Dictionary2 = {}
+                    key=list(Dictionary)
+                    Dictionary2={}
 
                     for j in range(len(options[0])):
-                        val = list(Dictionary[key[j]]['Result'])
-                        Dictionary2['val{}'.format(j)] = val
+                        val=list(Dictionary[key[j]]['Result'])
+                        Dictionary2['val{}'.format(j)]=val
 
-                    data = np.vstack(list(Dictionary2.values()))
-                    df2 = pd.DataFrame(data=data, index=list(
-                        Dictionary.keys()), columns=options[2])
-                    return df2.plot.bar(title=str(view), rot=0, fontsize=14, figsize=(10, 10))
+                    data=np.vstack(list(Dictionary2.values()))
+                    df2=pd.DataFrame(data = data, index = list(
+                        Dictionary.keys()), columns = options[2])
+                    return df2.plot.bar(title = str(self.sd).capitalize() + " SD Rank pivoting " + str(d[0]).capitalize() + " formats for " + str(view).capitalize() + " " + str(d[1]).capitalize(), rot = 0, fontsize = 14, figsize = (10, 10))
             else:
                 return "the dimension is " + dims[2]
 
     def plotRadar(self):
-        warnings.simplefilter(action='ignore', category=FutureWarning)
+        warnings.simplefilter(action = 'ignore', category = FutureWarning)
 
-        loader = Loader(self.config_path)
-        data = loader.loader()
-        d = data.get('dimensions')
-        dims = list(d.keys())
+        loader=Loader(self.config_path)
+        data=loader.loader()
+        d=data.get('dimensions')
+        dims=list(d.keys())
 
         if len(dims) > 3:
             raise Exception("can only plot 3 dimensions")
 
-        topConfig = self.calculateRank()['Result'].index.str.replace(
-            '.', ' ', regex=False)
-        topConfig = topConfig[0].split()
+        topConfig=self.calculateRank()['Result'].index.str.replace(
+            '.', ' ', regex = False)
+        topConfig=topConfig[0].split()
 
-        x = topConfig[0]
-        y = topConfig[1]
-        z = topConfig[2]
-        res = []
+        x=topConfig[0]
+        y=topConfig[1]
+        z=topConfig[2]
+        res=[]
 
         for i in dims:
-            self.sd = i
+            self.sd=i
             self.calculateRank()
-            r = rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
-                fr'(?=.*\b{x}\b)(?=.*\b{y}\b)(?=.*\b{z}\b)', regex=True)]['Result']
+            r=rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
+                fr'(?=.*\b{x}\b)(?=.*\b{y}\b)(?=.*\b{z}\b)', regex = True)]['Result']
             res.append(r[0])
 
-        tet = []
-        count = 0
+        tet=[]
+        count=0
         for j in dims:
-            t = j + ": " + topConfig[count]
+            t=j + ": " + topConfig[count]
             tet.append(t)
             count += 1
 
-        df = pd.DataFrame(dict(r=res, theta=tet))
-        fig = px.line_polar(df, labels={"a": "pler"}, r='r',
-                            theta='theta', line_close=True)
+        df=pd.DataFrame(dict(r=res, theta=tet))
+        fig=px.line_polar(df, labels = {"a": "pler"}, r = 'r',
+                            theta = 'theta', line_close = True)
         return fig.show()
 
-    def plotBox(self, q=None):
-        loader = Loader(self.config_path)
-        data = loader.loader()
-        d = data.get('dimensions')
+    def plotBox(self, q = None):
+        loader=Loader(self.config_path)
+        data=loader.loader()
+        d=data.get('dimensions')
 
         if self.sd not in d:
             raise Exception("incorrect dimension")
 
         # splitting dataframe according to SD
-        load = FileReader(self.config_path, self.log_path, self.size, self.sd)
-        df = load.file_reader()
-        df = df.head(10).reset_index()
-        df.rename(columns={'index': 'conf'}, inplace=True)
+        load=FileReader(self.config_path, self.log_path, self.size, self.sd)
+        df=load.file_reader()
+        df=df.head(10).reset_index()
+        df.rename(columns = {'index': 'conf'}, inplace = True)
 
-        plt.figure(figsize=(15, 10))
+        plt.figure(figsize = (15, 10))
 
         # box plot in horizontal mode
         if q != None:
-            box_plot = sns.boxplot(data=df[q], palette='rainbow',
-                                   orient='v',  width=.25, showfliers=True)
+            box_plot=sns.boxplot(data = df[q], palette = 'rainbow',
+                                   orient = 'v',  width = .25, showfliers = True)
         elif q == None:
-            box_plot = sns.boxplot(data=df, palette='rainbow',
-                                   orient='v',  width=.25, showfliers=True)
+            box_plot=sns.boxplot(data = df, palette = 'rainbow',
+                                   orient = 'v',  width = .25, showfliers = True)
 
-        i = 0
+        i=0
         for xtick in box_plot.get_xticklabels():
-            Q = xtick.get_text()
-            min_val = boxplot_stats(df[Q])[0]['whislo']
-            max_val = max(boxplot_stats(df[Q])[0]['fliers']) if (
+            Q=xtick.get_text()
+            min_val=boxplot_stats(df[Q])[0]['whislo']
+            max_val=max(boxplot_stats(df[Q])[0]['fliers']) if (
                 len(boxplot_stats(df[Q])[0]['fliers'] != 0)) else 0
             whisk_max = boxplot_stats(df[Q])[0]['whishi']
 
@@ -459,7 +466,6 @@ class MDRank(FileReader):
         inputPoints = dimensions.tolist()
         paretoPoints, dominatedPoints = Nsga2(
             inputPoints, self.dominates_agg).execute()
-
         pareto_agg = self.getConfs(paretoPoints, dimensionsAll)
         pareto_agg = self.getConfsSorted(pareto_agg)
         vals = np.array(list(pareto_agg.values()))
