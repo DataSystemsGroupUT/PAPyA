@@ -274,7 +274,8 @@ class Coherence(FileReader):
     def heatMapSubtract(self, *args, dimension: str):
         if dimension in self.li:
             if dimension == "paretoAgg":
-                var = MDRank(self.config_path, self.log_path, args[0]).paretoAgg()
+                var = MDRank(self.config_path, self.log_path,
+                             args[0]).paretoAgg()
                 data1_1 = var['Solution']
                 data1_1.replace('', np.nan, inplace=True)
                 data1_1.dropna(inplace=True)
@@ -283,16 +284,17 @@ class Coherence(FileReader):
                 data1_2.dropna(inplace=True)
                 data1 = pd.concat([data1_1, data1_2],
                                   axis=0, ignore_index=True)
-                
+
                 data1 = data1[:10]
                 order1 = list(data1.index)
                 idx = data1.tolist()
                 order1 = [x+1 for x in order1]
-                
+
                 ylabels = []
                 ordering = []
                 for x in args[1:]:
-                    var2 = MDRank(self.config_path, self.log_path, x).paretoAgg()
+                    var2 = MDRank(self.config_path,
+                                  self.log_path, x).paretoAgg()
                     data2_1 = var2['Solution']
                     data2_1.replace('', np.nan, inplace=True)
                     data2_1.dropna(inplace=True)
@@ -300,19 +302,19 @@ class Coherence(FileReader):
                     data2_2.replace('', np.nan, inplace=True)
                     data2_2.dropna(inplace=True)
                     data2 = pd.concat([data2_1, data2_2],
-                                    axis=0, ignore_index=True)
-                    
+                                      axis=0, ignore_index=True)
+
                     data2 = pd.Series(data2.index.values, index=data2)
                     data2 = data2.loc[idx]
                     data2 = data2.tolist()
                     order2 = [x+1 for x in data2]
-                    
+
                     # CREATE YLABEL AND ORDERING
                     ylabels.append(str(args[0]) + "-" + str(x))
                     order1_2 = np.subtract(order1, order2)
                     order1_2 = np.absolute(order1_2)
                     ordering.append(order1_2)
-                
+
                 orders = np.stack((ordering), axis=0)
                 xlabels = idx
 
@@ -335,9 +337,10 @@ class Coherence(FileReader):
                     labelbottom=False,
                     labeltop=True)
                 return plt.tight_layout()
-            
+
             elif dimension == "paretoQ":
-                var = MDRank(self.config_path, self.log_path, args[0]).paretoQ()
+                var = MDRank(self.config_path, self.log_path,
+                             args[0]).paretoQ()
                 data1_1 = var['Solution']
                 data1_1.replace('', np.nan, inplace=True)
                 data1_1.dropna(inplace=True)
@@ -346,12 +349,12 @@ class Coherence(FileReader):
                 data1_2.dropna(inplace=True)
                 data1 = pd.concat([data1_1, data1_2],
                                   axis=0, ignore_index=True)
-                
+
                 data1 = data1[:10]
                 order1 = list(data1.index)
                 idx = data1.tolist()
                 order1 = [x+1 for x in order1]
-                
+
                 ylabels = []
                 ordering = []
                 for x in args[1:]:
@@ -363,19 +366,19 @@ class Coherence(FileReader):
                     data2_2.replace('', np.nan, inplace=True)
                     data2_2.dropna(inplace=True)
                     data2 = pd.concat([data2_1, data2_2],
-                                    axis=0, ignore_index=True)
-                    
+                                      axis=0, ignore_index=True)
+
                     data2 = pd.Series(data2.index.values, index=data2)
                     data2 = data2.loc[idx]
                     data2 = data2.tolist()
                     order2 = [x+1 for x in data2]
-                    
+
                     # CREATE YLABEL AND ORDERING
                     ylabels.append(str(args[0]) + "-" + str(x))
                     order1_2 = np.subtract(order1, order2)
                     order1_2 = np.absolute(order1_2)
                     ordering.append(order1_2)
-                
+
                 orders = np.stack((ordering), axis=0)
                 xlabels = idx
 
@@ -398,10 +401,10 @@ class Coherence(FileReader):
                     labelbottom=False,
                     labeltop=True)
                 return plt.tight_layout()
-            
+
             else:
                 var = SDRank(self.config_path, self.log_path,
-                            args[0], dimension).calculateRank()
+                             args[0], dimension).calculateRank()
                 var = var['Result']
                 var = var.nlargest(n=10, keep='first')
                 idx = var.index.tolist()
@@ -413,7 +416,7 @@ class Coherence(FileReader):
                 ordering = []
                 for x in args[1:]:
                     var2 = SDRank(self.config_path, self.log_path,
-                                x, dimension).calculateRank()
+                                  x, dimension).calculateRank()
                     scores = var2['Result'].to_numpy()
                     val = np.argsort(-scores, kind='stable')
                     # Drop that column
@@ -455,7 +458,7 @@ class Coherence(FileReader):
                     labelbottom=False,
                     labeltop=True)
                 return plt.tight_layout()
-        
+
         elif dimension not in self.li:
             raise Exception("Dimension is not in set")
 
@@ -523,7 +526,7 @@ class Coherence(FileReader):
                     labelbottom=False,
                     labeltop=True)
                 return plt.tight_layout()
-            
+
             elif dimension == "paretoQ":
                 data1 = MDRank(self.config_path, self.log_path,
                                rankset1).paretoQ()
@@ -634,72 +637,3 @@ class Coherence(FileReader):
 
         elif dimension not in self.li:
             raise Exception("Dimension is not in set")
-
-        # elif x == 'paretoAgg':
-        #     self.sd = list(d.keys())[-1]
-        #     var1 = SDRank(self.config_path, self.log_path,
-        #                     self.rankset1, self.sd).calculateRank()
-        #     paretoAggSolution = MDRank(
-        #         self.config_path, self.log_path, self.rankset1, self.sd).paretoAgg()
-        #     paretoAggSolution = paretoAggSolution['Solution'].replace(
-        #         '', np.nan)
-        #     paretoAggSolution = paretoAggSolution.dropna()
-        #     var1 = var1.loc[paretoAggSolution]
-        #     var1 = var1['Result']
-        #     var2 = SDRank(self.config_path, self.log_path,
-        #                     self.rankset2, self.sd).calculateRank()
-        #     paretoAggSolution = MDRank(
-        #         self.config_path, self.log_path, self.rankset2, self.sd).paretoAgg()
-        #     paretoAggSolution = paretoAggSolution['Solution'].replace(
-        #         '', np.nan)
-        #     paretoAggSolution = paretoAggSolution.dropna()
-        #     var2 = var2.loc[paretoAggSolution]
-        #     var2 = var2['Result']
-
-        #     print(var1)
-        #     print(var2)
-        #     # newDf = pd.concat([var1, var2], axis=1)
-        #     # newDf_column_name = newDf.columns.values
-        #     # newDf_column_name[0] = str(self.rankset1)  # var1
-        #     # newDf_column_name[1] = str(self.rankset2)  # var2
-
-        #     # newDf.columns = newDf_column_name
-        #     # newDf = newDf.fillna(1)
-        #     # var1 = newDf[str(self.rankset1)]
-        #     # var2 = newDf[str(self.rankset2)]
-
-        #     # table = pd.concat([var1, var2], axis=1)
-        #     # print(table)
-        # elif x == 'paretoQ':
-        #     self.sd = list(d.keys())[-1]
-        #     var1 = SDRank(self.config_path, self.log_path,
-        #                     self.rankset1, self.sd).calculateRank()
-        #     paretoQSolution = MDRank(
-        #         self.config_path, self.log_path, self.rankset1, self.sd).paretoQ()
-        #     paretoQSolution = paretoQSolution['Solution'].replace(
-        #         '', np.nan)
-        #     paretoQSolution = paretoQSolution.dropna()
-        #     var1 = var1.loc[paretoQSolution]
-        #     var1 = var1['Result']
-        #     var2 = SDRank(self.config_path, self.log_path,
-        #                     self.rankset2, self.sd).calculateRank()
-        #     paretoQSolution = MDRank(
-        #         self.config_path, self.log_path, self.rankset2, self.sd).paretoQ()
-        #     paretoQSolution = paretoQSolution['Solution'].replace(
-        #         '', np.nan)
-        #     paretoQSolution = paretoQSolution.dropna()
-        #     var2 = var2.loc[paretoQSolution]
-        #     var2 = var2['Result']
-
-        #     newDf = pd.concat([var1, var2], axis=1)
-        #     newDf_column_name = newDf.columns.values
-        #     newDf_column_name[0] = str(self.rankset1)  # var1
-        #     newDf_column_name[1] = str(self.rankset2)  # var2
-
-        #     newDf.columns = newDf_column_name
-        #     newDf = newDf.fillna(1)
-        #     var1 = newDf[str(self.rankset1)]
-        #     var2 = newDf[str(self.rankset2)]
-
-        #     table = pd.concat([var1, var2], axis=1)
-        #     print(table)
