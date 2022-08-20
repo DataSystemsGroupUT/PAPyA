@@ -104,10 +104,10 @@ class SDRank(FileReader):
             rank_dataframe.append(rank_score)
         rank_dataframe_rscore = pd.concat(rank_dataframe)
         
-        if len(delete_config) == 0:
-            pass
-        elif len(delete_config) != 0:
-            rank_dataframe_rscore = rank_dataframe_rscore.drop(delete_config, axis=0)
+        # if len(delete_config) == 0:
+        #     pass
+        # elif len(delete_config) != 0:
+        #     rank_dataframe_rscore = rank_dataframe_rscore.drop(delete_config, axis=0)
 
         if len(args) == 0:
             return rank_dataframe_rscore.sort_values(by = ['Result'], ascending = False)
@@ -143,7 +143,7 @@ class SDRank(FileReader):
             if view not in options[0]:
                 filter=rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
                     fr'\b{view}\b', regex = True)]
-
+                
                 if view in options[1]:
                     Dictionary={}
                     loop=len(options[0])
@@ -278,7 +278,7 @@ class SDRank(FileReader):
                     for j in range(len(options[0])):
                         val=list(Dictionary[key[j]]['Result'])
                         Dictionary2['val{}'.format(j)]=val
-
+                    
                     data=np.vstack(list(Dictionary2.values()))
                     df2=pd.DataFrame(data = data, index = list(
                         Dictionary.keys()), columns = options[2])
