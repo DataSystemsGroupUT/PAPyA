@@ -426,17 +426,29 @@ class MDRank(FileReader):
             res[key] = confsDict[key]
         return res
 
-    def paretoQ(self):
+    def paretoQ(self, q=None):
         loader = Loader(self.config_path)
         data = loader.loader()
         d = data.get('dimensions')
 
         self.sd = list(d.keys())[-1]
-        dimensionsAll = getRanks(
-            self.config_path, self.log_path, self.size, self.sd).getRanks()
-        dimensionsAll = dimensionsAll.reset_index().values
-        dimensions = np.array(getRanks(
-            self.config_path, self.log_path, self.size, self.sd).getRanks()[:], dtype=np.float64)
+
+        if q is not None:
+            if isinstance(q, list):
+                dimensionsAll = getRanks(
+                    self.config_path, self.log_path, self.size, self.sd).getRanks(q)
+                dimensionsAll = dimensionsAll.reset_index().values
+                dimensions = np.array(getRanks(
+                    self.config_path, self.log_path, self.size, self.sd).getRanks(q)[:], dtype=np.float64)
+            else:
+                raise Exception("parameter must be a list")
+        elif q is None:
+            dimensionsAll = getRanks(
+                self.config_path, self.log_path, self.size, self.sd).getRanks()
+            dimensionsAll = dimensionsAll.reset_index().values
+            dimensions = np.array(getRanks(
+                self.config_path, self.log_path, self.size, self.sd).getRanks()[:], dtype=np.float64)
+
         inputPoints = dimensions.tolist()
         paretoPoints, dominatedPoints = Nsga2(
             inputPoints, self.dominates).execute()
@@ -457,7 +469,7 @@ class MDRank(FileReader):
         table = table.replace(np.nan, '', regex=True)
         return table
 
-    def paretoAgg(self):
+    def paretoAgg(self, q=None):
         global dominatedPoints
         global paretoPoints
         global dims
@@ -468,12 +480,24 @@ class MDRank(FileReader):
         dims = list(d.keys())
 
         li = []
-        for x in dims:
-            self.sd = x
-            dimension_ranking = SDRank(
-                self.config_path, self.log_path, self.size, self.sd).calculateRank()
-            dimension_ranking = dimension_ranking['Result']
-            li.append(dimension_ranking)
+        if q is not None:
+            if isinstance(q, list):
+                for x in dims:
+                    self.sd = x
+                    dimension_ranking = SDRank(
+                        self.config_path, self.log_path, self.size, self.sd).calculateRank(q)
+                    dimension_ranking = dimension_ranking['Result']
+                    li.append(dimension_ranking)
+            else:
+                raise Exception("parameter must be a list")
+        elif q is None:
+            for x in dims:
+                self.sd = x
+                dimension_ranking = SDRank(
+                    self.config_path, self.log_path, self.size, self.sd).calculateRank()
+                dimension_ranking = dimension_ranking['Result']
+                li.append(dimension_ranking)
+
         new_df = pd.concat(li, axis=1)
         dimensionsAll = new_df.reset_index().values
         dimensions = np.array(dimensionsAll[:, 1:], dtype=np.float64)
