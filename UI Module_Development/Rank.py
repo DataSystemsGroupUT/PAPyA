@@ -15,6 +15,7 @@ import numpy as np
 from numpy.ma.core import maximum_fill_value
 import seaborn as sns
 import matplotlib.pyplot as plt
+import math
 
 # SINGEL DIMENSION
 
@@ -86,7 +87,7 @@ class SDRank(FileReader):
             rank_table = rank_table.set_axis(column_names, axis='index')
             rank_table = rank_table.set_axis(
                 ['Rank '+str(i+1) for i in range(len(column_names))], axis='columns')
-
+    
         # CREATE R SCORE
             q = len(df_transpose.columns)
             d = len(rank_table.index)
@@ -94,6 +95,9 @@ class SDRank(FileReader):
             rank_score = []
             for index, row in rank_table.iterrows():
                 s = 0
+                print(d)
+                print(rank_table)
+                print(row[0])
                 for r in range(d):
                     s = s + (row[r]*(d-(r+1)) / (q*(d-1)))
                 rank_score.append(s)
@@ -312,7 +316,7 @@ class SDRank(FileReader):
             r = rank_dataframe_rscore.loc[rank_dataframe_rscore.index.str.contains(
                 fr'(?=.*\b{x}\b)(?=.*\b{y}\b)(?=.*\b{z}\b)', regex=True)]['Result']
             res.append(r[0])
-
+        
         tet = []
         count = 0
         for j in dims:
@@ -543,3 +547,35 @@ class MDRank(FileReader):
         triang = mtri.Triangulation(pp[:, 0], pp[:, 1])
         ax.plot_trisurf(triang, pp[:, 2], color='green', alpha=0.3)
         return plt.show()
+
+class RTA(FileReader):
+    def __init__(self, config_path: str, log_path: str, size: str, sd=None):
+        super().__init__(config_path, log_path, size, sd)
+
+    def rta(self, conf : str):
+        loader = Loader(self.config_path)
+        data = loader.loader()
+        d = data.get('dimensions')
+        dims = list(d.keys())
+        
+        score_list = []
+        for x in dims:
+            self.sd = x
+            r_scores = SDRank(self.config_path, self.log_path, self.size, self.sd).calculateRank()
+            r_scores = r_scores['Result']
+            r_scores = r_scores.loc[conf]
+            score_list.append(r_scores)
+        
+        rs = score_list[0]
+        rp = score_list[1]
+        rf = score_list[2]
+        # RTA Formula
+        sin = math.sin(math.radians(120))
+        x = sin/2
+        total = x * (1+1+1)
+        result = x * (rf*rp + rs*rp + rf*rs)
+        triangle_area = total-result
+        return triangle_area
+
+
+            
