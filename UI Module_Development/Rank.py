@@ -95,11 +95,11 @@ class SDRank(FileReader):
             rank_score = []
             for index, row in rank_table.iterrows():
                 s = 0
-                print(d)
-                print(rank_table)
-                print(row[0])
-                for r in range(d):
-                    s = s + (row[r]*(d-(r+1)) / (q*(d-1)))
+                if d == 1:
+                    s = 1
+                else:
+                    for r in range(d):
+                        s = s + (row[r]*(d-(r+1)) / (q*(d-1)))
                 rank_score.append(s)
             rank_score = pd.DataFrame(rank_score)
             rank_score = rank_score.set_axis(column_names, axis='index')
@@ -542,40 +542,59 @@ class MDRank(FileReader):
         ax.set_xlabel('Rf')
         ax.set_ylabel('Rp')
         ax.set_zlabel('Rs')
-
-        import matplotlib.tri as mtri
-        triang = mtri.Triangulation(pp[:, 0], pp[:, 1])
-        ax.plot_trisurf(triang, pp[:, 2], color='green', alpha=0.3)
-        return plt.show()
+        
+        # if pp[:, 1].all == 1:
+        if np.all(pp[:, 1] == pp[0, 1]) or np.all(pp[:, 0] == pp[0, 0]) or np.all(pp[:, 2] == pp[0, 2]) :
+            return plt.show()
+        else:
+            import matplotlib.tri as mtri
+            triang = mtri.Triangulation(pp[:, 0], pp[:, 1])
+            ax.plot_trisurf(triang, pp[:, 2], color='green', alpha=0.3)
+            return plt.show()
 
 class RTA(FileReader):
     def __init__(self, config_path: str, log_path: str, size: str, sd=None):
         super().__init__(config_path, log_path, size, sd)
 
-    def rta(self, conf : str):
+    def rta(self):
         loader = Loader(self.config_path)
         data = loader.loader()
         d = data.get('dimensions')
         dims = list(d.keys())
         
-        score_list = []
-        for x in dims:
-            self.sd = x
-            r_scores = SDRank(self.config_path, self.log_path, self.size, self.sd).calculateRank()
-            r_scores = r_scores['Result']
-            r_scores = r_scores.loc[conf]
-            score_list.append(r_scores)
-        
-        rs = score_list[0]
-        rp = score_list[1]
-        rf = score_list[2]
-        # RTA Formula
-        sin = math.sin(math.radians(120))
-        x = sin/2
-        total = x * (1+1+1)
-        result = x * (rf*rp + rs*rp + rf*rs)
-        triangle_area = total-result
-        return triangle_area
+        if len(dims) <= 3:
+            dicts = {}
+            for x in dims:
+                self.sd = x
+                r_scores = SDRank(self.config_path, self.log_path, self.size, self.sd).calculateRank()
+                r_scores = r_scores.sort_index(kind = "stable")
+                idx = list(r_scores.index)
+                # print(idx)
+                # print(r_scores)
+                # score_list.append(r_scores)
+                dicts[x] = r_scores['Result'].to_list()
+            # print(dicts)
+            # print(idx)
+            values = list(dicts.values())
+            
+            rta_scores = []
+            for i in range (len(idx)):
+                rs = values[0][i]
+                rp = values[1][i]
+                rf = values[2][i]
+                # RTA Formula
+                sin = math.sin(math.radians(120))
+                y = sin/2
+                total = y * (1+1+1)
+                result = y * (rf*rp + rs*rp + rf*rs)
+                triangle_area = total - result
+                rta_scores.append(triangle_area)
 
+            data = pd.DataFrame(rta_scores, index = idx, columns=["Rta_Scores"])
+            data = data.sort_values('Rta_Scores', ascending=True, kind='stable')
+            return data
+        
+        elif len(dims) > 3:
+            raise Exception("RTA cannot calculate more than 3 dimensions")
 
             

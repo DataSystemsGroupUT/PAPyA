@@ -1,7 +1,8 @@
 from logging import exception
+from tkinter.ttk import Style
 from PAPyA.config_loader import Loader
 from PAPyA.get_ranks import getRanks
-from PAPyA.best_of_k import bestOfParetoAgg, bestOfParetoQ, bestOfSD
+from PAPyA.best_of_k import bestOfParetoAgg, bestOfParetoQ, bestOfRTA, bestOfSD
 from PAPyA.file_reader import FileReader
 from PAPyA.kendall_index import kendallIndex
 from Rank import SDRank
@@ -68,9 +69,42 @@ class Conformance(FileReader):
                 conformance = 1 - (sum/(self.k*query))
                 data.append(conformance)
                 idx.append('paretoAgg')
+            elif x == 'RTA':
+                self.sd = list(d.keys())[-1]
+                criteria_table_RTA = getRanks(
+                    self.config_path, self.log_path, self.size, self.sd).getRanks()
+                criteria_table_RTA = criteria_table_RTA.loc[bestOfRTA(
+                    self.config_path, self.log_path, self.size, self.k).bestOfRTA()]
+                criteria_table_RTA = criteria_table_RTA[criteria_table_RTA > self.h]
+                count = criteria_table_RTA.count(axis=1)
+                sum = count.sum(axis=0)
+                conformance = 1 - (sum/(self.k*query))
+                data.append(conformance)
+                idx.append('RTA')
 
         table = pd.DataFrame(data, index=idx, columns=[self.size])
         return table
+
+    def plot(self):
+        data = self.run()
+        value = data[self.size].to_list()
+        idx = list(data.index)
+
+        stacked_value = []
+        for x in value:
+            v = 1-x
+            stacked_value.append(v)
+
+        new_df = pd.DataFrame(
+            np.transpose(np.array([value, stacked_value])), index=idx, columns=['conformance', 'stacked'])
+
+        sns.set(style='white', rc = {'figure.figsize':(10,6)})
+        cmap = sns.color_palette()
+
+        new_df.plot(kind='bar', stacked=True, color=[cmap[2], cmap[3]])
+        plt.xticks(rotation=0)
+
+        return plt.show()
 
     def configurationQueryRanks(self, dimension: str, mode=0):
         loader = Loader(self.config_path)
@@ -92,6 +126,13 @@ class Conformance(FileReader):
                     criteria_table_paretoAgg = criteria_table_paretoAgg.loc[bestOfParetoAgg(
                         self.config_path, self.log_path, self.size, self.k).bestOfParetoAgg()]
                     return criteria_table_paretoAgg
+                elif dimension == "RTA":
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_RTA = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_RTA = criteria_table_RTA.loc[bestOfRTA(
+                        self.config_path, self.log_path, self.size, self.k).bestOfRTA()]
+                    return criteria_table_RTA
                 else:
                     self.sd = dimension
                     criteria_table = getRanks(
@@ -150,6 +191,25 @@ class Conformance(FileReader):
                     criteria_table_paretoAgg = criteria_table_paretoAgg.style.applymap(
                         color_boolean)
                     return criteria_table_paretoAgg
+                elif dimension == "RTA":
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_RTA = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_RTA = criteria_table_RTA.loc[bestOfRTA(
+                        self.config_path, self.log_path, self.size, self.k).bestOfRTA()]
+                    criteria_table_RTA = criteria_table_RTA[
+                        criteria_table_RTA > self.h]
+                    ordering = criteria_table_RTA.count(axis='columns')
+                    ordering = ordering.sort_values(ascending=True)
+                    ordering = ordering.index.to_list()
+                    criteria_table_RTA = criteria_table_RTA.loc[ordering]
+                    criteria_table_RTA = criteria_table_RTA[:].notnull(
+                    )
+                    criteria_table_RTA = criteria_table_RTA[:].astype(
+                        str)
+                    criteria_table_RTA = criteria_table_RTA.style.applymap(
+                        color_boolean)
+                    return criteria_table_RTA
                 else:
                     self.sd = dimension
                     criteria_table = getRanks(
@@ -269,6 +329,10 @@ class Coherence(FileReader):
                 kendall = kendallIndex(
                     var1, var2).normalised_kendall_tau_distance()
                 result.append(kendall)
+            elif x == "RTA":
+                self.sd = list(d.keys())[-1]
+                var1 = SDRank(self.config_path, self.log_path,
+                              rankset1, self.sd).calculateRank()
         return pd.DataFrame(result, index=self.li, columns=['Kendall\'s Index'])
 
     def heatMapSubtract(self, *args, dimension: str):
@@ -592,13 +656,13 @@ class Coherence(FileReader):
                 var1 = var1.nlargest(n=10, keep='first')
                 idx = var1.index.tolist()
                 scores = var1.to_numpy()
-                order1 = np.argsort(-scores)
+                order1 = np.argsort(-scores, kind="stable")
                 order1 = order1 + 1
 
                 var2 = SDRank(self.config_path, self.log_path,
                               rankset2, dimension).calculateRank()
                 scores = var2['Result'].to_numpy()
-                val = np.argsort(-scores)
+                val = np.argsort(-scores, kind='stable')
                 # Drop that column
                 var2.drop(['Result'], axis=1, inplace=True)
                 # Put whatever series you want in its place
