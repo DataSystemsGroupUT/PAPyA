@@ -1,3 +1,4 @@
+from logging import raiseExceptions
 from matplotlib.cbook import boxplot_stats
 from PAPyA.config_loader import Loader
 from PAPyA.file_reader import FileReader
@@ -23,6 +24,55 @@ import math
 class SDRank(FileReader):
     def __init__(self, config_path: str, log_path: str, size: str, sd: str):
         super().__init__(config_path, log_path, size, sd)
+        
+    def replicability(self, option: str, mode = 0):# to check changes of one option if the other configurations are changed
+        loader = Loader(self.config_path)
+        data = loader.loader()
+        d = data.get("dimensions")
+        q = data.get("query")
+        
+        if option not in d[self.sd]:
+            raise Exception("choose option from selected dimension")    
+        if len(d[self.sd]) != 2:
+            raise Exception("choosen dimension option must be 2 to make comparison")     
+        else:
+            dimensions = []
+            for key,value in d.items():
+                if len(value) > 2:
+                    dimensions.append(key)
+            
+            if mode == 1:
+                df = self.calculateRank(option)['Rank 1']
+                df = df.sort_index(kind='stable')
+                idx = list(df.index)
+                df = df.to_list()
+                
+                total_score = []
+                for x in df:
+                    scores = x / q
+                    total_score.append(scores)
+                    
+                table = pd.DataFrame(total_score, index=idx, columns=[option])
+                table.index = table.index.str.replace(option, '')
+                table.index = table.index.str.replace('.', ' ', regex=True)
+                return table
+            elif mode == 0:
+                reversed_order = dimensions[::-1]
+                total_scores = []
+                for x in range(len(dimensions)):
+                    scores_per_dimension = []
+                    idx = []
+                    for i in d[dimensions[x]]:
+                        df = self.calculateRank(option, i)['Rank 1']
+                        idx.append(i)
+                        df = df.tolist()
+                        replicability_score = sum(df)/(q*len(d[reversed_order[x]]))
+                        scores_per_dimension.append(replicability_score)
+                    result = pd.DataFrame(scores_per_dimension, columns=[dimensions[x]], index=idx)
+                    total_scores.append(result)
+                global_replicability_scores = pd.concat(total_scores)
+                global_replicability_scores = global_replicability_scores.replace(np.nan, '')
+                return global_replicability_scores
 
     def calculateRank(self, *args):
         global rank_dataframe_rscore
