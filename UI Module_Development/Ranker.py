@@ -1,5 +1,6 @@
 from logging import exception
 from tkinter.ttk import Style
+from turtle import color, width
 from PAPyA.config_loader import Loader
 from PAPyA.get_ranks import getRanks
 from PAPyA.best_of_k import bestOfParetoAgg, bestOfParetoQ, bestOfRTA, bestOfSD
@@ -85,26 +86,152 @@ class Conformance(FileReader):
         table = pd.DataFrame(data, index=idx, columns=[self.size])
         return table
 
-    def plot(self):
-        data = self.run()
-        value = data[self.size].to_list()
-        idx = list(data.index)
+    def plot(self, mode=0):
+        loader = Loader(self.config_path)
+        data = loader.loader()
+        d = data.get('dimensions')
+        query = data.get('query')
+        dims = list(d.keys())
 
-        stacked_value = []
-        for x in value:
-            v = 1-x
-            stacked_value.append(v)
+        if mode == 0:
+            data = self.run()
+            value = data[self.size].to_list()
+            idx = list(data.index)
 
-        new_df = pd.DataFrame(
-            np.transpose(np.array([value, stacked_value])), index=idx, columns=['conformance', 'stacked'])
+            non_conformance = []
+            for x in value:
+                stacked = 1 - x
+                non_conformance.append(stacked)
 
-        sns.set(style='white', rc = {'figure.figsize':(10,6)})
-        cmap = sns.color_palette()
+            df = pd.DataFrame(np.transpose(np.array([value, non_conformance])), index=idx, columns=[
+                              "Conformance", "Non-Conformance"])
+            sns.set(style='white', rc = {'figure.figsize':(10,6)})
+            cmap = sns.color_palette()
+            df.plot(kind='bar', stacked=True, color=[cmap[2], cmap[3]], width=0.2)
+            plt.xticks(rotation='0')
 
-        new_df.plot(kind='bar', stacked=True, color=[cmap[2], cmap[3]])
-        plt.xticks(rotation=0)
+            return plt.show()
 
-        return plt.show()
+        elif mode == 1:
+            total_conformance = []
+            config_name = []
+            for x in self.li:
+                if x in dims:
+                    self.sd = x
+                    criteria_table = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table = criteria_table.loc[bestOfSD(
+                        self.config_path, self.log_path, self.size, self.sd, self.k).bestOfSD()]
+                    criteria_table = criteria_table[criteria_table > self.h]
+                    count = criteria_table.count(axis=1)
+                    if len(count) >= 3:
+                        count = count[:3]
+                    elif len(count) < 3:
+                        count = count[:]
+                    idx = list(count.index)
+                    val = count.to_list()
+
+                    conformance_value = []
+                    counter_value = []
+                    for i in val:
+                        conformance = 1-(i/query)
+                        counter = 1 - conformance
+                        conformance_value.append(conformance)
+                        counter_value.append(counter)
+                    total_conformance.append(conformance_value)
+                    total_conformance.append(counter_value)
+                    config_name.append(idx)
+                elif x == 'paretoQ':
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_paretoQ = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_paretoQ = criteria_table_paretoQ.loc[bestOfParetoQ(
+                        self.config_path, self.log_path, self.size, self.k).bestOfParetoQ()]
+                    criteria_table_paretoQ = criteria_table_paretoQ[criteria_table_paretoQ > self.h]
+                    count = criteria_table_paretoQ.count(axis=1)
+                    if len(count) >= 3:
+                        count = count[:3]
+                    elif len(count) < 3:
+                        count = count[:]
+                    idx = list(count.index)
+                    val = count.to_list()
+
+                    conformance_value = []
+                    counter_value = []
+                    for i in val:
+                        conformance = 1-(i/query)
+                        counter = 1 - conformance
+                        conformance_value.append(conformance)
+                        counter_value.append(counter)
+                    total_conformance.append(conformance_value)
+                    total_conformance.append(counter_value)
+                    config_name.append(idx)
+                elif x == "paretoAgg":
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_paretoAgg = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_paretoAgg = criteria_table_paretoAgg.loc[bestOfParetoAgg(
+                        self.config_path, self.log_path, self.size, self.k).bestOfParetoAgg()]
+                    criteria_table_paretoAgg = criteria_table_paretoAgg[
+                        criteria_table_paretoAgg > self.h]
+                    count = criteria_table_paretoAgg.count(axis=1)
+                    if len(count) >= 3:
+                        count = count[:3]
+                    elif len(count) < 3:
+                        count = count[:]
+                    idx = list(count.index)
+                    val = count.to_list()
+
+                    conformance_value = []
+                    counter_value = []
+                    for i in val:
+                        conformance = 1-(i/query)
+                        counter = 1 - conformance
+                        conformance_value.append(conformance)
+                        counter_value.append(counter)
+                    total_conformance.append(conformance_value)
+                    total_conformance.append(counter_value)
+                    config_name.append(idx)
+                elif x == "RTA":
+                    self.sd = list(d.keys())[-1]
+                    criteria_table_RTA = getRanks(
+                        self.config_path, self.log_path, self.size, self.sd).getRanks()
+                    criteria_table_RTA = criteria_table_RTA.loc[bestOfRTA(
+                        self.config_path, self.log_path, self.size, self.k).bestOfRTA()]
+                    criteria_table_RTA = criteria_table_RTA[criteria_table_RTA > self.h]
+                    count = criteria_table_RTA.count(axis=1)
+                    if len(count) >= 3:
+                        count = count[:3]
+                    elif len(count) < 3:
+                        count = count[:]
+                    idx = list(count.index)
+                    val = count.to_list()
+
+                    conformance_value = []
+                    counter_value = []
+                    for i in val:
+                        conformance = 1-(i/query)
+                        counter = 1 - conformance
+                        conformance_value.append(conformance)
+                        counter_value.append(counter)
+                    total_conformance.append(conformance_value)
+                    total_conformance.append(counter_value)
+                    config_name.append(idx)
+
+            counter = 0
+            for i in range(len(self.li)):
+                bottom = total_conformance[counter]
+                top = total_conformance[counter+1]
+                print(bottom, top)
+                counter = counter + 2
+
+                xlabel = config_name[i]
+                cmap = sns.color_palette()
+
+                plt.title(f"{self.li[i]} ranking")
+                plt.bar(xlabel, bottom, color=[cmap[2]], width=0.2)
+                plt.bar(xlabel, top, bottom=bottom, color=[cmap[3]], width=0.2)
+                plt.show()
 
     def configurationQueryRanks(self, dimension: str, mode=0):
         loader = Loader(self.config_path)
