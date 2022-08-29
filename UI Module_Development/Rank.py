@@ -38,7 +38,7 @@ class SDRank(FileReader):
         else:
             dimensions = []
             for key,value in d.items():
-                if len(value) > 2:
+                if len(value) != 2:
                     dimensions.append(key)
             
             if mode == 1:
