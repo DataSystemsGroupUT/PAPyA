@@ -1,5 +1,5 @@
 dimensions:
-  schemas: ["wpt", "extvp", "st", "vp", "pt"]
+  schemas: ["extvp"]
   partition: ["horizontal", "subject", "predicate"]
   storage: ["avro", "parquet", "orc", "csv"]
 

@@ -25,6 +25,37 @@ class SDRank(FileReader):
     def __init__(self, config_path: str, log_path: str, size: str, sd: str):
         super().__init__(config_path, log_path, size, sd)
         
+    def replicability_oneDimensionOption(self):
+        loader = Loader(self.config_path)
+        data = loader.loader()
+        d = data.get("dimensions")
+        q = data.get("query")
+          
+        if len(d[self.sd]) != 1:
+            raise Exception("choosen dimension option must be 1 to make comparison")
+        else:
+            choosen_dimension = self.sd
+            dimensions = []
+            for key,value in d.items():
+                if key != self.sd:
+                    dimensions.append(key)
+            
+            total_result = []
+            for x in dimensions:
+                scores_per_dimension = []
+                idx = []
+                for i in d[x]:
+                    self.sd = x
+                    df = self.calculateRank(i)["Rank 1"]
+                    idx.append(i)
+                    df = df.to_list()
+                    replicability_score = sum(df)/(q*len(df))
+                    scores_per_dimension.append(replicability_score)
+                result = pd.DataFrame(scores_per_dimension, columns=[choosen_dimension], index=idx)
+                total_result.append(result)
+            table = pd.concat(total_result)
+            return table
+        
     def replicability(self, option: str, mode = 0):# to check changes of one option if the other configurations are changed
         loader = Loader(self.config_path)
         data = loader.loader()
@@ -38,7 +69,7 @@ class SDRank(FileReader):
         else:
             dimensions = []
             for key,value in d.items():
-                if len(value) != 2:
+                if key != self.sd:
                     dimensions.append(key)
             
             if mode == 1:

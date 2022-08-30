@@ -1,5 +1,0 @@
-dimensions:
-  storage: ["csv", "avro", "orc", "parquet"]
-  schemas: ["st", "vt", "pt"]
-
-query: 11
