@@ -1,6 +1,6 @@
 dimensions:
   schemas: ["st", "pt", "vp", "extvp", "wpt"]
-  partition: ["horizontal", "subject", "predicate"]
+  partition: ["horizontal"]
   storage: ["parquet", "orc", "csv", "avro"]
 
 query: 20
