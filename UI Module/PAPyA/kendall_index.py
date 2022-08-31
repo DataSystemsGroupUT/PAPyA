@@ -17,6 +17,8 @@ class kendallIndex:
             a[i] < a[j], b[i] > b[j]), np.logical_and(a[i] > a[j], b[i] < b[j])).sum()
         return ndisordered / (n * (n - 1))
 
+    # ON DEVELOPMENT
+
     # def parr(self, input):
     #     return self.pairs(list(input))
 

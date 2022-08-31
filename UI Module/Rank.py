@@ -24,64 +24,66 @@ import math
 class SDRank(FileReader):
     def __init__(self, config_path: str, log_path: str, size: str, sd: str):
         super().__init__(config_path, log_path, size, sd)
+       
+    # ON DEVELOPMENT 
+    
+    # def replicability_plot(self,dimension_view: str, mode=0):
+    #     loader = Loader(self.config_path)
+    #     data = loader.loader()
+    #     d = data.get("dimensions")
+    #     choosen_dimension = self.sd
         
-    def replicability_plot(self,dimension_view: str, mode=0):
-        loader = Loader(self.config_path)
-        data = loader.loader()
-        d = data.get("dimensions")
-        choosen_dimension = self.sd
-        
-        for key,value in d.items():
-            if key == choosen_dimension:
-                option_list = value
-            if key == dimension_view:
-                view_list = value
+    #     for key,value in d.items():
+    #         if key == choosen_dimension:
+    #             option_list = value
+    #         if key == dimension_view:
+    #             view_list = value
             
-        # print(option_list)
-        # print(view_list)
-        full_data = []
-        for x in option_list:
-            print(x)
-            table = self.replicability_oneDimensionOption(x, mode)
-            for i in view_list:
-                replicability_score = table.loc[i].item()
-                full_data.append(replicability_score)
+    #     # print(option_list)
+    #     # print(view_list)
+    #     full_data = []
+    #     for x in option_list:
+    #         print(x)
+    #         table = self.replicability_oneDimensionOption(x, mode)
+    #         for i in view_list:
+    #             replicability_score = table.loc[i].item()
+    #             full_data.append(replicability_score)
 
-        # array_for_plot = []
-        # count = 0
-        # # 0 1 2 3 4 5
-        # print(full_data)
-        # for x in range(len(view_list)):
-        #     count = count + len(view_list)
-        #     arr = [full_data[x], full_data[count]]
-        #     array_for_plot.append(arr)
+    #     # array_for_plot = []
+    #     # count = 0
+    #     # # 0 1 2 3 4 5
+    #     # print(full_data)
+    #     # for x in range(len(view_list)):
+    #     #     count = count + len(view_list)
+    #     #     arr = [full_data[x], full_data[count]]
+    #     #     array_for_plot.append(arr)
         
-        # print(array_for_plot)
-        # arr1 = [full_data[0], full_data[3]]
-        # arr2 = [full_data[1], full_data[4]]
-        # arr3= [full_data[2], full_data[5]]
-        # print(full_data)
-            # column_name = list(table.columns)
-            # column_name = column_name[0]
-            # data = table[column_name].to_list()
-            # full_data.append(data)
+    #     # print(array_for_plot)
+    #     # arr1 = [full_data[0], full_data[3]]
+    #     # arr2 = [full_data[1], full_data[4]]
+    #     # arr3= [full_data[2], full_data[5]]
+    #     # print(full_data)
+    #         # column_name = list(table.columns)
+    #         # column_name = column_name[0]
+    #         # data = table[column_name].to_list()
+    #         # full_data.append(data)
 
-        # plt.plot(arr1, label = view_list[0])
-        # plt.plot(arr2, label = view_list[1])
-        # plt.plot(arr3, label = view_list[2])
-        # plt.legend()
-        # plt.xticks(np.arange(len(option_list)), option_list)
-        # plt.show()
+    #     # plt.plot(arr1, label = view_list[0])
+    #     # plt.plot(arr2, label = view_list[1])
+    #     # plt.plot(arr3, label = view_list[2])
+    #     # plt.legend()
+    #     # plt.xticks(np.arange(len(option_list)), option_list)
+    #     # plt.show()
             
-        # index_name = list(table.index)
-        # column_name = list(table.columns)
-        # column_name = column_name[0]
-        # data = table[column_name].to_list()
+    #     # index_name = list(table.index)
+    #     # column_name = list(table.columns)
+    #     # column_name = column_name[0]
+    #     # data = table[column_name].to_list()
         
-        # plt.plot(data)
-        # plt.title(d[column_name][0])
-        # plt.xticks(np.arange(len(index_name)), index_name)
-        # plt.xlabel('Dimensional Options')
+    #     # plt.plot(data)
+    #     # plt.title(d[column_name][0])
+    #     # plt.xticks(np.arange(len(index_name)), index_name)
+    #     # plt.xlabel('Dimensional Options')
         
     def replicability(self, options: str, mode = 0):
         loader = Loader(self.config_path)
