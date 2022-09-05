@@ -27,63 +27,37 @@ class SDRank(FileReader):
        
     # ON DEVELOPMENT 
     
-    # def replicability_plot(self,dimension_view: str, mode=0):
-    #     loader = Loader(self.config_path)
-    #     data = loader.loader()
-    #     d = data.get("dimensions")
-    #     choosen_dimension = self.sd
+    def replicability_plot(self,dimension_view: str, mode=0):
+        loader = Loader(self.config_path)
+        data = loader.loader()
+        d = data.get("dimensions")
+        choosen_dimension = self.sd
         
-    #     for key,value in d.items():
-    #         if key == choosen_dimension:
-    #             option_list = value
-    #         if key == dimension_view:
-    #             view_list = value
+        for key,value in d.items():
+            if key == choosen_dimension:
+                option_list = value
+            if key == dimension_view:
+                view_list = value
             
-    #     # print(option_list)
-    #     # print(view_list)
-    #     full_data = []
-    #     for x in option_list:
-    #         print(x)
-    #         table = self.replicability_oneDimensionOption(x, mode)
-    #         for i in view_list:
-    #             replicability_score = table.loc[i].item()
-    #             full_data.append(replicability_score)
+        full_data = []
+        for x in option_list:
+            table = self.replicability(x, mode)
+            for i in view_list:
+                replicability_score = table.loc[i].item()
+                full_data.append(replicability_score)
 
-    #     # array_for_plot = []
-    #     # count = 0
-    #     # # 0 1 2 3 4 5
-    #     # print(full_data)
-    #     # for x in range(len(view_list)):
-    #     #     count = count + len(view_list)
-    #     #     arr = [full_data[x], full_data[count]]
-    #     #     array_for_plot.append(arr)
-        
-    #     # print(array_for_plot)
-    #     # arr1 = [full_data[0], full_data[3]]
-    #     # arr2 = [full_data[1], full_data[4]]
-    #     # arr3= [full_data[2], full_data[5]]
-    #     # print(full_data)
-    #         # column_name = list(table.columns)
-    #         # column_name = column_name[0]
-    #         # data = table[column_name].to_list()
-    #         # full_data.append(data)
-
-    #     # plt.plot(arr1, label = view_list[0])
-    #     # plt.plot(arr2, label = view_list[1])
-    #     # plt.plot(arr3, label = view_list[2])
-    #     # plt.legend()
-    #     # plt.xticks(np.arange(len(option_list)), option_list)
-    #     # plt.show()
-            
-    #     # index_name = list(table.index)
-    #     # column_name = list(table.columns)
-    #     # column_name = column_name[0]
-    #     # data = table[column_name].to_list()
-        
-    #     # plt.plot(data)
-    #     # plt.title(d[column_name][0])
-    #     # plt.xticks(np.arange(len(index_name)), index_name)
-    #     # plt.xlabel('Dimensional Options')
+        arr1 = [full_data[0], full_data[2], full_data[4]]
+        arr2 = [full_data[1], full_data[3], full_data[5]]
+        total_arr = []
+        for x in range(len(view_list)):
+            arr =  []
+            counter = x
+            for i in option_list:
+                arr.append(full_data[counter])
+                counter = counter + len(view_list)  
+            plt.plot(option_list, arr, label=view_list[x])
+        plt.legend()
+        plt.show()
         
     def replicability(self, options: str, mode = 0):
         loader = Loader(self.config_path)
@@ -91,52 +65,55 @@ class SDRank(FileReader):
         d = data.get("dimensions")
         q = data.get("query")
         choosen_dimension = self.sd 
-          
-        if mode == 1:
-            dimensions = []
-            for key,value in d.items():
-                if key != choosen_dimension:
-                    dimensions.append(key)
-            
-            total_result = []
-            for x in dimensions:
-                scores_per_dimension = []
-                idx = []
-                for i in d[x]:
-                    self.sd = x
-                    df = self.calculateRank(i, options)["Result"]
-                    idx.append(i)
-                    df = df.to_list()
-                    replicability_score = sum(df)/len(df)
-                    scores_per_dimension.append(replicability_score)
-                result = pd.DataFrame(scores_per_dimension, columns=[options], index = idx)
-                total_result.append(result)
-            table = pd.concat(total_result)
-            self.sd = choosen_dimension
-            return table
-            
-        elif mode == 0:
-            dimensions = []
-            for key,value in d.items():
-                if key != choosen_dimension:
-                    dimensions.append(key)
-            
-            total_result = []
-            for x in dimensions:
-                scores_per_dimension = []
-                idx = []
-                for i in d[x]:
-                    self.sd = x
-                    df = self.calculateRank(i, options)["Rank 1"]
-                    idx.append(i)
-                    df = df.to_list()
-                    replicability_score = sum(df)/(q*len(df))
-                    scores_per_dimension.append(replicability_score)
-                result = pd.DataFrame(scores_per_dimension, columns=[options], index=idx)
-                total_result.append(result)
-            table = pd.concat(total_result)
-            self.sd = choosen_dimension
-            return table
+        
+        if options in d[choosen_dimension]:
+            if mode == 1:
+                dimensions = []
+                for key,value in d.items():
+                    if key != choosen_dimension:
+                        dimensions.append(key)
+                
+                total_result = []
+                for x in dimensions:
+                    scores_per_dimension = []
+                    idx = []
+                    for i in d[x]:
+                        self.sd = x
+                        df = self.calculateRank(i, options)["Result"]
+                        idx.append(i)
+                        df = df.to_list()
+                        replicability_score = sum(df)/len(df)
+                        scores_per_dimension.append(replicability_score)
+                    result = pd.DataFrame(scores_per_dimension, columns=[options], index = idx)
+                    total_result.append(result)
+                table = pd.concat(total_result)
+                self.sd = choosen_dimension
+                return table
+                
+            elif mode == 0:
+                dimensions = []
+                for key,value in d.items():
+                    if key != choosen_dimension:
+                        dimensions.append(key)
+                
+                total_result = []
+                for x in dimensions:
+                    scores_per_dimension = []
+                    idx = []
+                    for i in d[x]:
+                        self.sd = x
+                        df = self.calculateRank(i, options)["Rank 1"]
+                        idx.append(i)
+                        df = df.to_list()
+                        replicability_score = sum(df)/(q*len(df))
+                        scores_per_dimension.append(replicability_score)
+                    result = pd.DataFrame(scores_per_dimension, columns=[options], index=idx)
+                    total_result.append(result)
+                table = pd.concat(total_result)
+                self.sd = choosen_dimension
+                return table
+        else:
+            return "Option must be inside " + choosen_dimension + " dimension."
         
     def replicability_comparison(self, option: str, mode = 0):# to check changes of one option if the other configurations are changed
         loader = Loader(self.config_path)
