@@ -1,34 +1,33 @@
 Metadata-Version: 2.1
 Name: PAPyA
-Version: 0.1.0
-Summary: Prescriptive Performance Analysis for Big Data Problems
-Home-page: https://datasystemsgrouput.github.io/PAPyA/
-Author: Data Systems Group
-Author-email: <mail@testing.com>
-License: MIT
-Keywords: python,Benchmarking,RDF,Big Data,Analytics
+Version: 1.1.6
+Summary: A library for performance analysis of sql based RDF graph processing systems
+Author: Mohammed Ragab, Adam Satria Adidarma, Riccardo Tommasini
+Author-email: mohammed.ragab@ut.ee, adam.19051@mhs.its.ac.id, riccardo.tommasini@ut.ee
+License: UNKNOWN
+Keywords: python,benchmarking,rdf systems,big data,apache spark
 Platform: UNKNOWN
-Classifier: Development Status :: 1 - Planning
+Classifier: Development Status :: 5 - Production/Stable
 Classifier: Intended Audience :: Developers
 Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: Unix
 Classifier: Operating System :: MacOS :: MacOS X
 Classifier: Operating System :: Microsoft :: Windows
 Description-Content-Type: text/markdown
-License-File: LICENSE
 
-<p align="center">
-<a href='https://datasystemsgrouput.github.io/PAPyA/'><img src="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/figs/papayalogo.png" width="100"/> </a>
-</p>
 
-# <a href='https://datasystemsgrouput.github.io/PAPyA/'>PAPyA</a>
-
-Prescriptive Performance Analysis  in Python Actions 
-
-[![DOI](https://zenodo.org/badge/487547762.svg)](https://zenodo.org/badge/latestdoi/487547762)
-
-This library provides prescriptive analysis for the complex solution space of (RDF relational schema, Partitioning, and Storage Formats) that emerges with querying large RDF graphs over Relational Big Data (BD) System, e.g., Apache Spark-SQL.
-
-* Documentation and more details about <a href='https://datasystemsgrouput.github.io/PAPyA/'> PAPya </a>
+<p align="center">
+<a href='https://datasystemsgrouput.github.io/PAPyA/'><img src="https://github.com/DataSystemsGroupUT/PAPyA/blob/main/figs/papayalogo.png" width="100"/> </a>
+</p>
+
+# <a href='https://datasystemsgrouput.github.io/PAPyA/'>PAPyA</a>
+
+Prescriptive Performance Analysis  in Python Actions 
+
+[![DOI](https://zenodo.org/badge/487547762.svg)](https://zenodo.org/badge/latestdoi/487547762)
+
+This library provides prescriptive analysis for the complex solution space of (RDF relational schema, Partitioning, and Storage Formats) that emerges with querying large RDF graphs over Relational Big Data (BD) System, e.g., Apache Spark-SQL.
+
+* Documentation and more details about <a href='https://datasystemsgrouput.github.io/PAPyA/'> PAPya </a>
 
 

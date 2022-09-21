@@ -1,4 +1,4 @@
-from Rank import SDRank, MDRank, RTA
+from PAPyA.Rank import SDRank, MDRank, RTA
 
 
 class bestOfSD(SDRank):

@@ -1,8 +1,8 @@
-LICENSE
 README.md
 setup.py
 PAPyA/Rank.py
 PAPyA/Ranker.py
+PAPyA/__init__.py
 PAPyA/best_of_k.py
 PAPyA/config_loader.py
 PAPyA/file_reader.py
