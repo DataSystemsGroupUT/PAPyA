@@ -89,3 +89,7 @@ Bench-Ranker provides visualization for Conformance of the top-3 ranked configur
 
 
 - __Coherence HeatMaps__<br>
+In addition to _Conformance_, Bench-Ranker visualize Coherence using a simple heatmap plots according to a ranking criterion which can help show relationship between two ranking sets (i.e. dataset sizes), one plotted for each axis. For example, in the figure below is a Coherence heatmap of the top-10 ranked configurations of the _RTA_ ranking criterion in the 100M datasets scaling to 250M datasets.<br>
+<p align="center">
+    <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/coherencePlot.png" alt>
+</p>
