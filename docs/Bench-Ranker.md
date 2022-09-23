@@ -14,6 +14,15 @@ Bench-Ranker apply the ranking criteria for each dimension using ranking functio
 
 _R_ is the rank score of the ranked dimension. Such that _d_ represents the total number of parameters (configurations) under that dimension, O _dim_ (r) denotes the number of occurences of the dimension being placed at the rank _r_ (1st, 2nd, ...), and Q represents the total number of queries, as we have 11 query executions in the experiment (i.e. Q = 11).
 
+### Replicability
+Bench-Ranker provides the functionality of checking the system's performance replicability while introducing different experimental dimensions. The idea of replicability is checking system's performance on a single dimension while changing the parameters of the other dimensions. In the experiment, we compare two configurations (_Partitioning_ & _Storage_) on the schema dimensions respectively. In the table below, shows the effect of introducing different partitioning techniques and file formats on some schema dimensions (ExtVp & WPT) with their baseline configurations (_VP_ & _PT_). <br>
+<p>
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityTable.png"/>
+</p>
+
+The results show clear trade-offs between schema configurations as shown in the table above. This module also provides visualization for a better view in our data.
+
+
 ### Multi Dimension Ranking
 Single dimensional ranking optimizes the configurations towards a single particular dimension ignoring the trade-offs to other dimensions. This shows that Single Dimension ranking criteria maximizes the scores only for one dimension while ignoring the others. This leads to the idea of a Multi Dimensional Ranking criteria which aims to optimize all dimensions at the same time. Bench-Ranker utilizes the Non-Dominated Sorting Genetic Algorithm 2 (NSGA-II) to find the best performing configuration solution in a complex solution space.<br>
 
