@@ -62,7 +62,27 @@ We calculate conformance using this equation by positioning the element in the i
 In this experiment, we assume that rank sets have the same number of elements. Kendall’s distance between two rank sets R1 and R2, where P represents the set of unique pairs of distinct elements in the two sets. For instance, the K index between R1={c1,c2,c3} and R2={c1,c2,c4} for 100M and 250M is 0.33, i.e., one disagreement out of three pair comparisons.
 
 ### Visualization
-To get better insights of the experiment's data, Bench-Ranker gives visualization for both single dimensional ranking solution and multi dimensional ranking solution. In addition, it also provides visualization that shows the trade-offs of using the single dimensional ranking criteria with a radar plot. A default data visualization for the rank shall be specified. However, this can be specified by the user due to the specificity of the visualization.
+To get better insights of the experiment's data, Bench-Ranker gives visualization for both single dimensional ranking solution and multi dimensional ranking solution shown in the figure below. In addition, it also provides visualization that shows the trade-offs of using the single dimensional ranking criteria with a radar plot. A default data visualization for the rank shall be specified. However, this can be specified by the user due to the specificity of the visualization.
 <p align="center">
     <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/visualizations.png" alt>
 </p>
+
+On recent updates, Bench-Ranker provides even more visualizations along with some new functionalities to help users get better understanding of their data. The updates include some of the functionality explained below: <br>
+
+- __Replicability__
+With the functionality of checking the system's performance replicability while introducing different experimental dimensions, we also provides visualization for this module to clearly show the trade-offs introduced when changing the parameters of one specific dimension. In the figure below is an example to show the impact of the partitioning parameters of the schema dimensions.<br>
+<p align="center">
+    <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityFigure.png" alt>
+</p>
+
+- __Box Plot__
+To show the distribution of our query runtimes data, we used box plot diagram to compare these data between queries in the experiments. Box plot can provide information at a glance, which could give users general information about their data. The figure below gives an example of the best and worst performing configuration for query 1, 2, and 3.<br>
+<p align="center">
+    <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/boxplot.png" alt>
+</p>
+
+- __Conformance Plot Each Dimension__
+
+- __Conformance Plot Global__
+
+- __Coherence HeatMaps__
