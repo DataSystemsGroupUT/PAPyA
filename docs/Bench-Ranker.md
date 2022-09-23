@@ -84,7 +84,7 @@ To show the distribution of our query runtimes data, we used box plot diagram to
 - __Conformance Plot__<br>
 Bench-Ranker provides visualization for Conformance of the top-3 ranked configurations (or any arbitrary number of configurations) of all ranking criterion with the actual query rankings. In addition, it can also visualize the Conformance for the global scale (not considering top ranked configurations). The figure below shows Conformance visualization with the green bars representing the level of conformance, while the red bars represents the level of non-conformance in each ranking criterions.<br>
 <p align="center">
-    <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformancePlot.png" alt>
+    <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/ConformancePlot.png" alt>
 </p>
 
 
