@@ -69,20 +69,23 @@ To get better insights of the experiment's data, Bench-Ranker gives visualizatio
 
 On recent updates, Bench-Ranker provides even more visualizations along with some new functionalities to help users get better understanding of their data. The updates include some of the functionality explained below: <br>
 
-- __Replicability__
+- __Replicability__<br>
 With the functionality of checking the system's performance replicability while introducing different experimental dimensions, we also provides visualization for this module to clearly show the trade-offs introduced when changing the parameters of one specific dimension. In the figure below is an example to show the impact of the partitioning parameters of the schema dimensions.<br>
 <p align="center">
     <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityFigure.png" alt>
 </p>
 
-- __Box Plot__
+- __Box Plot__<br>
 To show the distribution of our query runtimes data, we used box plot diagram to compare these data between queries in the experiments. Box plot can provide information at a glance, which could give users general information about their data. The figure below gives an example of the best and worst performing configuration for query 1, 2, and 3.<br>
 <p align="center">
     <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/boxplot.png" alt>
 </p>
 
-- __Conformance Plot Each Dimension__
+- __Conformance Plot__<br>
+Bench-Ranker provides visualization for Conformance of the top-3 ranked configurations (or any arbitrary number of configurations) of all ranking criterion with the actual query rankings. In addition, it can also visualize the Conformance for the global scale (not considering top ranked configurations). The figure below shows Conformance visualization with the green bars representing the level of conformance, while the red bars represents the level of non-conformance in each ranking criterions.<br>
+<p align="center">
+    <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformancePlot.png" alt>
+</p>
 
-- __Conformance Plot Global__
 
-- __Coherence HeatMaps__
+- __Coherence HeatMaps__<br>
