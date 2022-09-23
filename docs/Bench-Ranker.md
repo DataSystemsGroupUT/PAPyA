@@ -32,6 +32,18 @@ Bench-Ranker provides two ways to apply NSGA-II algorithm:
 - __ParetoAgg__ <br>
 : applies NSGA-II algorithm by operating on the single dimension ranking criteria. This method aims to maximize the rank scores of the single dimensions ranking criteria altogether
 
+### Triangle Area (RTA) Ranking
+Bench-Ranker allows user to plug in a new ranking criterion if needed apart from the already existing ones (_Single Dimension_ & _Multi Dimension Ranking_). RTA is an example of adding new ranking criterion in Bench-Ranker. This ranking criterion makes an interpretation of the _Single Dimensional Ranking_ scores based on the triangle area. In the figure below, shows the representation of _Single Dimensional Ranking_ scores on a triangle sides, which aims to maximize the triangle's area. The closer they are to the outer triangle, the better the configuration combinations are. <br>
+<p>
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/RTAPlot.png"/>
+</p>
+
+The formula of RTA uses basic triangle area formula. Which sums up the triangle area of the three sides for each dimensions (_Schemas_, _Partitioning_, _Storage_).
+<p>
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/RTAFormula.png"/>
+</p>
+
+
 ### Ranking Validation  
 Bench-Ranker provides a ranking solution validation for all ranking criteria (i.e. SD Ranking and MD Ranking) using the _conformance_ and _coherence_. We identify if a ranking criteria is "good" if it's not suggesting any low-performing configurations in our experiment. We are using such metric to look at all ranking criteria and comparing them on different scales (i.e. dataset sizes).<br>
 
