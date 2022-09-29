@@ -6,8 +6,9 @@ from PAPyA.get_ranks import getRanks
 from PAPyA.best_of_k import bestOfParetoAgg, bestOfParetoQ, bestOfRTA, bestOfSD
 from PAPyA.file_reader import FileReader
 from PAPyA.kendall_index import kendallIndex
-from Rank import SDRank
-from Rank import MDRank
+from PAPyA.Rank import SDRank
+from PAPyA.Rank import MDRank
+from PAPyA.Rank import RTA
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -372,94 +373,139 @@ class Coherence(FileReader):
         result = []
         for x in self.li:
             if x in dims:
-                self.sd = x
                 var1 = SDRank(self.config_path, self.log_path,
-                              rankset1, self.sd).calculateRank()
-                var1 = var1['Result'].sort_index()
-                var1 = var1.to_numpy()
+                              rankset1, x).calculateRank()
+                var1 = list(var1.index)
                 var2 = SDRank(self.config_path, self.log_path,
-                              rankset2, self.sd).calculateRank()
-                var2 = var2['Result'].sort_index()
-                var2 = var2.to_numpy()
+                              rankset2, x).calculateRank()
+                var2 = list(var2.index)
                 kendall = kendallIndex(
                     var1, var2).normalised_kendall_tau_distance()
                 result.append(kendall)
             elif x == 'paretoAgg':
                 self.sd = list(d.keys())[-1]
-                var1 = SDRank(self.config_path, self.log_path,
-                              rankset1, self.sd).calculateRank()
+                # var1 = SDRank(self.config_path, self.log_path,
+                #               rankset1, self.sd).calculateRank()
                 paretoAggSolution = MDRank(
                     self.config_path, self.log_path, rankset1, self.sd).paretoAgg()
-                paretoAggSolution = paretoAggSolution['Solution'].replace(
-                    '', np.nan)
-                paretoAggSolution = paretoAggSolution.dropna()
-                var1 = var1.loc[paretoAggSolution]
-                var1 = var1['Result']
-                var2 = SDRank(self.config_path, self.log_path,
-                              rankset2, self.sd).calculateRank()
+                
+                solution_data = paretoAggSolution['Solution']
+                solution_data.replace('', np.nan, inplace=True)
+                solution_data.dropna(inplace=True)
+                dominated_data = paretoAggSolution['Dominated']
+                dominated_data.replace('', np.nan, inplace=True)
+                dominated_data.dropna(inplace=True)
+                data1 = pd.concat([solution_data, dominated_data],
+                                  axis=0, ignore_index=True)
+                # paretoAggSolution = paretoAggSolution['Solution'].replace(
+                #     '', np.nan)
+                # paretoAggSolution = paretoAggSolution.dropna()
+                # var1 = var1.loc[paretoAggSolution]
+                # var1 = var1['Result']
+                # var2 = SDRank(self.config_path, self.log_path,
+                #               rankset2, self.sd).calculateRank()
                 paretoAggSolution = MDRank(
                     self.config_path, self.log_path, rankset2, self.sd).paretoAgg()
-                paretoAggSolution = paretoAggSolution['Solution'].replace(
-                    '', np.nan)
-                paretoAggSolution = paretoAggSolution.dropna()
-                var2 = var2.loc[paretoAggSolution]
-                var2 = var2['Result']
-
-                newDf = pd.concat([var1, var2], axis=1)
-                newDf_column_name = newDf.columns.values
-                newDf_column_name[0] = str(rankset1)  # var1
-                newDf_column_name[1] = str(rankset2)  # var2
-
-                newDf.columns = newDf_column_name
-                newDf = newDf.fillna(1)
-                var1 = newDf[str(rankset1)]
-                var2 = newDf[str(rankset2)]
-
-                var1 = var1.to_numpy()
-                var2 = var2.to_numpy()
+                
+                solution_data = paretoAggSolution['Solution']
+                solution_data.replace('', np.nan, inplace=True)
+                solution_data.dropna(inplace=True)
+                dominated_data = paretoAggSolution['Dominated']
+                dominated_data.replace('', np.nan, inplace=True)
+                dominated_data.dropna(inplace=True)
+                data2 = pd.concat([solution_data, dominated_data],
+                                  axis=0, ignore_index=True)
+                
                 kendall = kendallIndex(
-                    var1, var2).normalised_kendall_tau_distance()
+                    data1.tolist(), data2.tolist()).normalised_kendall_tau_distance()
                 result.append(kendall)
+                # paretoAggSolution = paretoAggSolution['Solution'].replace(
+                #     '', np.nan)
+                # paretoAggSolution = paretoAggSolution.dropna()
+                # var2 = var2.loc[paretoAggSolution]
+                # var2 = var2['Result']
+
+                # newDf = pd.concat([var1, var2], axis=1)
+                # newDf_column_name = newDf.columns.values
+                # newDf_column_name[0] = str(rankset1)  # var1
+                # newDf_column_name[1] = str(rankset2)  # var2
+
+                # newDf.columns = newDf_column_name
+                # newDf = newDf.fillna(1)
+                # var1 = newDf[str(rankset1)]
+                # var2 = newDf[str(rankset2)]
+
+                # var1 = var1.to_numpy()
+                # var2 = var2.to_numpy()
+                
+                # result.append(kendall)
             elif x == 'paretoQ':
                 self.sd = list(d.keys())[-1]
-                var1 = SDRank(self.config_path, self.log_path,
-                              rankset1, self.sd).calculateRank()
+                # var1 = SDRank(self.config_path, self.log_path,
+                #               rankset1, self.sd).calculateRank()
                 paretoQSolution = MDRank(
                     self.config_path, self.log_path, rankset1, self.sd).paretoQ()
-                paretoQSolution = paretoQSolution['Solution'].replace(
-                    '', np.nan)
-                paretoQSolution = paretoQSolution.dropna()
-                var1 = var1.loc[paretoQSolution]
-                var1 = var1['Result']
-                var2 = SDRank(self.config_path, self.log_path,
-                              rankset2, self.sd).calculateRank()
+                
+                solution_data = paretoQSolution['Solution']
+                solution_data.replace('', np.nan, inplace=True)
+                solution_data.dropna(inplace=True)
+                dominated_data = paretoQSolution['Dominated']
+                dominated_data.replace('', np.nan, inplace=True)
+                dominated_data.dropna(inplace=True)
+                data1 = pd.concat([solution_data, dominated_data],
+                                  axis=0, ignore_index=True)
+                # paretoQSolution = paretoQSolution['Solution'].replace(
+                #     '', np.nan)
+                # paretoQSolution = paretoQSolution.dropna()
+                # var1 = var1.loc[paretoQSolution]
+                # var1 = var1['Result']
+                # var2 = SDRank(self.config_path, self.log_path,
+                #               rankset2, self.sd).calculateRank()
                 paretoQSolution = MDRank(
                     self.config_path, self.log_path, rankset2, self.sd).paretoQ()
-                paretoQSolution = paretoQSolution['Solution'].replace(
-                    '', np.nan)
-                paretoQSolution = paretoQSolution.dropna()
-                var2 = var2.loc[paretoQSolution]
-                var2 = var2['Result']
-
-                newDf = pd.concat([var1, var2], axis=1)
-                newDf_column_name = newDf.columns.values
-                newDf_column_name[0] = str(rankset1)  # var1
-                newDf_column_name[1] = str(rankset2)  # var2
-
-                newDf.columns = newDf_column_name
-                newDf = newDf.fillna(1)
-                var1 = newDf[str(rankset1)]
-                var2 = newDf[str(rankset2)]
-
-                var1 = var1.to_numpy()
-                var2 = var2.to_numpy()
+                
+                solution_data = paretoQSolution['Solution']
+                solution_data.replace('', np.nan, inplace=True)
+                solution_data.dropna(inplace=True)
+                dominated_data = paretoQSolution['Dominated']
+                dominated_data.replace('', np.nan, inplace=True)
+                dominated_data.dropna(inplace=True)
+                data2 = pd.concat([solution_data, dominated_data],
+                                  axis=0, ignore_index=True)
+                
                 kendall = kendallIndex(
-                    var1, var2).normalised_kendall_tau_distance()
+                    data1.tolist(), data2.tolist()).normalised_kendall_tau_distance()
                 result.append(kendall)
+                # paretoQSolution = paretoQSolution['Solution'].replace(
+                #     '', np.nan)
+                # paretoQSolution = paretoQSolution.dropna()
+                # var2 = var2.loc[paretoQSolution]
+                # var2 = var2['Result']
+
+                # newDf = pd.concat([var1, var2], axis=1)
+                # newDf_column_name = newDf.columns.values
+                # newDf_column_name[0] = str(rankset1)  # var1
+                # newDf_column_name[1] = str(rankset2)  # var2
+
+                # newDf.columns = newDf_column_name
+                # newDf = newDf.fillna(1)
+                # var1 = newDf[str(rankset1)]
+                # var2 = newDf[str(rankset2)]
+
+                # var1 = var1.to_numpy()
+                # var2 = var2.to_numpy()
+                
             elif x == "RTA":
                 self.sd = list(d.keys())[-1]
-                var1 = SDRank(self.config_path, self.log_path,
-                              rankset1, self.sd).calculateRank()
+                rta_result1 = RTA(self.config_path, self.log_path, rankset1).rta()
+                data1 = list(rta_result1.index)
+                rta_result2 = RTA(self.config_path, self.log_path, rankset2).rta()
+                data2 = list(rta_result2.index)
+
+                kendall = kendallIndex(
+                    data1, data2).normalised_kendall_tau_distance()
+                result.append(kendall)
+
         return pd.DataFrame(result, index=self.li, columns=['Kendall\'s Index'])
 
     def heatMapSubtract(self, *args, dimension: str):
@@ -573,6 +619,59 @@ class Coherence(FileReader):
                 orders = np.stack((ordering), axis=0)
                 xlabels = idx
 
+                plt.rc('xtick', labelsize=8)
+                plt.rc('ytick', labelsize=14)
+                plt.figure(figsize=(22, 5))
+                sns.heatmap(orders,
+                            cmap='YlOrBr',
+                            vmin=0,
+                            xticklabels=xlabels,
+                            yticklabels=ylabels,
+                            annot=True,
+                            square=True,
+                            annot_kws={'fontsize': 8, 'fontweight': 'bold'})
+                plt.yticks(rotation=0)
+                plt.tick_params(
+                    which='both',
+                    bottom=False,
+                    left=False,
+                    labelbottom=False,
+                    labeltop=True)
+                return plt.tight_layout()
+
+            elif dimension == "RTA":
+                var = RTA(self.config_path, self.log_path, args[0]).rta()
+                var = var['Rta_Scores']
+                var = var.nsmallest(n=10, keep='first')
+                idx = var.index.tolist()
+                scores = var.to_numpy()
+                order = np.argsort(scores, kind='stable')
+                order = order + 1
+
+                ylabels = []
+                ordering = []
+                for x in args[1:]:
+                    var2 = RTA(self.config_path, self.log_path, x).rta()
+                    scores = var2['Rta_Scores'].to_numpy()
+                    val = np.argsort(scores, kind='stable')
+                    # Put whatever series you want in its place
+                    var2['Result'] = val
+                    var2 = var2['Result']
+
+                    var2 = var2.loc[idx]
+                    order2_list = var2[:].tolist()
+                    order2 = [x+1 for x in order2_list]
+                    order2 = np.asarray(order2)
+
+                    # CREATE YLABEL AND ORDERING
+                    ylabels.append(str(args[0]) + "-" + str(x))
+                    order1_2 = np.subtract(order, order2)
+                    order1_2 = np.absolute(order1_2)
+                    ordering.append(order1_2)
+                
+                orders = np.stack((ordering), axis=0)
+                xlabels = idx
+                
                 plt.rc('xtick', labelsize=8)
                 plt.rc('ytick', labelsize=14)
                 plt.figure(figsize=(22, 5))
@@ -753,6 +852,54 @@ class Coherence(FileReader):
                 order2 = [x+1 for x in data2]
 
                 xlabels = idx
+                ylabels = [str(rankset1), str(rankset2)]
+                orders = np.stack((order1, order2), axis=0)
+
+                plt.rc('xtick', labelsize=10)
+                plt.rc('ytick', labelsize=14)
+                plt.figure(figsize=(22, 5))
+                sns.heatmap(orders,
+                            cmap='YlOrBr',
+                            vmin=0,
+                            xticklabels=xlabels,
+                            yticklabels=ylabels,
+                            annot=True,
+                            square=True,
+                            annot_kws={'fontsize': 8, 'fontweight': 'bold'})
+                plt.yticks(rotation=0)
+                plt.tick_params(
+                    which='both',
+                    bottom=False,
+                    left=False,
+                    labelbottom=False,
+                    labeltop=True)
+                return plt.tight_layout()
+            
+            elif dimension == "RTA":
+                var1 = RTA(self.config_path, self.log_path, rankset1).rta()
+                var1 = var1['Rta_Scores']
+                var1 = var1.nsmallest(n=10, keep='first')
+                idx = var1.index.tolist()
+                scores = var1.to_numpy()
+                order1 = np.argsort(scores, kind='stable')
+                order1 = order1+1
+
+                var2 = RTA(self.config_path, self.log_path, rankset2).rta()
+                scores = var2['Rta_Scores'].to_numpy()
+                val = np.argsort(scores, kind='stable')
+                # Drop that column
+                var2.drop(['Rta_Scores'], axis=1, inplace=True)
+                # Put whatever series you want in its place
+                var2['Rta_Scores'] = val
+                var2 = var2['Rta_Scores']
+
+                var2 = var2.loc[idx]
+                order2_list = var2[:].tolist()
+                order2 = [x+1 for x in order2_list]
+                order2 = np.asarray(order2)
+
+                xlabels = var1.index.values.tolist()
+                xlabels = xlabels[:10]
                 ylabels = [str(rankset1), str(rankset2)]
                 orders = np.stack((order1, order2), axis=0)
 

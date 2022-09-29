@@ -1,4 +1,4 @@
-from .file_reader import FileReader
+from PAPyA.file_reader import FileReader
 import pandas as pd
 import scipy.stats as ss
 

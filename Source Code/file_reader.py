@@ -1,5 +1,5 @@
-from .config_loader import Loader
-from .joinTuple import joinTuple
+from PAPyA.config_loader import Loader
+from PAPyA.joinTuple import joinTuple
 import itertools
 import time
 import os.path
