@@ -2,8 +2,7 @@
 
 > This section is intended for people who want to develop or further improve PAPyA library. 
 
-<!-- ### File Exploration</b> <br> -->
-<ins>File Exploration</ins>
+## File Exploration
 
 - File [Rank.py](Rank.py) are used to calculate ranks for the configurations to find the best performing ones with a prescriptive analysis approach along with the validations inside the [Ranker.py](Ranker.py) file.<br>
 
@@ -11,7 +10,7 @@
 
 - You can update this library by creating a new function class on these two files or create a new file if needed. <br>
 
-### Updating Package Manager<br>
+## Updating Package Manager<br>
 
 - PAPyA used python's package manager (pip) to store the library to help user find and install PAPyA easily in their environment.<br>
 
