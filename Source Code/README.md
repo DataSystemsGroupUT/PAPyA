@@ -1,9 +1,9 @@
 # Further Work
 
-> This section is for people who want to develop or further improve PAPyA library. <br>
-Here are the steps to update PAPyA: <br>
+> This section is intended for people who want to develop or further improve PAPyA library. 
 
-### File Exploration</b> <br>
+<!-- ### File Exploration</b> <br> -->
+[create an anchor](#anchors-in-markdown)
 
 - File [Rank.py](Rank.py) are used to calculate ranks for the configurations to find the best performing ones with a prescriptive analysis approach along with the validations inside the [Ranker.py](Ranker.py) file.<br>
 
