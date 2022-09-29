@@ -30,7 +30,7 @@ git clone https://github.com/DataSystemsGroupUT/PAPyA.git
 
 Below are some examples of our running experiments using PAPyA library with different sets of configurations generated from ipython notebooks:<br>
 
-When running the experiments, We used two different datasets to test replicability on the system namely [Watdiv](https://dsg.uwaterloo.ca/watdiv/) and [SP2Bench](https://arxiv.org/abs/0806.4627).
+> When running the experiments, We used two different datasets to test replicability on the system namely [Watdiv](https://dsg.uwaterloo.ca/watdiv/) and [SP2Bench](https://arxiv.org/abs/0806.4627).
 
 #### Watdiv
 - [Full Experiment](./UI%20Module/Experiments/Full_Experiment_Watdiv.ipynb)<br>
