@@ -3,7 +3,7 @@
 > This section is intended for people who want to develop or further improve PAPyA library. 
 
 <!-- ### File Exploration</b> <br> -->
-[anchor](#heading-to-achor)
+<ins>File Exploration</ins>
 
 - File [Rank.py](Rank.py) are used to calculate ranks for the configurations to find the best performing ones with a prescriptive analysis approach along with the validations inside the [Ranker.py](Ranker.py) file.<br>
 
