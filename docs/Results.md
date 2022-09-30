@@ -51,6 +51,17 @@ SDRank(config, logs, '100M', 'schemas').calculateRank()
 <p align="center">
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/top5schemaRank.png"/>
 </p>
+
+We can have even more parameters within the calculateRank method to give different results when removing some queries in the configuration. 
+```python
+# String parameters to slice the schema in this case we slice it on predicate and csv. 
+# While excluding a list of queries which in this case we exclude query 3,4, and 5.
+schemaSDRank_100M.calculateRank('predicate', 'csv', [3,4,5])
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/sdrank_withParameters.png"/>
+</p>
+
 The user can plot individual rank scores by calling the plot method from the single dimension class.
 
 ```python
