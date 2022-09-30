@@ -31,6 +31,16 @@ log
      │   ...
 ```
 
+We start the experiment by viewing our input data which are the log files of query runtimes over the configuration specified in the FileReader class parameters.
+ ```python
+from PAPyA.file_reader import FileReader
+
+SDRank(config, logs, '100M', 'schemas').file_reader()
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/query_runtimes.png"/>
+</p>
+
 In this experiment, we could get the single dimension ranking scores by calling the calculateRank function from the SDRank class which needs 4 parameters, the config file, logs file, dataset size, and the dimension we want to be ranked
 
 ```python
