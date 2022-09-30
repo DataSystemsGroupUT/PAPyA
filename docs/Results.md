@@ -1,13 +1,11 @@
 # Results
-This section presents PAPyA library in practice, we focus on the performance of a generalized single dimension and multi dimension ranking for complex big data solutions using a perscriptive performance analysis (PPA) approach. Our experiment design consist of:
+This section presents PAPyA library in practice, we focus on the performance of a generalized single dimension and multi dimension ranking for complex big data solutions using a perscriptive performance analysis (PPA) approach. Our experiment design consist of :
 
 - set of queries which are manually translated in SQL from SPARQL
 - RDF datasets of different sizes 
 - A configuration file based on the three dimensions (i.e. schemas, partitioning, and storage formats)
 
 In our experiment, we evaluate the performance of SparkSQL as a relational engine for evaluating the query workload. In particular, our key performance index is the query latency, but this could be extended to other metrics of evaluation. Our analysis is based on the average result of five different runs.
-
-### Data Preparator Part
 
 ### Bench-Ranking
 Bench-Ranking phase starts when we have results from Data Preparator in log files in the log folder of our repository. To start the analysis, we need to specify all dimensions and their options along with our key performance index which in our case is the query runs.
@@ -24,13 +22,13 @@ query: 11
 # log file structures
 log
 └───100M
-|    │   st.horizontal.csv.txt
-|    │   st.horizontal.avro.txt
-|    │   ...
+     │   st.horizontal.csv.txt
+     │   st.horizontal.avro.txt
+     │   ...
 └───250M
-|    |   st.horizontal.csv.txt
-|    │   st.horizontal.avro.txt
-|    │   ...
+     |   st.horizontal.csv.txt
+     │   st.horizontal.avro.txt
+     │   ...
 ```
 
 In this experiment, we could get the single dimension ranking scores by calling the calculateRank function from the SDRank class which needs 4 parameters, the config file, logs file, dataset size, and the dimension we want to be ranked
