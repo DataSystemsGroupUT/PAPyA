@@ -101,6 +101,17 @@ SDRank(config, logs, '100M', 'schemas').replicability_comparison(option = 'vp', 
 The example above tries to compare _vp_ with _extvp_ in the schemas dimension while pivoting over all the options in the other dimensions (_partition_ and _storage_).<br><br>
 This function has two modes of comparison, the first one is comparing it globally over the dimensions and the other one compares the option locally.
 
+#### Replicability Visualization 
+To make it easier to understand the impact of replicability over a dimensional options, this library provides a replicability plotting. In this example, we try to check the impact of storage dimension on the schemas dimension. 
+```python
+from PAPyA.Rank import SDRank
+SDRank('settings_watdiv.yaml', 'log_watdiv', '100M', 'schemas').replicability_plot('storage', mode = 0)
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityPlot.png"/>
+</p>
+
+
 The user can plot individual rank scores by calling the plot method from the single dimension class.
 
 ```python
