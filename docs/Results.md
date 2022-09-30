@@ -77,7 +77,29 @@ SDRank(config, logs, '100M', 'storage').replicability(options = 'csv', mode = 1)
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityResult.png"/>
 </p>
 
-On the example code above, we used the _storage_ dimension as the pivot point dimension to iterate over the other dimensions (_schemas_ and _partition_) with csv as the choosen option of storage.<br> Replicability has two modes to calculate over, the first one is to calculate from the query rankings while the other one calculates from the average of the single dimensional scores. <br>The result is a replicability scores for csv when changing parameters over the other dimensions.
+On the example code above, we used the _storage_ dimension as the pivot point dimension to iterate over the other dimensions (_schemas_ and _partition_) with csv as the choosen option of storage.<br><br> Replicability has two modes to calculate over, the first one is to calculate from the query rankings while the other one calculates from the average of the single dimensional scores. <br><br>The result is a replicability scores for csv when changing parameters over the other dimensions.
+
+#### Replicability Comparison 
+PAPyA have a replicability comparison functionality to compare the replicability score of two options which the user can specify in the configuration files themselves. 
+```yaml
+# configuration file
+dimensions:
+    schemas: ["vp", "extvp"]
+    partition: ["horizontal", "predicate", "subject"]
+    storage: ["csv", "avro", "parquet", "orc"]
+query: 11
+```
+```python
+# comparing replicability of two options in schemas dimension. mode 0 to compare globally, mode 1 to compare locally
+from PAPyA.Rank import SDRank
+SDRank(config, logs, '100M', 'schemas').replicability_comparison(option = 'vp', mode = 1)
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityComparison.png"/>
+</p>
+
+The example above tries to compare _vp_ with _extvp_ in the schemas dimension while pivoting over all the options in the other dimensions (_partition_ and _storage_).<br><br>
+This function has two modes of comparison, the first one is comparing it globally over the dimensions and the other one compares the option locally.
 
 The user can plot individual rank scores by calling the plot method from the single dimension class.
 
