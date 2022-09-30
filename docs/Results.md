@@ -7,7 +7,7 @@ This section presents PAPyA library in practice, we focus on the performance of 
 
 In our experiment, we evaluate the performance of SparkSQL as a relational engine for evaluating the query workload. In particular, our key performance index is the query latency, but this could be extended to other metrics of evaluation. Our analysis is based on the average result of five different runs.
 
-### Bench-Ranking
+## Bench-Ranking
 Bench-Ranking phase starts when we have results from Data Preparator in log files in the log folder of our repository. To start the analysis, we need to specify all dimensions and their options along with our key performance index which in our case is the query runs.
 
 ```yaml
@@ -30,6 +30,8 @@ log
      │   st.horizontal.avro.txt
      │   ...
 ```
+
+### Single Dimensional Ranking
 
 We start the experiment by viewing our input data which are the log files of query runtimes over the configuration specified in the FileReader class parameters.
  ```python
@@ -56,11 +58,26 @@ We can have even more parameters within the calculateRank method to give differe
 ```python
 # String parameters to slice the schema in this case we slice it on predicate and csv. 
 # While excluding a list of queries which in this case we exclude query 3,4, and 5.
-schemaSDRank_100M.calculateRank('predicate', 'csv', [3,4,5])
+SDRank(config, logs, '100M', 'schemas').calculateRank('predicate', 'csv', [3,4,5])
 ```
 <p align="center">
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/sdrank_withParameters.png"/>
 </p>
+
+### Replicability
+
+This library comes with the functionality to check the replicability of our system's performance when introducing different experimental dimensions. Replicability calculates over one dimensional option from the parameters over all the other dimensions.
+
+```python
+# mode 0, replicability on query ; mode 1, replicability on average
+from PAPyA.Rank import SDRank
+SDRank(config, logs, '100M', 'storage').replicability(options = 'csv', mode = 1)
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityResult.png"/>
+</p>
+
+On the example code above, we storage dimension as the pivot point dimension to iterate over the other dimensions (schemas and partition) with csv as the choosen option of storage. Replicability has two modes to calculate over, the first one is to calculate from the query rankings while the other one calculates from the average of the single dimensional scores. The result is a replicability scores for csv when changing parameters over the other dimensions.
 
 The user can plot individual rank scores by calling the plot method from the single dimension class.
 
