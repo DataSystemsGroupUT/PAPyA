@@ -64,6 +64,20 @@ SDRank(config, logs, '100M', 'schemas').calculateRank('predicate', 'csv', [3,4,5
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/sdrank_withParameters.png"/>
 </p>
 
+#### Single Dimensional Visualization
+##### Radar Plot
+##### Bar Plot
+The user can plot individual rank scores by calling the plot method from the single dimension class.
+
+```python
+SDRank(config, logs, '100M', 'schemas').plot('csv')
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDigram.png"/>
+</p>
+
+##### Box Plot
+
 ### Replicability
 
 This library comes with the functionality to check the replicability of our system's performance when introducing different experimental dimensions. Replicability calculates over one dimensional option from the parameters over all the other dimensions.
@@ -105,22 +119,13 @@ This function has two modes of comparison, the first one is comparing it globall
 To make it easier to understand the impact of replicability over a dimensional options, this library provides a replicability plotting. In this example, we try to check the impact of storage dimension on the schemas dimension. 
 ```python
 from PAPyA.Rank import SDRank
-SDRank('settings_watdiv.yaml', 'log_watdiv', '100M', 'schemas').replicability_plot('storage', mode = 0)
+SDRank(config, logs, '100M', 'schemas').replicability_plot('storage', mode = 0)
 ```
 <p align="center">
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityPlot.png"/>
 </p>
 
-
-The user can plot individual rank scores by calling the plot method from the single dimension class.
-
-```python
-SDRank(config, logs, '100M', 'schemas').plot('csv')
-```
-<p align="center">
-<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDigram.png"/>
-</p>
-
+######################################################
 To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This class takes three arguments, the config file, logs file, and the dataset size of our experiments.
 
 ```python
