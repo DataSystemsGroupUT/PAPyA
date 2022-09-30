@@ -65,10 +65,21 @@ SDRank(config, logs, '100M', 'schemas').calculateRank('predicate', 'csv', [3,4,5
 </p>
 
 #### Single Dimensional Visualization
-##### Radar Plot
-##### Bar Plot
-The user can plot individual rank scores by calling the plot method from the single dimension class.
+To represent user's data in an easy to read and interactive manner, PAPyA provides functionalities to visualize user's data to help rationalize the performance results and final decisions on their experimental data.
+###### Radar Plot
+Ranking over one dimension is insufficient when it counts multiple dimensions. The presence of trade-offs reduces the accuracy of single dimension ranking functions. This plot can help view and understand this problem in a simple and intuitive way.
+```python
+from PAPyA.Rank import SDRank
+SDRank(config, logs, '100M', 'schemas').plotRadar()
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/radarPlot.png"/>
+</p>
 
+This plot shows a figure of the top configuration of ranking by schema is optimized towards its dimension only, ignoring the other two dimensions.
+
+###### Bar Plot
+PAPyA also provides visualization that shows the performance of a single dimension parameters that user can choose in terms of their rank scores.
 ```python
 SDRank(config, logs, '100M', 'schemas').plot('csv')
 ```
@@ -76,7 +87,17 @@ SDRank(config, logs, '100M', 'schemas').plot('csv')
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/schemaDigram.png"/>
 </p>
 
-##### Box Plot
+###### Box Plot
+In order to show the distributions of our query runtimes data, we need a box plot diagram to compare these data between queries in our experiment. Box plot can help provide information at a glance, giving us general information about our data.
+```python
+from PAPyA.Rank import SDRank
+
+# Box plot example of query 1,2,3 of schema ranking dimension
+SDRank(config, logs, '100M', 'schemas').plotBox(["Q1", "Q2", "Q3"])
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/boxPlot2.png"/>
+</p>
 
 ### Replicability
 
@@ -125,7 +146,7 @@ SDRank(config, logs, '100M', 'schemas').replicability_plot('storage', mode = 0)
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityPlot.png"/>
 </p>
 
-######################################################
+<!-- ###################################################### -->
 To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This class takes three arguments, the config file, logs file, and the dataset size of our experiments.
 
 ```python
