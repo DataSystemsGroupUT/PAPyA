@@ -77,7 +77,7 @@ SDRank(config, logs, '100M', 'storage').replicability(options = 'csv', mode = 1)
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityResult.png"/>
 </p>
 
-On the example code above, we storage dimension as the pivot point dimension to iterate over the other dimensions (schemas and partition) with csv as the choosen option of storage. Replicability has two modes to calculate over, the first one is to calculate from the query rankings while the other one calculates from the average of the single dimensional scores. The result is a replicability scores for csv when changing parameters over the other dimensions.
+On the example code above, we used the _storage_ dimension as the pivot point dimension to iterate over the other dimensions (_schemas_ and _partition_) with csv as the choosen option of storage.<br> Replicability has two modes to calculate over, the first one is to calculate from the query rankings while the other one calculates from the average of the single dimensional scores. <br>The result is a replicability scores for csv when changing parameters over the other dimensions.
 
 The user can plot individual rank scores by calling the plot method from the single dimension class.
 
