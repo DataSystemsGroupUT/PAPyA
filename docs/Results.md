@@ -146,6 +146,16 @@ SDRank(config, logs, '100M', 'schemas').replicability_plot('storage', mode = 0)
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/replicabilityPlot.png"/>
 </p>
 
+### RTA
+Ranking by Triangle Area is a new ranking function we added to PAPyA to test its abstractions to add new user defined ranking criterion besides Single Dimensional and Multi Dimensional Ranking that we already provides. RTA calculates the area of triangle in which our three dimensional ranks are. The higher the score the better the configuration.
+```python
+from PAPyA.Rank import RTA
+RTA(config, logs, '250M').rta()
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/RTAResult.png"/>
+</p>
+
 <!-- ###################################################### -->
 To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This class takes three arguments, the config file, logs file, and the dataset size of our experiments.
 
