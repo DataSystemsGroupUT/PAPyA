@@ -174,15 +174,15 @@ multiRanking.paretoAgg()
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoAggSolution.png">
   <!-- <figcaption align = "center">
   <em>Multi Dimensional Ranking Solutions</em> -->
-  </figcaption>
+  <!-- </figcaption> -->
 </figure>
 <br>
 
 - The first method is paretoQ which apply the algorithm considering the rank sets obtained by sorting each query results individually. This method aims at minimizing query runtimes of the ranked dimensions<br>
 - The second method is paretoAgg which operates on the single dimensional ranking criteria. This method aims to maximize performance of the three ranks altogether<br>
 
-Users can plot paretoAgg method by calling the plot method from the MDRank class.
-
+#### Multi Dimensional Visualization
+We can have a 3D visualization of multi dimensional ranking solution according to paretoAgg method as shades of green projected in the canvas.
 ```python
 MDRank(config, logs, '100M').plot()
 ```
@@ -190,26 +190,44 @@ MDRank(config, logs, '100M').plot()
 <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoDiagram.png"/>
 </p>
 
-Lastly, the library provides two metrics of evaluation to evaluate the goodness of the ranking criteria which are the conformance and coherence which can be called from the validator class.
+### Ranking Criteria Validation
+Lastly, the library provides two metrics of evaluation to evaluate the goodness of the ranking criteria which are the conformance and coherence which can be called from the validator class. Both of these methods can take a list of ranking criterions the users want to evaluate.<br>
+- Conformance measures the adherence of the top-ranked configurations according to the actual query positioning of thoses configurations.<br>
+- Coherence is the measure agreement between two ranking sets that uses the same ranking criteria accross different experiments.<br>
 
 ```python
 from PAPyA.Ranker import Conformance, Coherence
 
-conformance_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
-coherence_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg']
+conformance_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg', 'RTA']
+coherence_set = ['schemas', 'partition', 'storage', 'paretoQ', 'paretoAgg', 'RTA']
 
-Conformance(config, logs, '100M', conformance_set, 5, 28).run()
-Coherence(config, logs, coherence_set, '100M', '250M').run()
+Conformance(config, logs, '250M', conformance_set, 5, 28).run()
+Coherence(config, logs, coherence_set).run('100M'. '250M')
 ```
 <figure align = "center">
-  <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformanceScore.png">
-  <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/coherenceScore.png">
-  <figcaption align = "center">
+  <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformanceResult.png">
+  <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/coherenceResult.png">
+  <!-- <figcaption align = "center">
   <em>Ranking Validation Scores</em>
-  </figcaption>
+  </figcaption> -->
 </figure>
 <br>
-Both of these methods can take a list of ranking criterions the users want to evaluate
+
+#### Ranking Criteria Validation Visualization
+PAPyA also provides functionality to have visualizations for the ranking criteria validations. For conformance, we can check different ranking criterions performance using a bar plots. While for coherence, we have a heatmap plot to show the coherence between two particular ranking sets of user's choice. 
+<b>Conformance</b><br>
+
+- Bar Plot <br>
+Conformance's bar plot has two modes of visualization. The first one is to have a global view of ranking criterions, the second, takes the three highest ranked configurations on each dimensions to plot.
+```python
+Conformance(config, logs, '250M', conformance_set, 5, 28).plot(0)
+```
+<p align="center">
+<img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/conformanceGlobalPlot.png"/>
+</p>
+
+<b>Coherence</b><br>
+
 
 ### Performance Analysis
 <table>
