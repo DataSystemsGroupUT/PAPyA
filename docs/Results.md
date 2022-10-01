@@ -157,22 +157,30 @@ RTA(config, logs, '250M').rta()
 </p>
 
 <!-- ###################################################### -->
-To get the configuration solutions of multi dimensional rankings, we used paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This class takes three arguments, the config file, logs file, and the dataset size of our experiments.
+### Multi Dimensional Ranking
+To get the configuration solutions of multi dimensional rankings, we apply the NSGA2 (Non-Dominated Sorting Genetic Algorithm) on paretoQ and paretoAgg method to call the two types of multi dimensional rankings respectively. This class takes three arguments, the config file, logs file, and the dataset size of our experiments.
 
 ```python
 from PAPyA.Rank import MDRank
 
-MDRank(config, logs, '100M').paretoQ()
-MDRank(config, logs, '100M').paretoAgg()
+multiRanking = MDRank(config, logs, '100')
+```
+```python
+multiRanking.paretoQ()
+multiRanking.paretoAgg()
 ```
 <figure align = "center">
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoQSolution.png">
   <img src="https://github.com/DataSystemsGroupUT/PAPyA/raw/main/figs/paretoAggSolution.png">
-  <figcaption align = "center">
-  <em>Multi Dimensional Ranking Solutions</em>
+  <!-- <figcaption align = "center">
+  <em>Multi Dimensional Ranking Solutions</em> -->
   </figcaption>
 </figure>
 <br>
+
+- The first method is paretoQ which apply the algorithm considering the rank sets obtained by sorting each query results individually. This method aims at minimizing query runtimes of the ranked dimensions<br>
+- The second method is paretoAgg which operates on the single dimensional ranking criteria. This method aims to maximize performance of the three ranks altogether<br>
+
 Users can plot paretoAgg method by calling the plot method from the MDRank class.
 
 ```python
