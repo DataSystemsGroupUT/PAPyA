@@ -26,7 +26,7 @@ Or clone this repo:
 git clone https://github.com/DataSystemsGroupUT/PAPyA.git
 ```
 
-## Experiments
+## Examples (PAPyA in practice)
 
 Below are some examples of our running experiments using PAPyA library with different sets of configurations generated from ipython notebooks:<br>
 
